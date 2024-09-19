@@ -1,0 +1,9 @@
+// Tipos de comentarios
+
+//
+
+/* */
+
+/**
+ * 
+ */
