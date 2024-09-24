@@ -15,7 +15,7 @@ $b = 2;
 function test()
 {
     global $a;
-    echo "Valor de a:" .$a, "<br>";
+    echo "Valor de a:",$a, "<br>";
 }
 
 echo "<h1>Hola Mundo</h1>;"
