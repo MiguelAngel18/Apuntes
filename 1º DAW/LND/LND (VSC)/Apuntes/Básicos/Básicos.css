@@ -1,0 +1,71 @@
+
+/* CSS (Cascading Style Sheets):
+1.Definición:
+• CSS es un lenguaje de estilo utilizado para controlar la 
+presentación y el diseño de documentos HTML o XML. 
+Permite aplicar estilos como colores, fuentes, márgenes y 
+posicionamiento a elementos individuales o conjuntos de 
+elementos.
+2.Características Principales:
+• Separación de Contenido y Estilo: Permite separar la 
+estructura del documento HTML de su presentación visual.
+• Cascada: Determina cómo se aplican y priorizan los estilos 
+cuando hay conflictos.
+• Selectores: Permiten seleccionar elementos HTML a los que se 
+aplicarán los estilos.
+• Propiedades: Definen las características de estilo, como color, 
+tamaño de fuente, márgenes, etc.
+3.Sintaxis Básica:
+
+css
+
+selector 
+{
+ propiedad: valor;
+}
+
+• selector: Selecciona el elemento al que se aplicarán los estilos.
+• propiedad: Característica de estilo que se modificará.
+• valor: Valor asignado a la propiedad.
+• Ejemplo Básico de CSS:
+
+
+• body 
+{
+ font-family: "Arial", sans-serif;
+ color: #333;
+ background-color: #f4f4f4;
+}
+
+h1 
+{
+ font-size: 24px;
+ color: #0066cc;
+}
+
+.clase 
+{
+ border: 1px solid #999;
+ padding: 10px;
+}
+
+• Estilos para el cuerpo de la página, encabezado h1 y elementos con la
+clase "clase".
+• Selectores Comunes:
+• Tipo: h1, p, div.
+• ID: #miId.
+• Clase: .miClase.
+• Atributo: [atributo="valor"].
+• Propiedades Comunes:
+• Texto: color, font-family, font-size.
+• Fondo: background-color, background-image.
+• Caja: margin, padding, border.
+• Posicionamiento: position, top, left.
+• Cascada y Herencia:
+• Cascada: Determina cómo se resuelven los conflictos entre reglas de
+estilo.
+• Herencia: Algunas propiedades se heredan de los elementos padres a
+los hijos.
+• Diseño Responsivo:
+• Utilización de @media para adaptar estilos a diferentes dispositivos
+

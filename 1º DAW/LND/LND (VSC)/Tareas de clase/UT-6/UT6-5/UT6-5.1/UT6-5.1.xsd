@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="BDcomponentes">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="componente" maxOccurs="unbounded"> <!-- Valor máximos (ilimitados) -->
+                    <xs:complexType>
+                        <xs:sequence>
+                    
+                            <xs:element name="nombre" type="xs:string"/> <!-- Tipo de dato: String -->
+                            <xs:element name="precio" type="xs:double" maxOccurs="99999999"/> <!-- Valor máximo -->  <!-- Tipo de dato: double -->
+                            
+                            <xs:element name="tipo"> <!-- Elemento con dos posibles valores -->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:enumeration value="1"/>
+                                        <xs:enumeration value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="peso" type="xs:double" minOccurs="0"/> <!-- Valor mínimo -->
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

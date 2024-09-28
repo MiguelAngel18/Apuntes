@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Factura
+comment0.text=\r\n\ \ \ \ \ \u2022\ PRIMEROS_100\ \ de\ valor\ 0.14\ cts/kw\ \u2013\ representan\ el\ coste\ de\ cada\ kw\ para\ los\ primeros\ 100\ que\ se\ consuman\r\n\ \ \ \ \u2022\ SIGUIENTES_150\ \ de\ valor\ 0.10\ cts/kw\ \u2013\ es\ lo\ que\ se\ paga\ por\ cada\ uno\ de\ los\ kw\ consumidos\ dentro\ de\ los\ 150\ sgtes\r\n\ \ \ \ \u2022\ RESTO\ \u2013\ de\ valor\ 0.07\ \ cts/kw\ \u2013\ es\ lo\ que\ se\ paga\ a\ lo\ que\ exceda\ de\ 250\ kw\ en\ el\ consumo\r\n\ \ \ \ \u2022\ dos\ atributos\ de\ tipo\ double,\ lecturaAnterior\ y\ lecturaActual.\r\n\r\n
+comment1.params=lecturaAnterior\ lecturaActual
+comment1.target=Factura(double,\ double)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Factura\r\n
+comment2.params=
+comment2.target=double\ getConsumo()
+comment2.text=\r\n\ un\ accesor\ getConsumo()\ que\ devuelve\ el\ n\u00BA\ de\ Kw\ consumidos\r\n
+comment3.params=
+comment3.target=double\ getImporteTotal()
+comment3.text=\r\n\ el\ m\u00E9todo\ \ que\ devuelve\ el\ importe\ a\ pagar\ por\ lo\ que\ se\ ha\ consumido\ incluyendo\ \r\n\ el\ Iva\ (16%).\r\n
+numComments=4

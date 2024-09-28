@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<BDusuarios xsi:noNmaespaceSchemaLocation="UT6-3.2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+</BDusuarios>

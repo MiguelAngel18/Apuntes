@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Calculadora
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Calculadora\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Calculadora()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Calculadora\r\n
+comment2.params=
+comment2.target=int\ getCantidad()
+comment2.text=\r\n\ Accesor\ para\ la\ cantidad\r\n
+comment3.params=
+comment3.target=int\ getMaximo()
+comment3.text=\r\n\ Accesor\ para\ el\ maximo\r\n
+comment4.params=
+comment4.target=int\ getMinimo()
+comment4.text=\r\n\ Accesor\ para\ el\ minimo\r\n
+comment5.params=numero
+comment5.target=void\ introducirNumero(int)
+comment5.text=\r\n\ \ \u2013\ a\u00F1ade\ un\ nuevo\ n\u00FAmero\ a\ un\ objeto\ Calculadora.\ El\r\nefecto\ ser\u00E1\ que\ el\ estado\ de\ la\ calculadora\ cambia\ puesto\ que\ habr\u00E1\ que\ contar\ el\ n\u00FAmero,\r\na\u00F1adirlo\ a\ la\ suma\ y\ actualizar\ el\ valor\ del\ m\u00E1ximo\ y\ del\ m\u00EDnimo\r\n
+comment6.params=
+comment6.target=double\ getMedia()
+comment6.text=\r\n\ \ \u2013\ devuelve\ la\ media\ de\ todos\ los\ valores\ introducidos\ a\ la\ calculadora\r\n
+numComments=7

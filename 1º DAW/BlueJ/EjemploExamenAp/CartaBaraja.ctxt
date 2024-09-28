@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=CartaBaraja
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CartaBaraja\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=queValor\ quePalo
+comment1.target=CartaBaraja(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CartaBaraja\r\n
+comment2.params=
+comment2.target=java.lang.String\ getPalo()
+comment2.text=\ \r\n\ Accesor\ para\ el\ \ palo\r\n
+comment3.params=
+comment3.target=java.lang.String\ getValor()
+comment3.text=\r\n\ Accesor\ para\ el\ valor\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ Devuelve\ la\ String\ con\ el\ valor\ y\ el\ palo\r\n
+comment5.params=
+comment5.target=void\ imprimir()
+comment5.text=\r\n\ Imprime\ por\ pantalla\r\n
+numComments=6

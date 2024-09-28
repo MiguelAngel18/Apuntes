@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT2-8 Formularios 1</title>
+    <link rel="stylesheet" src="style.css" type="text/css" href="Formulario.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <strong>
+                Formulario
+            </strong>
+        </h1>
+    </header>
+    <fieldset>
+    <form>
+    <div name="Formulario">
+    <div>
+        
+        <label for="idNombre"><h3>Nombre:</h3></label>
+        <input type="text" id="idNombre" name="nombre" placeholder="Introduce tu nombre">
+        <label for="idDNI"><h3>DNI:</h3></label>
+        <input type="text" id="idDNI" name="nombre" placeholder="Introduce tu DNI">
+        <label for="idDireccion"><h3>Dirección:</h3></label>
+        <input type="text" id="idDireccion" name="direccion" placeholder="Introduce tu Dirección">
+        <label for="idPassword"><h3>Contrseña:</h3></label>
+        <input type="password" id="idPassword" name="password" placeholder="Introduce la contraseña">
+        <br>
+    <div id="sexo">
+        <label for="idSexo"><h3>Sexo:</h3></label>
+        <label for="idSexo">Masculino</label>
+        <input type="radio" id="idSexo" name="sexo">
+        <label for="idSexo">Femenino</label>
+        <input type="radio" id="idSexo" name="sexo" placeholder="Femenino">
+        <label for="idSexo">Otro</label>
+        <input type="radio" id="idSexo" name="sexo" placeholder="Otro">
+        <br>
+    </div>
+        <label for="idFecha"><h3>Fecha de nacimiento:</h3></label>
+        <input type="date" id="idFecha" name="date"></input>
+        <br>
+    
+        <label for="idLocalidad"><h3>Localidad:</h3></label>
+        <select id="idLocalidad" name="localidad">
+            <option value="aguimes" selected>Agüimes</option>
+            <option value="santa-lucia">Santa Lucía</option>
+            <option value="ingenio">Ingenio</option>
+            <option value="san-bartolome">San Bartolomé</option>
+            <option value="telde">Telde</option>
+            <option value="las-palmas">Las Palmas de GC</option>
+            <option value="otro">Otro</option>
+        </select>
+    </div>
+    <div id="ciclo">
+        
+    <label for="ciclo"><h3>Ciclo:</h3></label>
+    <label for="ciclo">SMR</label>
+    <input type="radio" id="ciclo" name="ciclo" value="microinformatica">
+    <label for="ciclo">DAM</label>
+    <input type="radio" id="ciclo" name="ciclo" value="multiplataforma">
+    <label for="ciclo">DAW</label>
+    <input type="radio" id="ciclo" name="ciclo" value="web"  checked>
+    <label for="ciclo">ASIR</label>
+    <input type="radio" id="ciclo" name="ciclo" value="administracion">
+    
+    <br>
+ 
+    </div>
+
+    <div>
+        <br>
+        <label>Curso:</label>
+        
+        <input type="checkbox" id="curso1" name="curso[]" value="1">
+        <label for="curso1">1º</label>
+        
+        <input type="checkbox" id="curso2" name="curso[]" value="2">
+        <label for="curso2">2º</label>
+        
+        <input type="checkbox" id="curso3" name="curso[]" value="3">
+        <label for="curso3">3º</label>
+    </div>
+    <div>
+        <h6>------------------------------------------------------</h6>
+        <input type="submit" id="idBotton" value="Enviar formulario">
+        <input type="reset" id="idBotton" value="Borrar formulario">
+    </div>
+    </fieldset>
+    </form>
+</body>
+<footer>
+
+    <div id="containerEmail">
+        <label for="email"><h3>Email de contacto</h3></label>
+        <input type="email" id="email" name="email" placeholder="Introduce tu correo electrónico">
+    </div>
+    <br>
+    <div id="containerComent">
+        <label for="coment"><h3>Caja de comentarios</h3></label>
+        <input type="textarea" id="coment" placeholder="Da tu opinión">
+    </div>
+
+</footer>
+</html>

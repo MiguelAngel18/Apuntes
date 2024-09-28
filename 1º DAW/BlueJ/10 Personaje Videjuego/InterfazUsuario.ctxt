@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=InterfazUsuario()
+comment1.target=void\ ejecutar()
+comment2.target=void\ avanzarPersonaje()
+comment2.text=\n\nPermite\ avanzar\ el\ personaje\n\n\n
+comment3.target=void\ girarPersonaje()
+comment3.text=\n\nPermite\ girar\ el\ personaje\n\n\n
+comment4.target=void\ mostrarPersonaje()
+comment4.text=\n\nMuestra\ la\ situaci\u00F3n\ actual\ del\ personaje\n\n
+comment5.target=int\ menu()
+comment5.text=\nPresenta\ un\ men\u00FA\ en\ la\ pantalla\npara\ que\ el\ usuario\ pueda\ elegir\ su\ opci\u00F3n\n@return\ \ devuelve\ la\ opci\u00F3n\ seleccionada\n\n
+comment6.target=void\ borrarPantalla()
+comment6.text=\nBorrar\ la\ pantalla\ \ \n\n
+numComments=7

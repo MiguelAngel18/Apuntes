@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto Miguel Ángel</title>
+    <link rel="stylesheet" src="style.css" type="text/css" href="Proyecto.css">
+<!--<link rel="alternate" type="application/rss+xml" title="Articulos" href="http://www.misitio.com/fichero.rss" /> --> 
+
+    <link rel="shortcut icon" href="https://ih1.redbubble.net/image.4997930447.6194/st,small,507x507-pad,600x600,f8f8f8.jpg"> <!-- Imagen de la pestaña del navegador -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><!-- Icono del menú reducido (tres lineas horizontales) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> <!-- Iconos Submenú-->
+    
+    <!-- Fuente externa. Extraída de Google Fonts. Nombre "Nunito" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav id="menu"> <!-- Menú de la página -->
+
+        <div class="telefonos"> <!-- Menú de la página para teléfonos -->
+
+            <div class="header">
+
+                <div class="logo">
+                    <img src="img/Flork.png"> <!-- Logo del Menú -->
+                </div>
+
+                <div class="mas"> <!-- Menú de la página reducido-->
+
+                    <button>
+                        <span class="material-symbols-outlined">menu</span> <!-- Imagen del menú reducido (Tres barritas laterales)-->
+                    </button>
+
+                    <div class="submenu">
+                        <a href="#">Inicio</a>
+                        <a href="#QuienEsFlork">Quién es Flork</a>
+                        <a href="#link_portafolio">Portafolio</a>
+                        <a href="#link_formulario">Formulario</a>
+                        <a href="#pieDePagina">Contáctanos</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ordenadores"> <!-- Menú de la página para ordenadores -->
+
+            <div class="logo"> 
+                <img src="img/Flork.png"> <!-- Logo del menú extendido -->
+            </div>
+
+            <div class="principales"> <!-- Enlaces principales -->
+            
+                <a href="#">Inicio</a>
+                <a href="#QuienEsFlork">Quién es Flork</a>
+                <a href="#link_portafolio">Portafolio</a>
+            
+            </div>
+
+            <div class="secundarios"> <!-- Enlaces secundarios -->
+            
+                <a href="#link_formulario">Formulario</a>
+                <a href="#pieDePagina">Contáctanos</a>
+            
+            </div>
+
+
+            <div class="secundarios_mas"> <!-- Menú de la página para tablets o semidesplegado -->
+               
+                <a href="" class="mas"><span class="material-symbols-outlined">menu</span></a> <!-- Imagen del submenú -->
+                
+                <div class="submenu">
+
+                    <a id="i_formulario" href="#link_formulario">
+                    
+                        Formulario
+                        <span id="i_formulario" class="material-symbols-outlined">inventory</span>
+                    
+                    </a>
+
+                    <a id="i_contactanos" href="#pieDePagina">
+                    
+                        Contáctanos   
+                        <span id="i_telefono" class="material-symbols-outlined">phone_in_talk</span>
+                    
+                    </a>
+
+                </div>
+            
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main id="contenido"> <!-- Contenido de la página -->
+
+        <section class="cabecera"> <!-- Título y la ola -->
+
+            <h1 id="title"><strong>Flork</strong></h1>
+            <div id="QuienEsFlork"></div>
+
+            <div class="ola">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 150%; width: 100%;">
+                    <path d="M-69.07,-60.53 C172.45,165.83 298.30,154.03 565.23,-45.77 L503.72,157.97 L-4.17,156.00 Z" style="stroke: none; fill: rgb(0, 0, 0);"></path>
+                </svg>
+            </div>
+
+            
+        </section>
+        
+
+        <main class="cuerpo"> <!-- Distintas secciones de la página -->
+
+            <section class="cuerpo1"> <!-- Apartado 1. Contexto -->
+                
+                <h1 class="title1"><strong>¿Quién es Flork?</strong></h1>
+
+                <section class="parrafo1Eimg">
+
+                    <section class="parrafo">
+
+                        <h4 id="parrafo1-texto1">
+
+                            Flork es el protagonista de un cómic web estadounidense que nació en enero de 2012 en un blog de la plataforma WordPress12.
+                            Fue creado usando MS-Paint y popularizado en 20163. El webcómic es conocido por su humor absurdo y existencialista3.
+                            Aunque su creador es anónimo, Flork se ha convertido en uno de los memes más utilizados de los últimos tiempos4.
+
+                        </h4>
+
+                        <img id="img2" class="img2" src="img/img-text1.png">
+
+                        <h4 id="parrafo1-texto2">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                        
+                        </h4>
+
+                    </section>
+
+                    <img id="img1" class="img1" src="img/img-text1.png">
+
+                </section>
+
+            </section>
+
+            <section class="cuerpo2"> <!-- Apartado 2. +Info sobre Flork -->
+
+                    <section class="parte1">
+
+                        <div class="title"><strong><h1>Su nacimiento</h1></strong></div>
+
+                        <h4 class="parrafo">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+
+                        </h4>
+
+                        <h4 class="parrafo">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+
+                        </h4>
+
+                        <section class="Florks">
+
+                            <img id="a" class="on" src="img/Flork2.png">
+                            <img id="b" class="on" src="img/Flork2.png">
+                            <img id="c" class="on" src="img/Flork2.png">
+                            <img id="d" class="on" src="img/Flork2.png">
+    
+                        </section>
+    
+                        <h4 class="parrafo-florks">
+                            
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero
+                            dolorem ipsum sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam
+                            officia. Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            <div id="link_portafolio"></div>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Even iet quis eligendi facilis? Eaque, nisi?                    
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum                     
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                        
+                        </h4>
+
+                    </section>
+
+                    <section class="parte2"> <!-- Parte 2. Portafolio de imágenes -->
+
+                        <h1 class="titleP"><strong>Portafolio</strong></h1>
+
+                        <div class="Portafolio"> 
+                            
+                            <div id="columnas">
+
+                                <img src="img/Captura de pantalla 2024-05-08 215555.png" alt="" class="img_portafolio">
+                                <img src="img/Captura de pantalla 2024-05-08 215541.png" alt="" class="img_portafolio">
+                                <img src="img/Captura de pantalla 2024-05-08 215600.png" alt="" class="img_portafolio">
+                                <img src="img/Flork-notficacion.png" alt="" class="img_portafolio" id="fotoF">
+                                <img src="img/flork-confusio.png" alt="" class="img_portafolio">
+                                <img src="img/Flork2.png" alt="" class="img_portafolio">
+                                
+                            </div>
+
+                        </div>
+
+                    </section>
+
+            </section>
+
+            <section class="cuerpo3">  <!-- Apartado 3. Portafolio img (Stickers) -->
+
+                    <section class="parte1"> <!-- Parte 1. Portafolio de imágenes -->
+
+                        <div class="title"><strong><h1>Su particular humor</h1></strong></div>
+
+                        <h4 class="parrafo">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+
+                        </h4>
+
+                        <h4 class="parrafo">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+
+                        </h4>
+
+                    </section>
+
+                    <section class="parte2">
+
+                        <h1 class="title"><strong>Relevancia actual</strong></h1>
+
+                        <h4 class="parrafo">
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero
+                            dolorem ipsum sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam
+                            officia. Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+                            <div id="link_formulario"></div>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis libero dolorem ipsum
+                            sapiente voluptates unde repellendus obcaecati fugit aliquam? In quis aliquam officia.
+                            Eveniet quis eligendi facilis? Eaque, nisi?
+
+                        </h4>
+
+                    </section>
+
+            </section>
+
+            <section class="cuerpo4">  <!-- Apartado 4. Formulario -->
+
+                <h1 id="title_form"><strong>Formulario</strong></h1>
+                
+                <form id="formulario">
+                                                     
+                                <div>
+                        
+                                    <label for="idNombre"><h3>Nombre:</h3></label>
+                                    <input type="text" id="idNombre" name="nombre" placeholder="Introduce tu nombre">
+                                    <label for="idDNI"><h3>DNI:</h3></label>
+                                    <input type="text" id="idDNI" name="nombre" placeholder="Introduce tu DNI">
+                                    <label for="idDireccion"><h3>Dirección:</h3></label>
+                                    <input type="text" id="idDireccion" name="direccion" placeholder="Introduce tu Dirección">
+                                    <label for="idPassword"><h3>Contrseña:</h3></label>
+                                    <input type="password" id="idPassword" name="password" placeholder="Introduce la contraseña">
+                        
+                                </div>
+
+                                <div id="sexo">
+                        
+                                <label for="idSexo"><h3>Sexo:</h3></label>
+                                <label for="idSexo1">Masculino</label>
+                                <input type="radio" id="idSexo1" name="sexo">
+                                <label for="idSexo2">Femenino</label>
+                                <input type="radio" id="idSexo2" name="sexo" placeholder="Femenino">
+                                <label for="idSexo3">Otro</label>
+                                <input type="radio" id="idSexo3" name="sexo" placeholder="Otro">
+                        
+                                </div>
+
+                                <div>
+                        
+                                <label for="idFecha"><h3>Fecha de nacimiento:</h3></label>
+                        
+                                <input type="date" id="idFecha" name="date"></input>
+                    
+                                <label for="idLocalidad"><h3>Localidad:</h3></label>
+                        
+                                <select id="idLocalidad" name="localidad">
+                                
+                                    <option value="aguimes" selected>Agüimes</option>
+                                    <option value="santa-lucia">Santa Lucía</option>
+                                    <option value="ingenio">Ingenio</option>
+                                    <option value="san-bartolome">San Bartolomé</option>
+                                    <option value="telde">Telde</option>
+                                    <option value="las-palmas">Las Palmas de GC</option>
+                                    <option value="otro">Otro</option>
+                        
+                                </select>
+                        
+                                </div>
+
+                                <div id="ciclo">
+                        
+                                <label for="ciclo1"><h3>Ciclo:</h3></label>
+                                <label for="ciclo1">SMR</label>
+                                <input type="radio" id="ciclo" name="ciclo" value="microinformatica">
+                                <label for="ciclo2">DAM</label>
+                                <input type="radio" id="ciclo2" name="ciclo" value="multiplataforma">
+                                <label for="ciclo">DAW</label>
+                                <input type="radio" id="ciclo3" name="ciclo" value="web"  checked>
+                                <label for="ciclo4">ASIR</label>
+                                <input type="radio" id="ciclo4" name="ciclo" value="administracion">
+                                     
+                                </div>
+
+                                <br>
+
+                                <div>
+                        
+                                <label>Curso:</label>
+
+                                <label for="curso1">1º</label>
+                                <input type="checkbox" id="curso1" name="curso[]" value="1">
+                        
+                                <label for="curso2">2º</label>
+                                <input type="checkbox" id="curso2" name="curso[]" value="2">
+                                
+                                </div>
+                    
+                                <div>
+                        
+                                <h6>__________________________________________________</h6>
+
+                                <input type="submit" id="idBotton" value="Enviar formulario">
+                            
+                                <input type="reset" id="idBottonR" value="Borrar formulario">
+                       
+                                </div>
+
+                                <div id="EmailComntarios">
+
+                                <div id="containerEmail">
+
+                                    <label for="email"><h3>Email de contacto</h3></label>
+                                    <input type="email" id="email" name="email" placeholder="Introduce tu correo electrónico">
+
+                                </div>
+
+                                <br>
+
+                                <div id="containerComent">
+                            
+                                    <label for="coment"><h3>Caja de comentarios</h3></label>
+                                    <input type="textarea" id="coment" placeholder="Da tu opinión">
+                            
+                                </div>
+                    
+                                </div>
+
+                                <div id="formulario_img"></div>
+
+                </form>
+
+            </section>
+    
+        </main>
+
+        <footer id="pieDePagina">  <!-- Pie de página -->
+
+            <section class="footerEnlaces">  <!-- Redes sociales -->
+
+                <h3>Redes Sociales</h3>
+
+                <ul class="redes">
+                
+                    <li class="facebook"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></i>Facebook</li></a>
+                    <li class="instagram"><a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter"></i>Twitter</li></a>
+                    <li class="twitter"><a href="https://www.instagram.com "><i class="fa-brands fa-instagram"></i>Instagram</li></a>
+                    <li class="whatsapp"><a href="#"><i class="fa-brands fa-whatsapp"></i>WhatsApp: <a class="footer-text">+34 786 71 52 46</a></li></a>
+            
+                </ul>
+
+            </section>
+
+            <section class="subFooter">  <!-- Teléfono de contacto -->
+            
+                <a href="" class="footer-text"><small>© Teléfono de contacto: +34 687 09 30 46</small></a>
+
+            </section>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
+
+
+<!-- 
+    
+    - Hacer el tamaño para tablet (783px)
+
+    - Hacer el temaño para teléfonos (564px aprx.)
+
+-->

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Hucha
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Hucha\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Hucha()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Hucha\r\n
+comment2.params=
+comment2.target=double\ getDinero()
+comment2.text=\r\n\ Accesor\ p\u00E0ra\ el\ dinero\r\n
+comment3.params=cantidad
+comment3.target=void\ meterDinero(double)
+comment3.text=\r\n\ Mete\ dinero\ en\ la\ hucha\r\n
+comment4.params=cantidad
+comment4.target=void\ sacarDinero(double)
+comment4.text=\r\n\ Saca\ dinero\ de\ la\ hucha\r\n
+comment5.params=
+comment5.target=void\ printDetalles()
+comment5.text=\r\n\ Imprime\ la\ cantidad\ de\ dinero\ de\ la\ hucha\r\n
+numComments=6

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Numero
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Numero\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=num
+comment1.target=Numero(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Numero\r\n
+comment2.params=otroNumero
+comment2.target=boolean\ esMayorQue(int)
+comment2.text=\r\n\ -\ si\ el\ valor\ que\ guarda\ el\ objeto\ es\ mayor\ que\ el\ n\u00BA\ pasado\ como\ par\u00E1metro\r\n\ devuelve\ true,\ en\ caso\ contrario\ false\r\n
+comment3.params=otroNumero
+comment3.target=boolean\ esMenorQue(int)
+comment3.text=\r\n\ \ -\ si\ el\ valor\ que\ guarda\ el\ objeto\ es\ menor\ que\ el\ n\u00BA\ pasado\ como\ par\u00E1metro\ \r\n\ \ devuelve\ true,\ en\ caso\ contrario\ false\r\n
+comment4.params=otroNumero
+comment4.target=boolean\ esIgualQue(int)
+comment4.text=\r\n\ -\ si\ el\ n\u00BA\ que\ se\ pasa\ como\ par\u00E1metro\ es\ igual\ que\ el\ atributo\ del\ \r\n\ objeto\ devuelve\ true,\ en\ \r\n\ caso\ contrario\ false\r\n
+comment5.params=otroNumero
+comment5.target=java.lang.String\ comprobar(int)
+comment5.text=\r\n\ -\ si\ el\ atributo\ es\ mayor\r\n\ \ \ \ que\ el\ n\u00BA\ que\ se\ pasa\ como\ par\u00E1metro\ devuelve\ la\ cadena\ \u201CM\u00E1s\r\n\ \ \ \ grande\u201D,\ si\ es\ menor\ devuelve\ la\ cadena\ \u201CEs\ menor\u201D,\ si\ son\ iguales\r\n\ \ \ \ devuelve\ \u201CSon\ iguales\u201D\r\n
+comment6.params=otroNumero
+comment6.target=java.lang.String\ comprobar2(int)
+numComments=7

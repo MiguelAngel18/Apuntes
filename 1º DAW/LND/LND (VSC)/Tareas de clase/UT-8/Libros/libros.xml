@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="libros.xsl" type="text/xsl"?>
+
+<libros>
+	<libro>
+		<titulo>STEVE JOBS: LA BIOGRAFIA</titulo>
+		<autor>WALTER ISAACSON</autor>
+		<isbn>9788499921181</isbn>
+		<precio>23,90</precio>
+	</libro>
+	<libro>
+		<titulo>LA NATURALEZA DEL ESPACIO Y EL TIEMPO</titulo>
+		<autor>STEPHEN HAWKING</autor>
+		<autor>ROGER PENROSE</autor>
+		<isbn>9788499920542</isbn>
+		<precio>18,90</precio>
+	</libro>
+	<libro>
+		<titulo>EL IMPERIO ERES TU</titulo>
+		<autor>JAVIER MORO</autor>
+		<precio>21,50</precio>
+	</libro>
+	<libro>
+		<titulo>EL SECRETO</titulo>
+		<autor>RHONDA BYRNE</autor>
+		<isbn>9788479536442</isbn>
+		<precio>22,00</precio>
+		<precio>20,90</precio>
+	</libro>
+	<libro>
+		<titulo>EL TEMOR DE UN HOMBRE SABIO</titulo>
+		<autor>PATRICK ROTHFUSS</autor>
+		<isbn>9788401339639</isbn>
+	</libro>
+</libros>

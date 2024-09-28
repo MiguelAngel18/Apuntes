@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=FacturaLuz
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FacturaLuz\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nuevoConsumo
+comment1.target=FacturaLuz(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FacturaLuz\r\n
+comment2.params=
+comment2.target=int\ getConsumo()
+comment2.text=\ \r\n\ Accesor\ para\ el\ consumo\r\n\ \r\n
+comment3.params=
+comment3.target=double\ getImporteTotal()
+comment3.text=\r\n\ Calcula\ el\ imprte\ total\ de\ la\ factura\ \r\n
+numComments=4

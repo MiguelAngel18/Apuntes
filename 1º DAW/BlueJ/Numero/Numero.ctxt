@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Numero
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Numero\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Numero()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Numero\r\n
+comment2.params=
+comment2.target=int\ getNumero()
+comment2.text=\ \r\n\ Accesor\ para\ el\ numero\r\n
+comment3.params=queNumero
+comment3.target=void\ setNumero(int)
+comment3.text=\r\n\ Mutador\ para\ el\ numero\r\n
+comment4.params=
+comment4.target=boolean\ esPar()
+comment4.text=\r\n\ que\ devuelve\ true\ si\ el\ n\u00BA\ contenido\ en\ el\ objeto\ es\ par\r\n
+comment5.params=
+comment5.target=int\ getUltimaCifra()
+comment5.text=\r\n\ getUltimaCifra(),\ que\ devuelve\ la\ \u00FAltima\ cifra\ del\ n\u00FAmero\r\n
+comment6.params=
+comment6.target=int\ obtenerSumaCifras()
+comment6.text=\r\n\ Define\ el\ m\u00E9todo\ obtenerSumaCifras()\ que\ devuelve\ la\ suma\ de\ las\ tres\ cifras\ \r\nque\ forman\ el\ n\u00BA\r\n
+numComments=7

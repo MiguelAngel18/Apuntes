@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ultramarinos.xsl" type="text/xsl"?>
+<facturas>
+	<factura>
+		<comprador>Claudio</comprador>
+		<fecha>13/10/2011</fecha>
+		<producto>
+			<nombre>Mariscos varios</nombre>
+			<unidades>3</unidades>
+			<precio>15</precio>
+		</producto>
+		<producto>
+			<nombre>Langosta</nombre>
+			<unidades>2</unidades>
+			<precio>50</precio>
+		</producto>
+		<producto>
+			<nombre>Pez Espada</nombre>
+			<unidades>1</unidades>
+			<precio>25</precio>
+		</producto>
+	</factura>
+	<factura>
+		<comprador>Javier</comprador>
+		<fecha>11/11/2011</fecha>
+		<producto>
+			<nombre>Vieja</nombre>
+			<unidades>6</unidades>
+			<precio>5</precio>
+		</producto>
+		<producto>
+			<nombre>Sardinas</nombre>
+			<unidades>1</unidades>
+			<precio>30</precio>
+		</producto>
+	</factura>
+	<factura>
+		<comprador>Eva</comprador>
+		<fecha>12/11/2011</fecha>
+		<producto>
+			<nombre>Caballas</nombre>
+			<unidades>20</unidades>
+			<precio>4</precio>
+		</producto>
+	</factura>
+</facturas>

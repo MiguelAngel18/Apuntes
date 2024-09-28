@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    
+DTD para un documento XML que contiene una lista de editoriales con información opcional:
+
+    <!DOCTYPE editoriales [
+
+    <!ELEMENT editoriales (titulo, editorial+)>
+
+    <!ELEMENT titulo (#PCDATA)>
+
+    <!ELEMENT editorial (nombre, email?, homepage?, direccion, tfno?,fax?)>
+
+        <!ELEMENT nombre (#PCDATA)>
+
+        <!ELEMENT email (#PCDATA)>
+
+        <!ELEMENT homepage (#PCDATA)>
+
+        <!ELEMENT direccion (#PCDATA)>
+
+        <!ELEMENT tfno (#PCDATA)>
+
+        <!ELEMENT fax (#PCDATA)>
+
+]>
+
+ -->
+
+
+<editoriales xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.MiguelAngel.info" xs:SchemaLocation="editoriales.xsd">
+
+    <titulo></titulo>
+
+    <editorial> <!-- Tiene todos los elementos -->
+        
+        <nombre></nombre>
+        <email></email>
+        <homepage></homepage>
+        <direccion></direccion>
+        <tfno></tfno>
+        <fax></fax>
+
+    </editorial>
+
+    <editorial> <!-- No tienen el elemento FAX -->
+        
+        <nombre></nombre>
+        <email></email>
+        <homepage></homepage>
+        <direccion></direccion>
+        <tfno></tfno>
+
+    </editorial>
+
+    <editorial> <!-- Tiene solo los elementos obligatorios (Nombre y Direccion)-->
+        
+        <nombre></nombre>
+        <direccion></direccion>
+
+    </editorial>
+
+</editoriales>

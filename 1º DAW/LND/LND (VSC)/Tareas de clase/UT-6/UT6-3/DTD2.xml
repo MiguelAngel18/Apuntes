@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DTD-->
+<!DOCTYPE BDusuarios [
+
+    <!ELEMENT BDusuarios (usuario)+>
+
+    <!ELEMENT usuario (nombre, email, fechaNac)>
+
+    <!ATTLIST usuario clave CDATA #REQUIRED>
+    <!ATTLIST usuario dni CDATA #REQUIRED>
+
+    <!ELEMENT nombre (#PCDATA)>
+
+    <!ELEMENT email (#PCDATA)>
+
+    <!ELEMENT fechaNac EMPTY>
+
+]>
+
+<BDusuarios> 
+    
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+    <usuario clave="" dni="">
+    
+        <nombre>Nombre</nombre>
+        <email>Precio</email>
+        <fechaNac></fechaNac>
+    
+    </usuario>
+
+</BDusuarios>

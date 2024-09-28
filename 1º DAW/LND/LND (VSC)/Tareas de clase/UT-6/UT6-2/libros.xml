@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DTD-->
+<!DOCTYPE documento [
+    <!ELEMENT documento (libro+)>
+    <!ELEMENT libro (titulo+,autor*,isbn?,precio*)> <!-- Suponemos que existen libros sin auntores conocidos -->
+    <!ATTLIST libro id CDATA >
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT isbn (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+]>
+
+<documento> 
+    
+    <libro id="01">
+    
+        <titulo>Titulo</titulo>
+        <autor>Autor</autor>
+        <isbn>ISBN</isbn>
+        <precio>Precio</precio>
+    
+    </libro>
+
+    <libro id="02">
+    
+        <titulo>Titulo</titulo>
+        <autor>Autor1</autor>
+        <autor>Autor2</autor>
+        <isbn>ISBN</isbn>
+        <precio>Precio</precio>
+    
+    </libro>
+
+    <libro id="03">
+    
+        <titulo>Titulo</titulo>
+        <autor>Autor</autor>
+
+        <precio>Precio</precio>
+    
+    </libro>
+
+    <libro id="04">
+        
+        <titulo>Titulo</titulo>
+        <autor>Autor</autor>
+        <isbn>ISBN</isbn>
+        <precio>Precio1</precio>
+        <precio>Precio2</precio>
+    
+    </libro>
+
+    <libro id="05">
+        
+        <titulo>Titulo</titulo>
+        <autor>Autor</autor>
+        <isbn>ISBN</isbn>
+
+    </libro>
+
+</documentoid=>

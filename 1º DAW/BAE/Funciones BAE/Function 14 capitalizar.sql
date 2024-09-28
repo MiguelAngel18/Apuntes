@@ -1,0 +1,13 @@
+USE world;
+DROP FUNCTION IF EXISTS inicialMayuscula;
+DELIMITER $$
+CREATE FUNCTION inicialMayuscula(palabra VARCHAR(100)) 
+						RETURNS VARCHAR(100) DETERMINISTIC
+BEGIN
+	DECLARE may VARCHAR(100);
+	SET may=CONCAT(UPPER(LEFT(palabra,1)), LOWER(SUBSTR(palabra,2)));
+	RETURN may;
+END$$
+DELIMITER ;
+
+SELECT inicialMayuscula("juerNEs");

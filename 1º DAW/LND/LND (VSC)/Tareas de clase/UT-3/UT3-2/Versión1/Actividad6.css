@@ -1,0 +1,46 @@
+*
+{
+    color: black;
+    background-color: #849ca9 ; 
+}
+
+body
+{
+    align-items: center;
+}
+
+
+h1
+{
+    color:  #0452fb;
+    background-color: #eabb75;
+    text-align: center;
+}
+
+h3
+{
+    background-color: #0484fb;
+    text-align: center;
+}
+
+
+.tabla_hueca
+{
+    height: 100%;
+    width: 60%;
+}
+
+
+
+#tabla
+{
+    height: 60%;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+input
+{
+    background-color: white;
+}

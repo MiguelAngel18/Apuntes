@@ -1,0 +1,61 @@
+*
+{
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+
+header
+{
+    border-bottom: 1px solid black;
+}
+
+
+.contenido
+{
+    display: flex;
+    flex-direction: row
+}
+
+
+
+#section1 
+{
+    margin-top: 33%;
+    margin-bottom: 33%;
+}
+
+
+#section2 
+{
+    margin-top: 33%;
+    margin-bottom: 33%;
+}
+
+
+#section3 
+{
+    margin-top: 33%;
+    margin-bottom: 33%;
+}
+
+table
+{
+    width: auto;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+img
+{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+h5
+{
+    color: blue;
+}

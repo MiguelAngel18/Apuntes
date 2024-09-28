@@ -1,0 +1,84 @@
+
+  
+
+  
+.table_  /* Bordes de la tabla*/
+{
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    text-align: center;
+    margin:black;
+    border-collapse:collapse;
+    border-color:black;
+}
+
+.DiasSemana
+{
+    color: black; background-color: white;
+}
+
+.BAE
+{
+     background-color:  #ffc1c1 ; color:black;
+}
+
+.PRO
+{
+     background-color:  #e0ffc1 ; color:black;
+}
+.ETS
+{
+     background-color:  #e0dca0; color:black;
+}
+.LND
+{
+     background-color: #c1ffd1; color:black;
+}
+.LNT
+{
+     background-color: #c1d1ff ; color:black;
+}
+.SSF
+{
+     background-color:  #c1ffff; color:black;
+}
+.FOL
+{
+     background-color: #e0c1ff; color:black;
+}
+.recreo
+{
+
+    border-color: white;
+}
+tr
+{
+    border-color: black;
+    font-size: 104px;
+    text-align: center;
+    margin:auto;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

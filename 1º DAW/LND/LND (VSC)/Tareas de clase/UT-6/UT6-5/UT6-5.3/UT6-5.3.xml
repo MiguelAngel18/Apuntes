@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TVSCHEDULE NAME="My TV Schedule" xsi:noNmaespaceSchemaLocation="UT6-5.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+
+    <CHANNEL CHAN="ABC">
+
+        <BANNER>ABC's Schedule</BANNER>
+
+        <DAY>
+
+            <DATE>2023-04-24</DATE>
+
+            <PROGRAMSLOT VTR="A1">
+
+                <TIME>08:00 PM</TIME>
+
+                <TITLE RATING="TV-G" LANGUAGE="en">Family Show</TITLE>
+
+                <DESCRIPTION>A show for the whole family.</DESCRIPTION>
+
+            </PROGRAMSLOT>
+
+            <PROGRAMSLOT>
+
+                <TIME>09:00 PM</TIME>
+
+                <TITLE>Romantic Comedy</TITLE>
+
+            </PROGRAMSLOT>
+
+        </DAY>
+
+        <DAY>
+
+            <DATE>2023-04-25</DATE>
+
+            <HOLIDAY>Memorial Day</HOLIDAY>
+
+        </DAY>
+
+    </CHANNEL>
+
+    <CHANNEL CHAN="NBC">
+
+        <BANNER>NBC's Schedule</BANNER>
+
+        <DAY>
+
+            <DATE>2023-04-24</DATE>
+
+            <PROGRAMSLOT>
+
+                <TIME>08:00 PM</TIME>
+
+                <TITLE RATING="TV-14">Crime Drama</TITLE>
+
+                <DESCRIPTION>A crime drama.</DESCRIPTION>
+
+            </PROGRAMSLOT>
+
+            <PROGRAMSLOT>
+
+                <TIME>09:00 PM</TIME>
+
+                <TITLE RATING="TV-MA">Mature Show</TITLE>
+
+            </PROGRAMSLOT>
+
+        </DAY>
+
+        <DAY>
+
+            <DATE>2023-04-25</DATE>
+
+            <HOLIDAY>Memorial Day</HOLIDAY>
+
+        </DAY>
+
+    </CHANNEL>
+
+</TVSCHEDULE>

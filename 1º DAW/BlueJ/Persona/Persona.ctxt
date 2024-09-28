@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Persona
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Persona\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nuevoNombre\ nuevaEdad
+comment1.target=Persona(java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Persona\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment2.text=\r\n\ Accesor\ del\ atributo\ nombre\r\n
+comment3.params=
+comment3.target=int\ getEdad()
+comment3.text=\r\n\ Accesor\ para\ la\ edad\r\n
+comment4.params=nuevoNombre
+comment4.target=void\ setNombre(java.lang.String)
+comment4.text=\r\n\ Mutador\ para\ el\ \ nombre\r\n
+comment5.params=nuevaEdad
+comment5.target=void\ setEdad(int)
+comment5.text=\r\n\ Mutador\ para\ la\ edad\r\n
+comment6.params=
+comment6.target=int\ edadEn5Anios()
+comment6.text=\r\n\ Devuelve\ la\ edad\ de\ ala\ persona\ dentro\ de\ cinco\ a\u00F1os\r\n
+comment7.params=
+comment7.target=void\ saludar()
+comment7.text=\r\n\ Saluda\ por\ pantalla\r\n
+numComments=8

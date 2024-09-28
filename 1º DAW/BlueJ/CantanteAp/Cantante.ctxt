@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Cantante
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Cantante\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Cantante()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Cantante\r\n
+comment2.params=
+comment2.target=void\ cantar()
+comment2.text=\r\n\ cuando\ se\ le\ env\u00EDa\ el\ mensaje\ cantar()\ alobjeto\ se\ examina\ su\ estado\ de\ \u00E1nimo.\ Si\ est\u00E1\ feliz\ se\ emite\ el\r\n\ \ \ \ mensaje\ \u201CCantando\ bajo\ la\ lluvia\u201D,\ si\ est\u00E1\ triste\ se\ escribe\ \u201CNo\ tiene\r\n\ \ \ \ \u00E1nimo\ para\ cantar\u201D\r\n
+comment3.params=
+comment3.target=boolean\ estaTriste()
+comment3.text=\r\n\ Version\ 1\ dice\ si\ est\u00E1\ triste\ o\ no\r\n
+comment4.params=
+comment4.target=boolean\ estaTristeV2()
+comment4.text=\r\n\ Version\ 2\ dice\ si\ est\u00E1\ triste\ o\ no\r\n
+comment5.params=
+comment5.target=void\ cambiarEstadoAnimo()
+comment5.text=\r\n\ Cambia\ esdtado\ de\ animo\r\n
+comment6.params=
+comment6.target=void\ cambiarEstadoAnimoV2()
+comment6.text=\r\n\ \r\n
+numComments=7

@@ -1,0 +1,45 @@
+*
+{
+    color:cadetblue;
+    background-color:darkslategrey;
+    text-align: center;
+}
+
+header
+{
+    text-align: center;
+}
+
+body
+{
+    text-align: center;
+}
+
+footer
+{
+    display: flex;
+    flex: row;
+    text-align: center;
+}
+
+
+#containerEmail
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 275px;
+    padding-right: 275px;
+    text-align: center;
+
+}
+
+#containerComent
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 275px;
+    padding-right: 275px;
+    text-align: center;
+}
+
+

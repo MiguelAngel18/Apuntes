@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Personaje
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Personaje\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=queNombre
+comment1.target=Personaje(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Personaje\r\n
+comment2.params=distancia
+comment2.target=void\ avanzar(int)
+comment2.text=\r\n\ modifica\ las\ coordenadas\ del\ personaje\ que\ \r\navanzar\u00E1\ la\ distancia\ (en\ unidades)\ especificada\ como\ par\u00E1metro.\ \r\n
+comment3.params=
+comment3.target=void\ girar()
+comment3.text=\r\n\ cambia\ la\ orientaci\u00F3n\ del\ personaje\ que\ siempre\ \r\n\ gira\ en\ sentido\ horario\:\ N\ ?\ E,\ S\ ?\ O,\ E\ ?\ S,\ O\ ?\ N\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

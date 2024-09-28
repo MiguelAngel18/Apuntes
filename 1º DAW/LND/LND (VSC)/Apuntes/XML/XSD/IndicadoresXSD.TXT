@@ -1,0 +1,67 @@
+
+|Indicadores| ---> Hay siete indicadores:
+
+
+Indicadores de pedido: se utilizan para definir el orden de los elementos.
+
+    - All: especifica que los elementos secundarios pueden aparecer en cualquier orden y que cada elemento secundario debe aparecer solo una vez.
+
+    Ejem:     
+    
+        <xs:all>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+        </xs:all>
+
+
+    - Choice: especifica que puede aparecer un elemento secundario u otro.
+
+    Ejem:     
+    
+        <xs:choice>
+            <xs:element name="employee" type="employee"/>
+            <xs:element name="member" type="member"/>
+        </xs:choice>
+
+
+    - Sequence: especifica que los elementos secundarios deben aparecer en un orden específico.
+
+    Ejem:     
+    
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+        </xs:sequence>
+____________________________________________________________________________________________________________________________________________________
+
+
+Indicadores de ocurrencia: se utilizan para definir la frecuencia con la que puede ocurrir un elemento.
+
+    - maxOccurs: especifica el número máximo de veces que puede aparecer un elemento.
+
+    Ejem: <xs:element name="child_name" type="xs:string" maxOccurs="10"/>
+                                                        <--------->
+
+
+    - minOccurs: especifica el número mínimo de veces que puede aparecer un elemento.
+    Para permitir que un elemento aparezca un número ilimitado de veces, use maxOccurs="unbounded" (o no poner nada, supongo).
+
+    Ejem: <xs:element name="child_name" type="xs:string" maxOccurs="10" minOccurs="0"/>
+                                                                       <--------->
+____________________________________________________________________________________________________________________________________________________
+
+
+
+Indicadores del grupo: se utilizan para definir conjuntos de elementos relacionados.
+
+    - Group name: debe definir un elemento all, choice o sequence, con uno o más element dentro, dentro del grupo declarado.
+
+    Ejem: <xs:group name="groupname"> | groupname= Nombre del grupo de elementos a introducir.
+
+
+    - attributeGroup name: define un grupo de atributos.
+
+    Ejem: <xs:attributeGroup name="groupname"> | groupname= Nombre del grupo de tributos a introducir.
+____________________________________________________________________________________________________________________________________________________
+
+

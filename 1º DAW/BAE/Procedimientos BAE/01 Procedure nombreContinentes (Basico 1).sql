@@ -1,0 +1,10 @@
+USE world;
+DROP PROCEDURE IF EXISTS nombreContinentes;
+DELIMITER $$
+CREATE PROCEDURE nombreContinentes()
+BEGIN
+	SELECT DISTINCT CONTINENT FROM COUNTRY;
+END$$
+DELIMITER ;
+
+CALL nombreContinentes();

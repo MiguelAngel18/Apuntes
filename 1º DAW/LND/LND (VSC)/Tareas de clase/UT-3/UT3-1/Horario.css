@@ -1,0 +1,249 @@
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+header 
+{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.contenedor 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contenido 
+{
+    display: flex;
+    flex: 1;
+}
+
+h2
+{
+    text-align:center;
+    width: 100%;
+    height: 1vh;
+}
+
+.ladoIzquierdo 
+{
+    background-color: lightgray;
+    width: 80%;
+    padding: 20px;
+}
+
+
+table
+{
+    
+    border: 0px;
+    border-color: black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+th:nth-child(1) 
+{
+    background-color: lightpink;
+}
+
+
+
+tr:nth-child(1) 
+{
+    background-color: lightpink;
+}
+
+
+td:nth-child(1) 
+{
+    background-color: black;
+}
+
+
+tr:nth-child(4) 
+{
+    background-color: yellow;
+    line-height: center;
+    border-color: black;
+    text-align: center;
+    
+}
+
+img
+{
+    width: 100px;
+    height: 100px;
+}
+
+label
+{
+    line-height: center; 
+}
+
+input
+{
+    text-align: center;
+}
+
+
+.ladoDerecho 
+{
+    background-color: darkgray;
+    flex: 1;
+    padding: 20px 40px;
+}
+
+
+.ladoDerecho ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+
+.ladoDerecho ul li
+{
+    margin-bottom: 20px;
+}
+
+
+/*
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+header 
+{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.contenedor 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contenido 
+{
+    display: flex;
+    flex: 1;
+}
+
+h2
+{
+    text-align:center;
+    width: 100%;
+    height: 1vh;
+}
+
+.ladoIzquierdo 
+{
+    background-color: lightgray;
+    width: 80%;
+    padding: 20px;
+}
+
+
+table
+{
+    
+    border: 0px;
+    border-color: black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+th:nth-child(1) 
+{
+    background-color: lightpink;
+}
+
+
+
+tr:nth-child(1) 
+{
+    background-color: lightpink;
+}
+
+
+td:nth-child(1) 
+{
+    background-color: black;
+}
+
+
+tr:nth-child(4) 
+{
+    background-color: yellow;
+    line-height: center;
+    border-color: black;
+    text-align: center;
+    
+}
+
+img
+{
+    width: 100px;
+    height: 100px;
+}
+
+label
+{
+    line-height: center; 
+}
+
+input
+{
+    text-align: center;
+}
+
+
+.ladoDerecho 
+{
+    background-color: darkgray;
+    flex: 1;
+    padding: 20px 40px;
+}
+
+
+.ladoDerecho ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+
+.ladoDerecho ul li
+{
+    margin-bottom: 20px;
+}
+
+
+*/

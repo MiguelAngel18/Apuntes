@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DTD-->
+<!DOCTYPE curso [
+    <!ELEMENT curso (alumno+)> <!--Se crea el elemento curso y se expecifica que tendrá más de un alumno-->
+    <!ATTLIST curso aula CDATA > <!--Se crea un atributo y se especifica dentro tanto el nombre del elemento al que pertenece como su propio nombre -->
+    <!ELEMENT alumno (nombre+,carrera?,matrícula1*,(matricula1 | matrícula2))>
+
+    <!-- , (coma): significa que el elemento contiene los elementos en el orden indicado.
+                                                                                   
+         | (o lógico): significa que el elemento contiene uno de los dos elementos.
+          
+         Nada: significa que el elemento puede aparecer sólo una vez.
+
+         ?: significa que el elemento puede aparecer o no, pero sólo una vez.
+
+         *: significa que el elemento puede no aparecer o aparecer una o más veces.
+                                                                                 
+         +: significa que el elemento tiene que aparecer una o más veces (no puede no aparecer).
+        
+    -->
+
+    <!ATTLIST alumno id  CDATA>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT carrera (#PCDATA)>
+    <!ELEMENT matrícula1 (#PCDATA)>
+    <!ELEMENT matrícula2 (#PCDATA)>
+]>
+<curso aula="15" id="001"> 
+    <alumno> <!--Tag padre--> <!--Elemento raíz-->
+    <nombre>Rita</nombre>  <!--Tag hiijo-->
+    <carrera generación="2005">Medicina</carrera> <!--Tag hijo--><!--Dentro del tag existw el atributo "generación", que se refiere al año de estudio de la carrera-->
+    <matrícula1>123456789</matrícula1>
+    <matrícula2>1 2 3 4 5 6 7 8 9</matrícula2> <!--Tag hijo-->
+    <!--Los espacios sinsignificativos-->
+</alumno>
+
+<alumno aula="G103" id="002"> <!--Tag padre--> <!--Elemento raíz-->
+    <nombre>Miguel Ángel</nombre>  <!--Tag hiijo-->
+    <carrera generación="2005">Informática</carrera> <!--Tag hijo--><!--Dentro del tag existw el atributo "generación", que se refiere al año de estudio de la carrera-->
+    <matrícula1>987654321</matrícula1>
+    <matrícula2>9 8 7 6 5 4 3 2 1</matrícula2> <!--Tag hijo-->
+    <!--Los espacios sinsignificativos-->
+</alumno>
+</curso>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="products.xsl" type="text/xsl"?>
+<products>
+  <product>
+    <name>T-shirt</name>
+    <price>20</price>
+  </product>
+  <product>
+    <name>Pants</name>
+    <price>30</price>
+  </product>
+  <product>
+    <name>Shoes</name>
+    <price>50</price>
+  </product>
+</products>

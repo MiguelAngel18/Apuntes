@@ -1,0 +1,36 @@
+
+
+<?xml version="1.0"?>
+<!DOCTYPE mensaje [
+    <!ELEMENT mensaje (remitente,destinatario+,asunto?,texto?)> <!--Se crea el elemento y se expecifica que tendrá un remitente y uno o más destinatarios -->
+    <!ELEMENT remitente (nombre,email)>
+    <!ELEMENT destinatario (nombre,email)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT texto (parrafo*)>
+    <!ELEMENT parrafo (enfasis*)>
+    <!ELEMENT enfasis (#PCDATA)>
+]>
+
+<mensaje>
+    
+    <remitente>
+        <nombre>Alfredo Reino</nombre>
+        <email>alf@inium.com</email>
+    </remitente>
+
+    <destinatario>
+        <nombre>Bill Clinton</nombre>
+        <email>president@whitehuse.gov</email>
+    </destinatario>
+
+    <asunto>Hola Bill</asunto>
+    
+    <texto>
+        <parrafo>
+            ¿Hola qué tal? Hace <enfasis>mucho</enfasis> que no escribes.
+            A ver si llamas y quedamos para tomar algo.
+        </parrafo>
+    </texto>
+</mensaje>

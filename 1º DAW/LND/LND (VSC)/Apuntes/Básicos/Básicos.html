@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!--Html:5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del documento</title> <!--Esto es lo que se ve en el navegador, en la biñeta de la pestaña abierta-->
+    <link rel="stylesheet" src="style.css" type="text/css" href="">  <!--Así es como se vincula un documento .css al documento .html-->
+    <!--En href se introduce el nombre del documento .css , que ha de estar en la misma carpeta-->
+</head>
+<body> 
+
+    Estructura Básica de un Documento HTML:
+    <br>
+    <! DOCTYPE html ><br>
+    < html ><br>
+    < head >"<br>
+     < title >Título de la Página</ tltle ><br>
+    </ head ><br>
+    < body ><br>
+        Contenido de la página<br>
+    </ body >
+    </ html >
+
+    Elementos HTML Básicos:
+
+    • Encabezados: 
+    <h1>Títulos: "< h1 > </ h1 >" </h1>
+    <h2>Subtítulos:  "< h2 > </ h2 >" </h2>
+    <h3>Encabezados:  "< h3 > </ h3 >" </h3>
+    <h4>Tamaño normal: "< h4 > </ h4 >" </h4>
+    <h5>Tamaño un poco más pequeño de lo normal:  "< h5 > </ h5 >" </h5>
+    <h6>Letra pequeña al final de lo página: "< h6 > </ h6 >" </h6>
+   
+    •Separador:  "< br >"
+    <br>
+    •Letra en negrita: "< b > </ b > "   o   "< strong > </ strong >"
+    <br>
+    •Letra cursiva o cita:  "< cite > </ cite >"   <!--Con "e"-->
+    <br>
+    •Letra negra y cursiva: "< em > </ em >"
+    <br>
+    •Párrafos: "< p >"
+    <br>
+    •Subíndice y Superíndice: "< sub > </ sub >" y "< sub > </ sup >"
+    <br>
+    •Enlaces: < a href="https://www.w3schools.com">W3schools (tutoriales de Html y Css)> </ a >
+    <a href="https://www.w3schools.com">W3schools (tutoriales de Html y Css)></a>
+    <br>
+    •Imágenes: < img src="Imagen de WhatsApp 2023-09-10 a las 09.16.01.jpg" alt="Jo, la imagen no cargó" >"
+    <img src="Imagen de WhatsApp 2023-09-10 a las 09.16.01.jpg" alt="Jo, la imagen no cargó">
+    <br>
+
+    •Listas no ordenadas: "< ul > </ ul >" y "< li > </ li >". "ul" crea un punto a la izquierda del texto que está dentro de "li".  
+    <br>
+    •Listas ordenadas: "< ol > </ ol >" y "< li > </ li >". "ol" crea una serie de números de manera creciente a la izquierda del texto que está dentro de "li". 
+    <br>
+
+    •Tablas: Para crear una tabla rápidamente se puede hacer "tr(nº de filas)*td*(nº de columnas) // th (es para los encabezados)
+    <br>
+    <a href="https://youtube.com/shorts/HEmVe4kzoaQ?si=mIxqzQKQGpybQUyi">Tutorial rápido de como hacer una tabla></a>
+    <br>
+    "< table > </ table >": Da la forma de una tabla.
+    < table border="" >
+    <br>
+    "< tr > </ tr >":
+    <br>
+    "< th > </ th >":
+    <br>
+    "< td > </ td >":
+    <br>
+    •Formularios:
+    <a href="https://youtu.be/RXS3esRlNK4?si=8qC2Jd3BeK_pk5TQ">Tutorias formularios)></a>
+    <br>
+    • Espacio donde existirá el formulario.
+    < form action="/ruta-de-destino" method="POST"> </ form >
+    <br>
+    <form action="/ruta-de-destino" method="POST"> <!--Casi siempre usaremos POST, porque con GET los datos aparecerán en la URL, por lo que no es seguro-->
+    • Para crear un borde al formulario. 
+    < fieldset > </ fieldset >
+    <fieldset>
+    • Para poner un texto a la izquierda del espacio donde se introducirá el dato.
+    < label for="nombre" > Nombre: </ label >
+    <label for="nombre" > Nombre: </label>
+    <br>
+    • Para poner un texto de título y un borde al formulario.
+    <br>
+    • Para poner un texto dentro del espacio donde se introducirá el dato.
+    <br>
+    < input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" >
+    <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos">
+    <input type="text" id="correo" name="correo" placeholder="Ingrese su correo">
+    <br>
+    • Para poner una serie de opciones.
+    < input type="submit" value="Enviar" >
+    <input type="radio" name="gender" value="male" checked>Hombre<br>
+    <input type="radio" name="gender" value="male" checked>Mujer<br> <!--El name"gender" define que los tres son parte del mismo apartado -->
+    <input type="radio" name="gender" value="male" checked>Otros
+    <br>
+    • Para poner un botón al lado del espacio donde se introducirá el dato.
+    < input type="submit" value="Enviar" >
+    <button type="button">Botón</button> 
+    <input type="submit" value="Enviar">
+
+    <textarea style="width: auto"></textarea>
+    </fieldset>
+</form>
+    <br>
+
+    Atributos Comunes:
+    <br>
+    • target="_blank" : sirve para al momento de darle click al enlace se habra otra página en el navegador.
+    <br>
+    • href: Se introduce la URL de lo que se quiera enlazar.
+    <br>
+    • class y id: Identificadores para estilos y scripts.
+    <br>
+    • style: Estilos en línea.
+    <br>
+    • src: Fuente de recursos como imágenes o scripts.
+    <br>
+    • Diseño Responsivo:
+    <br>
+    • Utilización de medios (@media) para adaptar el diseño a diferentes dispositivos.
+    <br>
+    • Enlaces y Recursos:
+    <br>
+    • Enlaces relativos y absolutos.
+    <br>
+    • Inclusión de estilos y scripts externos.
+
+
+   Poner los div y ver tutoriales de contenedores.
+
+   Crear el archivo de estilos.css 
+
+
+
+
+
+
+</body>
+</html>

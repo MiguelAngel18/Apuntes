@@ -1,0 +1,158 @@
+Contenido Examen Tema 7:
+
+- Herencia: Una clase solo puede heredar de una única clase.
+
+- Poliformismo
+
+- Interfaces: Un interfaz Java es la especificación de un tipo, nombre del tipo y conjunto de métodos, que
+no define ninguna implementación para los métodos.
+
+    Ejemplo:
+
+        public interface Portable
+        {
+            public void cargarBateria();
+            public void funcionarConBateria(); 
+        }
+
+
+- Clases abstractas:
+
+    - No se pueden crear instancias
+    - Sólo las clases abstractas pueden contener métodos abstractos
+    - Las clases abstractas con métodos abstractos fuerzan a las subclases a redefinir e
+      implementar los métodos declarados como abstractos
+    - Una clase abstracta se puede utilizar como tipo aunque no se instancie
+    - Pueden contener atributos y métodos no abstractos
+    - Si tienen métodos estáticos pueden ser
+      invocados.
+
+
+- Métodos abstractos:
+
+    - Un método abstracto no puede ser definido como final porque ha de ser
+      redefinido
+
+
+- Casting: Para poder efectuar la asignación (para que el compilador no emita error) hay que realizar un
+casting y eso sólo si sabemos seguro que la publicación p en ejecución es una revista. Si no es
+así en ejecución se lanza la excepción ClassCastException.
+
+    Ejemplo: Punto p = (Punto) obj;
+
+
+- Redefinación de métodos (Override): Consiste en modificar los valores que admiten los métodos tales como equals o compareTo.
+
+- Tipo estático: una variable  del tipo declarado en la sentencia de declaración de dicha
+variable. Es su tipo en tiempo de compilación.
+
+Articulo art; // es de tipo estático
+
+- El tipo dinámico es una variable es el tipo real del objeto al que referencia la variable en
+ejecución. Es su tipo en tiempo de ejecución.
+
+Articulo art = new CD(); // es de tipo dinámico, apunta a un objeto CD
+
+    Ejemplo de esto:
+
+    private ArrayList<Articulo> articulos;
+    
+    public void listar()
+    {
+        for (Articulo a: articulos)
+        {
+            a.print();
+            System.out.println();
+        }
+    }
+
+
+- Instanceof: El operador instanceof verifica si un objeto dado es, directa o indirectamente, una instancia
+de una clase dada. Comprueba si el objeto es de una clase o de sus derivadas.
+
+
+- Interfaces Comparable y Comparator:
+
+
+    - Comparable: Este interface define un único método que compara el objeto receptor con el que recibe como
+      parámetro y devuelve un entero. De aquí sale el compareTo.
+
+      La interfaz Comparable dice si el valor introducido es mayor, igual o menos al otro objeto con el que hemos implementado el método. (Solo esos dos)
+
+        private int objeto1;
+        private int bojeto2;
+
+        objeto1.compareTo(objeto2);
+
+
+    Ejemplo:
+
+    public class Coche implements Comparable<Coche>
+    {
+        private int velocidad;
+
+        public int compareTo(Coche otro)
+        {
+
+            if (this.velocidad == otro.getVelocidad())
+                return 0;
+
+            if (this.velocidad < otro.getVelocidad())
+                return -1;
+
+            return 1;
+        }
+    }
+
+
+
+- Interface Comparator  => compare
+
+Es posible ordenar un conjunto de objetos (en una colección, o un array, ...) que no
+implementen el interface Comparable o por algún otro criterio de ordenación además del que
+indique el método compareTo() de Comparable.
+
+    El interface Comparator consiste en un único método:
+
+    import java.util.Comparator;
+    
+    public class ComparadorCoches implements Comparator<Coche>
+    {
+        private int velocidad;
+
+        public int compareTo(Coche c1, Coche c2)
+        {
+            if (c1.getVelocidad() < c2.getVelocidad())
+                return -1;
+            
+            if (c1.getVelocidad() == c2.getVelocidad())
+                return 0;
+            
+            return 1;
+        }
+    }
+
+    List<Coche> lista = new ArrayList<Coche>();
+0    Collections.sort(lista, new ComparadorCoches())
+
+
+El método compara los dos tipos de ordenación (por nombre, por apellidos) devolviendo un resultado:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+A1A1A1@Agua de Firgas@0.5@1230
+A1B222@Pan de Molde@1.23@32
+PL4Z76@Galletas bandama@2.25@54
+23121@Bizcochos de Moya@3.55@10
+G12T345@Chocolatinas Tirma@4.33@244
+B2C343@Chorizo de Teror@2.23@10
+A1A1A1@Agua de Teror@0.55f@345
+A2A2A2@Turron de Teror@3.55@10
+121212C@Clipper Fresa@2.78@55

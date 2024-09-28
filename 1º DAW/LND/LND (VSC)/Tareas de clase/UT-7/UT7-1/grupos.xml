@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grupos>
+	<grupo id="1">
+		<alumno>
+			<nombre>Juan</nombre>
+			<apellido>Hidalgo</apellido>
+		</alumno>
+		<alumno>
+			<nombre>Ana</nombre>
+			<apellido>Chen</apellido>
+		</alumno>
+		<alumno>
+			<nombre>Diego</nombre>
+			<apellido>Silgueiro</apellido>
+		</alumno>
+	</grupo>
+	<grupo id="2">
+		<alumno>
+			<nombre>Esmir</nombre>
+			<apellido>Acosta</apellido>
+		</alumno>
+		<alumno>
+			<nombre>Jesus</nombre>
+			<apellido>Carrasco</apellido>
+		</alumno>
+	</grupo>
+	<grupo id="3">
+		<alumno>
+			<nombre>Juana</nombre>
+			<apellido>Valdes</apellido>
+		</alumno>
+		<alumno>
+			<nombre>Regina</nombre>
+			<apellido>Do Santos</apellido>
+		</alumno>
+		<repetidores>
+			<alumno>
+				<nombre>Eva</nombre>
+				<apellido>Morales</apellido>
+			</alumno>
+		</repetidores>
+	</grupo>
+</grupos>

@@ -1,0 +1,66 @@
+*  /*Controla todo el documento CSS, superponiéndose a todo lo demás*/
+{
+    margin: 10px;  /*Controla el margen de todos los contenedores*/
+    padding: 0px;  /*Controla el margen interior de todos los contenedores*/
+    
+}
+
+
+header 
+{
+    background-color: black; /*Controla el color del fondo del contenedor*/
+    color: white;  /*Controla el color del texto dentro del contenedor*/
+    height: auto;  /*Controla la altura del contenedor*/
+    width: auto;   /*Controla la anchura del contenedor*/
+    text-align: center; /*Coloca el texto que se encuentre dentro del contenedor en su centro*/
+    line-height: 100px;
+    
+    /*Arriba,abajo,izquierda,derecha*/
+    border-top : 3px solid red; /*Coloca un borde del color asignado en la parte superior del contenedor*/
+    border-bottom : 3px solid yellow; /*Coloca un borde del color asignado en la parte inferior del contenedor*/
+    border-left : 3px solid blue; /*Coloca un borde del color asignado en la parte izquierda del contenedor*/
+    border-right : 3px solid green; /*Coloca un borde del color asignado en la parte derecha del contenedor*/
+}
+
+
+body
+{
+    background-color: lightgrey;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.contenedor
+{
+    width:70%;
+    margin: 0px;
+    border: 20px solid black;
+}
+
+
+nav 
+{
+    background-color: whitesmoke;
+    height: auto;
+    border: 2px solid black;
+}
+
+
+nav .ul .li
+{
+    
+    list-style: none;
+    margin: 10px;
+    float: b;
+}    
+
+
+.article
+{
+
+}
+
+.clearfix
+{
+    clear: both;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DTD-->
+<!DOCTYPE lista [
+    <!ELEMENT lista (tarea+)>
+    <!ATTLIST lista id CDATA #REQUIRED>
+    <!ELEMENT tarea (titulo+,descripcion*,fecha_vencimiento?)>
+    <!ATTLIST tarea id CDATA #REQUIRED>
+    <!ATTLIST tarea img CDATA >
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT decripcion (#PCDATA)>
+    <!ELEMENT fecha_vencimiento (#PCDATA)>
+]>
+
+<lista id="abc">
+
+    <tarea id="01" img="FlorkProgramador.png">
+
+        <titulo>Titulo</titulo>
+        <decripcion>descripcion</decripcion>
+        <fecha_vencimiento>DD/MM/YYYY</fecha_vencimiento>
+
+    </tarea>
+
+    <tarea id="02" img="FlorkProgramador.png">
+
+        <titulo>Titulo</titulo>
+        <decripcion>descripcion</decripcion>
+
+    </tarea>
+
+    <tarea id="03" img="FlorkProgramador.png">
+
+        <titulo>Titulo</titulo>
+        <fecha_vencimiento>DD/MM/YYYY</fecha_vencimiento>
+
+    </tarea>
+
+</lista>

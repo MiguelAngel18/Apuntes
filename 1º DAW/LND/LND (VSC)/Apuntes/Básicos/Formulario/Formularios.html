@@ -1,0 +1,125 @@
+Formularios:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Tutorial:
+    <a target="_blank" href="https://youtu.be/RXS3esRlNK4?si=8qC2Jd3BeK_pk5TQ">Tutorias formularios</a>
+    <br>
+    
+    Formulario: <form> </form> Espacio donde existirá el formulario.
+    
+    <form action="/ruta-de-destino" method="POST"></form> <!--Casi siempre usaremos POST, porque con GET los datos aparecerán en la URL, por lo que no es seguro-->
+
+    • Para crear un borde al formulario: <fieldset> </fieldset>    
+
+    <br>
+
+   
+
+    Imput's:
+
+    <br>
+
+    type="text" Admite todo tipo de texto.
+    type="email" Solo admite formatos de correo electrónico.
+    type="password" El texto no será visible mientras se escriba.
+    type="radio" Para respuestas múltiples
+    id="" Para darle un identificador
+    name="" Para introducirle un nombre a la variable con el que se gusrdará el dato.
+    placeholder="" Para poner un texto a la izquierda del espacio espacio de texto.   
+   
+    <br>
+
+        <input type="text">
+        <input type="text" id="nombre" name="name">
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos">
+        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo">
+        <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
+
+        • Para poner una serie de opciones:
+        <input type="radio" name="gender" value="male" checked>Hombre<br>
+        <input type="radio" name="gender" value="male" checked>Mujer<br> <!--El name"gender" define que los tres son parte del mismo apartado -->
+        <input type="radio" name="gender" value="male" checked>Otros
+
+    <br>
+
+    <label></label> Para poner un texto a la izquierda del espacio de texto.
+    for="" para vincular este label con el id de un input 
+    
+    <br> 
+    
+    <label for="nombre"> Nombre: </label >
+    
+    <br>
+    
+    <select></select> Para crear un espacio con diferentes respuestas.
+    <opcion></opcion> Para crear nuevas opciones entre las que elegir.
+    <select id="color" name="color">
+    
+    <select>  
+
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+
+    </select>
+    
+    <br>
+
+    <textarea></textarea> Para introducir un area de texto que 
+    <textarea style="width: auto" name="Texto inicial"></textarea>
+    style="" Para introducir un estilo y tamaño predefinido al área de texto.
+
+    <br>
+
+    <button></button> Para poner un botón al lado del espacio de texto.
+    
+    <br>
+
+    <button type="button">Botón</button>
+
+
+    <input type="submit" value="Enviar">
+    <button type="submit">Botón</button>
+
+      
+    
+    <datalist></datalist> Para introducir una lista.
+    <input list="colores">
+    
+    <datalist id="colores">
+        <option>Rojo</option>
+        <option>Verde</option>
+        <option>Azul</option>
+        <option>Negro</option>
+    </datalist>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

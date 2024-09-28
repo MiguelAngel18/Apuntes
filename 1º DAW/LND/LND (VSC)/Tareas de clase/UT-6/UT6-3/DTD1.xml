@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DTD-->
+<!DOCTYPE BDcomponentes [
+
+    <!ELEMENT BDcomponentes (componente)+>
+
+    <!ELEMENT componente (nombre, (precio|precioIgic), tipo+, peso)>
+
+    <!ELEMENT nombre (#PCDATA)>
+
+    <!ELEMENT precio (#PCDATA)>
+
+    <!ELEMENT precioIgic (#PCDATA)>
+
+    <!ELEMENT tipo (#PCDATA)>
+
+    <!ELEMENT peso (#PCDATA)>
+
+]>
+
+<BDcomponentes> 
+    
+    <componente>
+    
+        <nombre>Nombre</nombre>
+        <precio>Precio</precio>
+        <tipo>Tipo</tipo>
+        <peso>Peso</peso>
+    
+    </componente>
+
+    <componente>
+    
+        <nombre>Nombre</nombre>
+        <precioIgic>precioIgic</precioIgic>
+        <tipo>Tipo1</tipo>
+        <tipo>Tipo2</tipo>
+        <peso>Peso</peso>
+    
+    </componente>
+
+    <componente>
+    
+        <nombre>Nombre</nombre>
+        <precio>Precio</precio>
+        <tipo>Tipo</tipo>
+        <peso>Peso</peso>
+    
+    </componente>
+
+</BDcomponentes>

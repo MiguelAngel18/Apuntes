@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0">
+<rss>
+
+    <channel>
+
+	    <title>Proyecto RSS</title>
+	    <link href="C:/Users/Miguel Ángel/OneDrive/Documentos/IES El Rincón/LND/LND (VSC)/Z Proyecto/Proyecto.html"></link>
+	    <description>Primer RSS</description>
+	    
+        <item>
+
+		    <title>Primer Item</title>
+		    <link href="C:\Users\Miguel Ángel\OneDrive\Documentos\IES El Rincón\LND\LND (VSC)\Z Proyecto\Proyecto.html"></link>
+			<description> Primera Descrición</description>
+
+		</item>
+
+		<item>
+
+		    <title>Segundo Item</title>
+		    <link href="C:\Users\Miguel Ángel\OneDrive\Documentos\IES El Rincón\LND\LND (VSC)\Z Proyecto\Proyecto.html"></link>
+			<description>Descrición</description>
+
+
+		</item>
+
+		<item>
+
+		    <title>Tercer Item</title>
+		    <link href="C:\Users\Miguel Ángel\OneDrive\Documentos\IES El Rincón\LND\LND (VSC)\Z Proyecto\Proyecto.html"></link>
+			<description>Descrición</description>
+
+		</item>
+
+    </channel>
+
+</rss>

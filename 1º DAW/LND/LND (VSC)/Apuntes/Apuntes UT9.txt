@@ -1,0 +1,18 @@
+Manejo de ficheros:
+
+Escritura de ficheros:
+
+- FileWriter(nombreFichero)  |  FileWriter(nombreFichero, true):
+
+Crea un nuevo fichero, introduciendo un String como nombre
+
+- BufferedWriter()
+
+
+Constructor:
+
+    public sumadorEnterosScanner(String fichero) throws FileNotFoundException 
+    {
+        BufferedReader linea = new BufferedReader(new FileReader(fichero));
+    }
+    

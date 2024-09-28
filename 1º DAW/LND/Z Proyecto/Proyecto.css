@@ -1,0 +1,1035 @@
+*
+{
+    box-sizing: border-box;
+    text-decoration: none; /* Elimina el subrayado predefinido de los enlaces */
+}
+
+body
+{
+    margin: 0; /* Elimina el margen de los contenedores*/
+    padding: 0; /* Elimina el relleno de los contenedores*/
+    font-family: 'Times New Roman', Times, serif; /* Le da un estilo a los textos */
+    height: 100%;
+    width: 100%;
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+
+/* Modificaciones de la barra lateral */
+
+body::-webkit-scrollbar 
+{
+    width: 18px; /* Tamaño de la barra lateral */
+}
+  
+body::-webkit-scrollbar-track 
+{
+    background: black; /* Color tras la barra lateral */
+}
+
+body::-webkit-scrollbar-thumb 
+{
+    background-color: white; /* Color de la barra lateral */
+    border: 4px solid black; /* Color del borde la barra lateral */
+}
+
+
+
+
+#menu /* Características del menú */
+{
+    color:white; /* Color del texto del menú */
+    background-color: black; /* Color del fondo del menú */
+    width: 100%; /* Ancho de la página */
+    position: fixed; /* Elemento que mantendrá el menú fijo en la parte superior de la página */ 
+    z-index: 1000; /* Elemento que mantinene al menú por encima de todo lo demás */
+}
+
+.logo img /* Características del logotipo que aparece en la parte izquierda del menú */
+{
+    min-width: 100px; /* Tamaño mínimo del logotipo */
+    max-width: 100px; /* Tamaño máximo del logotipo */
+    padding: 20px 20px; /* Añade un relleno de 20 pixeles a la izquierda y derecha*/
+    border-radius: 30px; /* Elemento que redondea los bordes de la imagen */
+}
+
+.submenu /* Características del submenú */
+{
+    opacity: 0.8; /* Vuelve el submenú semitransparente */
+    display:none; /* Este elemento oculta el submenú de manera predeterminada */
+}
+
+nav /* Color del cursor en el menú */
+{
+    cursor: url(img/cursor-blanco.png), auto;
+}
+
+nav a /* Características de los enlaces del menú */
+{
+    cursor: url(img/cursor-blanco.png), auto; /* Color del cursor sobre los*/
+
+    color:white; /* Color de los enlaces del menú */
+    text-decoration: none; /* Elimina el subrayado predefinido de los enlaces */
+    display:block; /* Los enlaces se comportarán como bloques y no como inline text */
+    padding: 20px 25px; /* Para que se distancien los enlaces*/
+    border-radius: 2px; /* Elemento que redondea los bordes de los enlaces */
+}
+
+nav a:active
+{
+    color: black;
+    background-color: black;
+}
+
+label,input
+{
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+nav a:hover, label:hover /* Características de los enlaces del menú, mientras está el cursor encima. Alterna los colores de los enlaces */
+{
+    color:black; /* Color de los enlaces del menú tras el hover*/
+    background-color: white;  /* Color del fondo del menú tras el hover*/
+}
+
+
+
+
+/* Elementos del HTML para la distribución para teléfonos y pantallas pequeñas */
+.telefonos 
+{
+    display:none; /* Oculta esta barra en función del tamaño de la pantalla */
+}
+
+.telefonos .header
+{
+    display:flex; /* Elemento flexible */
+    justify-content:space-between; /* Divide y alinea el contenido del navegador de forma horizontal */
+}
+
+.telefonos .header .mas button
+{
+    border: 2px solid black;
+    border-radius: 5px; /* Logo con el borde redondeado */
+    background-color: white;
+    margin: 30px 20px;
+    padding: 10px 20px;
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+
+
+
+/* Elementos del HTML para la distribución para ordenadores y pantallas grandes */
+.ordenadores
+{
+    display:flex;
+    justify-content:space-between; /* Divide y alinea el contenido del navegador de forma horizontal */
+    align-items: center; /* Alinea el contenido del navegador de forma vertical */
+}
+
+.principales, .secundarios
+{
+    display: flex; /* Vuelve elementos flexible los enlaces principales y secundarios del menú */
+}
+
+.secundarios_mas
+{
+    display: none; /* Oculta los enlaces secundarios del submenú para las pantallas medianas y grandes */
+}
+
+
+.submenu #servicios
+{
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+#i_maletin
+{
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+
+.submenu #contactanos
+{
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+#i_telefono
+{
+    padding-left: 2px;
+}
+
+.submenu #i_formulario
+{
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 824px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .logo img
+    {
+        min-width: 100px; /* Da un nuevo mínimo para el tamaño del logo */
+    }
+
+    .secundarios
+    {
+       display: none; /* Oculta los enlaces secundarios cuando la pantalla deja de superar el máximo introducido. Se verán los enlaces principales y el apartado "Más" */
+    }
+
+    .secundarios_mas
+    {
+       display: block !important; /* Hace que los elementos del apartado "Más" se comporten como bloques */
+       
+    }
+
+    .secundarios_mas .submenu
+    {
+        position: absolute; /* Mantendrá una posición absoluta con respecto al resto del navegador */
+        background-color: black; /* Color del fondo del apartado de Más */
+        display: none; /* Oculta este apartado cuando la pantalla deja de superar el máximo introducido. Solo */
+        width: 150px;
+        right: 0;
+        border: 20px solid black;
+    }
+
+    .secundarios_mas:hover > .submenu
+    {
+       display: block; /* Hace que los elementos del apartado "Más" se comporten como bloques */
+       margin: 0;
+       padding: 0;
+    }
+
+
+    #parrafo1-texto1,#parrafo1-texto2
+    {
+        margin-bottom: 15 0px;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .img1
+    {
+        margin-top: 125px;
+    }
+}
+
+
+@media screen and (max-width: 538px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .ordenadores
+    {
+        display: none;
+    }
+
+    .telefonos
+    {
+        display: block;
+    }
+
+    .telefonos .submenu
+    {
+        position: absolute; /* Mantendrá una posición absoluta con respecto al resto del navegador */
+        background-color: black; /* Color del fondo del apartado de Más */
+        display: none; /* Oculta este apartado cuando la pantalla deja de superar el máximo introducido. Solo */
+        width: 156px;
+        right: 0;
+        border: 20px solid black;
+    }
+
+    .secundarios_mas
+    {
+       display: block; /* Hace que los elementos del apartado "Más" se comporten como bloques */
+    }
+
+    .mas:hover > .submenu
+    {
+       display: block; /* Hace que los elementos del apartado "Más" se comporten como bloques */
+       margin: 0;
+       padding: 0;
+    }
+    
+    .ola
+    {
+        height: 50px;
+    }
+
+    .Florks
+    {
+        display:none;
+        flex-wrap: wrap;
+        margin: 3 5% 35%;
+        justify-content: space-evenly;
+    }
+
+    #img2
+    {
+        margin-top: -50px;
+        margin-left: 125px;
+    }
+
+    .Florks .on
+    {
+        border:5px solid black;
+    }
+}
+
+.Florks:hover
+{
+
+    .on
+    {
+        display: inline-flex;
+    }
+
+    .on:hover
+    {
+        opacity: 0.8;       
+    }
+    #formulario
+    {
+        height: 1000px;
+        width: 250px;
+        margin: 0%;
+    }
+}
+
+#contenido
+{
+    position: absolute;
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+.cuerpo
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+section .cabecera
+{
+    height: 250px;
+    width: 100%;
+    border-bottom: 5px solid black;
+    min-width: 784px;
+}
+
+.ola
+{
+    height: 125px;
+    overflow: hidden;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+}
+
+#contenido .cabecera h1#title
+{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    text-align: center;
+    justify-content: center;
+
+    font-size: 15em;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 175px;
+    padding: 0;
+    z-index: 100;
+}
+
+
+@media screen and (max-width: 824px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #contenido
+{
+    position: absolute;
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+#contenido .cabecera h1#title
+{
+    text-align: center;
+    justify-content: center;
+
+    font-size: 7em;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+}
+
+@media screen and (max-width: 700px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #contenido
+    {
+        position: absolute;
+        margin-top: 130px;
+        height: 100%;
+        width: 100%;
+        cursor: url(img/cursor-negro.png), auto;
+    }
+
+    section .cabecera
+    {
+        height: 210px;
+        width: 100%;
+        border-bottom: 5px solid black;
+    }
+
+    #contenido .cabecera h1#title
+    {
+        text-align: center;
+        justify-content: center;
+
+        font-size: 6em;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+    }
+
+    .img1
+    {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+
+    #contenido
+    {
+        position: absolute;
+        margin-top: 150px;
+        height: 100%;
+        width: 100%;
+        cursor: url(img/cursor-negro.png), auto;
+    }
+
+    #parrafo1-texto2
+    {
+        margin-bottom: 15 0px;
+        justify-content: left;
+        text-align: left;
+    }
+     
+    section .cabecera
+    {
+        height: 195px;
+        width: 100%;
+        border-bottom: 5px solid black;
+    }
+
+    #contenido .cabecera h1#title
+    {
+        text-align: center;
+        justify-content: center;
+
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 495px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #contenido
+{
+    position: absolute;
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
+    cursor: url(img/cursor-negro.png), auto;
+}
+
+section .cabecera
+{
+    height: 150px;
+    width: 100%;
+    border-bottom: 5px solid black;
+}
+
+
+#contenido .cabecera h1#title
+{
+    text-align: center;
+    justify-content: center;
+
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+
+
+}
+
+.cuerpo h1
+{
+    font-size: 3em;
+    margin: 0;
+
+}
+
+.cuerpo h4
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+}
+
+.cuerpo1 h1
+{
+    padding-top: 50px;
+}
+
+.title
+{
+    margin-top: 25px;
+    height: 50px;
+    width: 100%;
+}
+
+
+.parte2
+{
+    flex-direction: column;
+}
+
+.title1
+{
+    height: 100px;
+    width: 750px;
+}
+
+
+.parrafo1Eimg
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+}
+
+.parrafo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+
+.parrafo-florks
+{
+    margin-top: 75px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.img1, .img2
+{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+#img2
+{
+    margin-top: 0;
+}
+
+@media screen and (max-width: 782px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #img1
+    {
+        display:none;
+    }
+}
+
+@media screen and (min-width: 782px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #img2
+    {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 769px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .img1
+    {
+        margin-top: 100px;
+    }
+
+    .cabecera
+    {
+        margin: 0%;
+        padding: 0%;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+/* Animacion prueba */
+
+
+#a
+{
+    background-color: white;
+}
+
+#b
+{
+    background-color: #0083c9;
+}
+
+#c
+{
+    background-color: #ffcc01;
+}
+
+#d
+{
+    display: none;
+}   
+
+
+#a,#b,#c,#d
+{
+    box-shadow: rgb(0, 0, 0) 0px 60px 70px 5px;
+
+}
+
+@media screen and (min-width: 1440px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .Florks
+    {
+        padding: 0px 0px;
+        border: 5px solid black;
+        display: inline-flex;
+    }
+}
+
+@media screen and (min-width:1041px) and (max-width: 1057px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+
+    .Florks
+    {
+        padding: 0px 0px;
+        display:flexbox;
+        flex-direction: row;
+    }
+
+    .Florks .on
+    {
+        border:5px solid black;
+    }
+
+    #a
+    {
+        background-color: red;
+    }
+
+    #b
+    {
+        background-color: yellow;
+    }
+    
+    #c
+    {
+        background-color: green;
+    }
+
+    #d
+    {
+        display: inline-block;
+        background-color: rgb(3, 3, 255);
+    }
+}
+
+@media screen and (min-width:1041px) and (max-width: 1062px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .Florks
+    {
+        #a,#b,#c,#d
+        {
+            height: 350px;
+            width: 334px;
+            border: 5px solid black;
+        }
+    }
+}
+
+@media screen and (min-width:1063px) and (max-width: 1439px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .Florks
+    {
+        padding: 0px 0px;
+        display:content;
+        margin-top: 5%;
+        margin-left: 4%;
+    }
+
+    .Florks .on
+    {
+        border:5px solid black;
+    }
+
+    #a
+    {
+        background-color: red;
+    }
+
+    #b
+    {
+        background-color: yellow;
+    }
+    
+    #c
+    {
+        background-color: green;
+    }
+
+    #d
+    {
+        display: inline-block;
+        background-color: rgb(3, 3, 255);
+    }
+}
+
+@media screen and (min-width: 1007px) and (max-width: 1040px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .Florks
+    {
+        display:flex;
+        flex-wrap: wrap;
+        margin: 3 5% 35%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1006px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .Florks
+    {
+        display:flex;
+        flex-wrap: wrap;
+        margin-top: 10%;
+        justify-content: space-evenly;
+    }
+
+    .Florks .on
+    {
+        border:5px solid black;
+    }
+}
+
+.florks
+{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.Portafolio
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 5px solid white;
+}
+
+#columnas
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 1em;
+    text-align: center;
+    width: 100%;
+    padding: 10px 5px;
+    
+  }
+
+.img_portafolio
+{
+    border-radius: 1em;
+    height: 150px;
+    width: 150px;
+    border: solid black 10px;
+    margin: 2% 5%;
+}
+
+#fotoF
+{
+    height: 150px;
+    width: 200px;
+}
+
+#title_form, h1.titleP
+{
+    font-size: 5em;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#formulario
+{
+    color:black;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    border: 5px solid black;
+    margin: 0% 20%;
+    height: 1000px;
+    background-image: url("img/flork-confusio.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+
+    box-shadow: rgb(0, 0, 0) 0px 70px 90px 0px;
+}
+
+@media screen and (max-width: 1102px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #formulario
+    {
+        margin: 0% 10%;
+    }
+}
+
+@media screen and (max-width: 782px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #formulario
+    {
+        margin: 0;
+        margin-left: 5%;
+
+        background-image: url("img/flork-confusio.png");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: 500px;
+        background-position-y: center;
+    }
+}
+
+@media screen and (max-width: 590px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #formulario
+    {
+        background-size: 450px;
+    }
+}
+
+@media screen and (max-width: 530px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    #formulario
+    {
+        background-size: 400px;
+    }
+}
+
+#EmailComntarios
+{
+    text-align: center;
+}
+
+#email
+{
+    align-items: center;
+    min-width: 190px;
+    max-width: 300px;
+    text-align: center;
+}
+
+#coment
+{
+    min-width: 190px;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Footer: Pie de página con mis redes sociales */
+#pieDePagina
+{
+    margin-top: 150px;
+    position: absolute;
+    border-bottom: 5px solid black;
+    color:white; /* Color de las letras del menú */
+    background-color: black; /* Color del fondo del menú */
+    width: 100%; /* Garantiza que el footer ocupará todo el ancho de la página */
+}
+
+#pieDePagina .redes
+{
+    border-right: 5px solid gray;
+}
+
+.footerEnlaces
+{
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.footerEnlaces h3
+{
+    font-size: 2em;
+    margin: 25px 0px;
+}
+
+footer ul 
+{
+    list-style-type: none; /* Elimina burbujas de las listas desordenadas */
+}
+
+footer ul li 
+{
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+
+footer ul li i 
+{
+    margin-right: 13px;
+}
+
+footer ul a 
+{
+    color: white;
+}
+
+.footer-text
+{
+    padding-top: 3px;
+    padding-bottom: 4px;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.iconos
+{
+    cursor: url(img/cursor-blanco.png), auto;
+
+    color:white; /* Color de los enlaces del menú */
+    text-decoration: none; /* Elimina el subrayado predefinido de los enlaces */
+    display:block; /* Los enlaces se comportarán como bloques y no como inline text */
+    padding: 20px 25px; /* Para que se distancien los enlaces*/
+    height: 30px;
+    width: 30px;
+}
+
+#facebook
+{
+    display: flex;
+    justify-content: left;
+}
+
+#instagram
+{
+    display: flex;
+    justify-content: left;
+}
+
+#twitter
+{
+    display: flex;
+    justify-content: left;
+}
+
+#whatsapp
+{
+    display: flex;
+    justify-content: left;
+}
+
+@media screen and (max-width: 1002px) /* Modifoca los valores de los elemetos cuando la pantalla deja de superar el máximo introducido */
+{
+    .parrafo1Eimg
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .parrafo1
+    {
+        height: 500px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .img1
+    {
+        margin-top: 50px;
+    }
+    
+    .florks
+    {
+        height: 500px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+    }
+
+}
+
+/* Subfooter: Pie de página con el teléfono de contacto */
+.subFooter
+{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: url(img/cursor-blanco.png), auto;
+}
+
+.subFooter .footer-text
+{
+    color: lightgrey;
+    cursor: url(img/cursor-blanco.png), auto;
+}

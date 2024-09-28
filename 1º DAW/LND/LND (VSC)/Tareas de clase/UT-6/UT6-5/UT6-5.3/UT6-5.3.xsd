@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Espacio de Nombre -->
+    
+    <xs:element name="TVSCHEDULE">
+        <xs:complexType>
+            <xs:all> <!-- Restricción: Cualquier orden -->
+
+                <xs:element name="CHANNEL">
+                    <xs:complexType>
+                        <xs:sequence>
+                    
+                            <xs:element name="BANNER"> <!-- Restricción de longitud -->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string"> <!-- Tipo de dato -->
+                                        <xs:minLength value="0"/>
+                                        <xs:maxLength value="10"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="DAY">
+                                <xs:complexType>
+                                    <xs:sequence> <!-- Restricción: De secuencia -->
+
+                                        <xs:element name="DATE"/>
+                                        <xs:element name="HOLIDAY"/>
+
+                                        <xs:element name="PROGRAMSLOT">
+                                            <xs:complexType>
+                                                <xs:choice> <!-- Restricción: De selección -->
+
+                                                    <xs:element name="TIME"/>
+                                                    <xs:element name="TITLE"/>
+                                                    <xs:element name="DESCRIPTION"/>
+                                    
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
