@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <script>
+
+        let numero = parseInt(prompt("Escribe algo:"));
+        let num = numero;
+
+        alert(typeof(numero));
+        if(typeof(numero) == typeof(0))
+        {
+            while(num>=0)
+            {
+                document.write(num+"<br>");
+                num--
+            }
+            while(num!=numero)
+            {
+                num++
+                document.write(num+"<br>");
+            }
+        }
+
+    </script>
+</body>
+</html>

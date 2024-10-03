@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <section>
+
+        <h1>Saluda a un amigo</h1>
+        <label for="nombre">¿Tu nombre?</label>
+        <input type="text" id="nombre">
+
+        <P>
+            <script>
+                function saludar()
+                {
+                    let nombre = document.getElementById("nombre").value;
+                    alert("Hola <strong>"+nombre+"<strong>, soy PENTIUM 4.");
+                }
+            </script>
+        </P>
+
+        <button onclick="saludar()">Saludar</button>
+
+    </section>
+</body>
+</html>
