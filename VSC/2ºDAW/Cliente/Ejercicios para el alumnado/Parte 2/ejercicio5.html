@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 5</title>
 
     <script>
-        function saludar()
+
+        function validar()
         {
-            let nombre = document.getElementById("nombre").value;
-            let resultado = document.getElementById("resultado");
-            resultado.innerHTML = "Hola <strong>" + nombre + "</strong>, yo soy PENTIUM 4";
+            let resultado = document.getElementById("idNumero").value;
+
+            try
+            {
+                if(resultado > 10 || resultado < 5 || isNaN(resultado) === true)
+                {
+                    document.getElementById("idResultado").innerHTML = "El número introducido no es válido.";
+                    throw Error;
+                }
+                else
+                {
+                    document.getElementById("idResultado").innerHTML = "El número introducido es válido.";
+                }
+            }
+            catch(err)
+            {
+                document.getElementById("demo") = err.name;
+            }
         }
+        
     </script>
 
     <style>
@@ -33,6 +51,9 @@
         h1
         {
             color: #8B0000;
+            background-color: #f3abab;
+            text-align: center;
+            border: 1px solid #8B0000;
         }
 
         input[type="text"]
@@ -58,20 +79,19 @@
             color: white;
             padding: 10px 20px;
             margin-top: 10px;
-            margin-left: 100px;
+            margin-left: 110px;
             border: none;
             cursor: pointer;
         }
     </style>
-</head>
 
+</head>
 <body>
     <div class="container">
-        <h1>Saludando a un amigo</h1>
-        <label for="nombre">¿Tu nombre?</label>
-        <input type="text" id="nombre" name="nombre">
-        <div class="result" id="resultado"></div>
-        <button onclick="saludar()">SALUDAR</button>
+        <h1>Validar número</h1>
+        <input type="text" id="idNumero" name="numero">
+        <div class="result" id="idResultado"></div>
+        <button onclick="validar()">Validar</button>
     </div>
 </body>
 </html>

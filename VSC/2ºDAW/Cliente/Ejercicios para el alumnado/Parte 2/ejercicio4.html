@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    
+    <script>
+
+        function alertar()
+        {
+            try
+            {
+                let resultado = confirm("Haz click en Aceptar para continuar en la página.\nHaz click en Cancelar para salir de la página.");
+
+                if (resultado === false) // Cancelar
+                {
+                    window.location.href = "https://www.google.com";
+                }
+            }
+            catch(error)
+            {
+                console.log("Ha ocurrido un error: " + error)
+            }
+        }
+
+    </script>
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 300px;
+            margin: 200px auto;
+            background-color: #a8a6a6;
+            padding: 10%;
+            border: 1px solid #8B0000;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button onclick="alertar()">Púlsame</button>
+    </div>
+</body>
+</html>

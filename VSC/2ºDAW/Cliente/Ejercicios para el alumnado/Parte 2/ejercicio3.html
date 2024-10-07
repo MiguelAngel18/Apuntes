@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 3</title>
 
     <script>
-        function saludar()
+        function generar()
         {
-            let nombre = document.getElementById("nombre").value;
-            let resultado = document.getElementById("resultado");
-            resultado.innerHTML = "Hola <strong>" + nombre + "</strong>, yo soy PENTIUM 4";
+            let primitiva = new Set();
+
+            while(primitiva.size < 6)
+            {
+                let numero = Math.floor(Math.random() * 48 + 1);
+                primitiva.add(numero);
+            }
+            console.log(primitiva.values());
+            let resultado = document.getElementById("idResultado");
+            resultado.innerHTML = Array.from(primitiva).join(",");
         }
     </script>
 
@@ -33,6 +39,9 @@
         h1
         {
             color: #8B0000;
+            background-color: #f3abab;
+            text-align: center;
+            border: 1px solid #8B0000;
         }
 
         input[type="text"]
@@ -58,20 +67,18 @@
             color: white;
             padding: 10px 20px;
             margin-top: 10px;
-            margin-left: 100px;
+            margin-left: 75px;
             border: none;
             cursor: pointer;
         }
     </style>
-</head>
 
+</head>
 <body>
     <div class="container">
-        <h1>Saludando a un amigo</h1>
-        <label for="nombre">¿Tu nombre?</label>
-        <input type="text" id="nombre" name="nombre">
-        <div class="result" id="resultado"></div>
-        <button onclick="saludar()">SALUDAR</button>
+        <h1>Primitiva</h1>
+        <button onclick="generar()">Generar Números</button>
+        <div class="result" id="idResultado"></div>
     </div>
 </body>
 </html>
