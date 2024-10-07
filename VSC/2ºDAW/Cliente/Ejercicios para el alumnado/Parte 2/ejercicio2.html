@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio 2</title>
+
+    <script>
+
+        let numero = Math.floor(Math.random() * 100 + 1);
+        let intentos = 6;
+
+        function adivinar()
+        {
+            let num = document.getElementById("idNumero").value;
+            let resultado = document.getElementById("idResultado");
+            
+            if(num >= 1 && num <= 100)
+            {
+                intentos--;
+                if(numero > num)
+                {
+                    resultado.textContent = "¡Incorrecto! Inténtalo con un número mayor." + " Número de intentos restantes:" + intentos;
+                }
+                else if(numero < num)
+                {
+                    resultado.textContent = "¡Incorrecto! Inténtalo con un número menor." + " Número de intentos restantes:" + intentos;
+                }
+                else if(numero == num)
+                {
+                    resultado.textContent = "¡Exacto! El número " + num + ", es el número correcto.";
+                }
+                
+                if(intentos<0)
+                {
+                    resultado.textContent = "¡Perdiste! El número correcto era " + numero + ". Te sobraron: " + intentos + " intentos.";
+                    intentos = 6;
+                    numero = Math.floor(Math.random() * 100 + 1);
+                }
+            }
+            else
+            {
+                resultado.textContent = "¡Incorrecto! El número " + num + ", no es el número válido.";
+            }
+        }
+
+    </script>
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+        }
+
+        h1
+        {
+            color: #8B0000;
+        }
+
+        input[type="text"]
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            background-color: #D3D3D3;
+            width: 280px;
+            padding: 10px;
+            border: 1px solid #8B0000;
+            margin-top: 10px;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Adivina el número</h1>
+        <label for="idNumero">Número (1 - 100):</label>
+        <input type="text" id="idNumero" name="numero">
+        <div class="result" id="idResultado"></div>
+        <button onclick="adivinar()">ADIVINAR</button>
+    </div>
+</body>
+</html>

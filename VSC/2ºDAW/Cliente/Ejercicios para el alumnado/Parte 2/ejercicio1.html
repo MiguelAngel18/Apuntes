@@ -3,27 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Ejercicio 1</title>
+
+    <script>
+        function saludar()
+        {
+            let nombre = document.getElementById("nombre").value;
+            let resultado = document.getElementById("resultado");
+            resultado.textContent = "Hola " + nombre + ", yo soy PENTIUM 4";
+        }
+    </script>
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+        }
+
+        h1
+        {
+            color: #8B0000;
+        }
+
+        input[type="text"]
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            background-color: #D3D3D3;
+            width: 280px;
+            padding: 10px;
+            border: 1px solid #8B0000;
+            margin-top: 10px;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <section>
-
-        <h1>Saluda a un amigo</h1>
+    <div class="container">
+        <h1>Saludando a un amigo</h1>
         <label for="nombre">¿Tu nombre?</label>
-        <input type="text" id="nombre">
-
-        <P>
-            <script>
-                function saludar()
-                {
-                    let nombre = document.getElementById("nombre").value;
-                    alert("Hola <strong>"+nombre+"<strong>, soy PENTIUM 4.");
-                }
-            </script>
-        </P>
-
-        <button onclick="saludar()">Saludar</button>
-
-    </section>
+        <input type="text" id="nombre" name="nombre">
+        <div class="result" id="resultado"></div>
+        <button onclick="saludar()">SALUDAR</button>
+    </div>
 </body>
 </html>
