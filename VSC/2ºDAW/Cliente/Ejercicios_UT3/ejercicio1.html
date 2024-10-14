@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ejercicio 5</title>
-
-    <script>
-
-        function validar()
-        {
-            let resultado = document.getElementById("idNumero").value;
-
-            try
-            {
-                if(resultado > 10 || resultado < 5 || isNaN(resultado) === true)
-                {
-                    document.getElementById("idResultado").innerHTML = "El número introducido no es válido.";
-                    throw new Error();
-                }
-                else
-                {
-                    document.getElementById("idResultado").innerHTML = "El número introducido es válido.";
-                }
-            }
-            catch(err)
-            {
-                document.getElementById("demo") = err.name;
-            }
-        }
-
-    </script>
+    
+    <title>Ejercicio 1</title>
 
     <style>
         body
@@ -51,9 +24,7 @@
         h1
         {
             color: #8B0000;
-            background-color: #f3abab;
             text-align: center;
-            border: 1px solid #8B0000;
         }
 
         input[type="text"]
@@ -85,13 +56,48 @@
         }
     </style>
 
+    <script>
+
+        let num, numero1, numero2, operacion, resultado, intercambio=false;
+        const operadores = ['+', '-', '*', '/'];
+
+        numero1 = Math.floor(Math.random() * 10) + 1;
+        numero2 = Math.floor(Math.random() * 10) + 1;
+
+        operacion = numero1 +" "+ operadores[Math.floor(Math.random() * operadores.length)] +" "+ numero2;
+
+        function verificar()
+        {
+            if(operacion = num) // Error en la comparación del número(string) y la operación(string)
+            {
+                resultado = "Correcto";
+            }
+            else
+            {
+                resultado = "Incorrecto";
+            }
+            return resultado;
+        }
+
+        function enviar()
+        {
+            num = document.getElementById("idNumero").value;
+
+            resultado = verificar();
+            intercambio=true;
+        }
+
+    </script>
+
 </head>
+
 <body>
     <div class="container">
-        <h1>Validar número</h1>
+        <h1><strong>Contesta</strong></h1>
+        <label for="idNumero">Operación: <script>document.write(operacion)</script></label>
         <input type="text" id="idNumero" name="numero">
-        <div class="result" id="idResultado"></div>
-        <button onclick="validar()">Validar</button>
+        <div class="result" id="idResultado"><script>if(intercambio===true){document.write(resultado)}else{(document.write(""))}</script></div>
+        <button onclick="enviar()">Enviar</button>
     </div>
 </body>
 </html>

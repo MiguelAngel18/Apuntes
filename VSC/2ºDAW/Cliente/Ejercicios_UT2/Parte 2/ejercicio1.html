@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Ejercicio 1</title>
-
-    <script>
-        function saludar()
-        {
-            let nombre = document.getElementById("nombre").value;
-            let resultado = document.getElementById("resultado");
-            resultado.innerHTML = "Hola <strong>" + nombre + "</strong>, yo soy PENTIUM 4";
-        }
-    </script>
-
+    
     <style>
         body
         {
@@ -63,6 +54,19 @@
             cursor: pointer;
         }
     </style>
+
+    <script>
+        function saludar()
+        {
+            let nombre = document.getElementById("nombre").value;
+            if(nombre!=="")
+            {   
+                resultado = document.getElementById("resultado");
+                resultado.innerHTML = "Hola <strong>" + nombre + "</strong>, yo soy PENTIUM 4";
+            }
+        }
+    </script>
+
 </head>
 
 <body>

@@ -29,10 +29,10 @@
                 }
                 else if(numero == num)
                 {
-                    resultado.textContent = "¡Exacto! El número " + num + ", es el número correcto.";
+                    resultado.textContent = "¡Exacto! El número " + num + ", es el número correcto. Te sobraron: " + intentos + " intentos.";
                 }
                 
-                if(intentos<0)
+                if(intentos<=0)
                 {
                     resultado.textContent = "¡Perdiste! El número correcto era " + numero + ". Te sobraron: " + intentos + " intentos.";
                     intentos = 6;
@@ -41,7 +41,7 @@
             }
             else
             {
-                resultado.textContent = "¡Incorrecto! El número " + num + ", no es el número válido.";
+                resultado.textContent = "¡Incorrecto! El número " + num + ", no es el número válido o no es un número.";
             }
         }
 

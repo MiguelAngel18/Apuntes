@@ -5,22 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
 
-    <script>
-        function generar()
-        {
-            let primitiva = new Set();
-
-            while(primitiva.size < 6)
-            {
-                let numero = Math.floor(Math.random() * 48 + 1);
-                primitiva.add(numero);
-            }
-            console.log(primitiva.values());
-            let resultado = document.getElementById("idResultado");
-            resultado.innerHTML = Array.from(primitiva).join(",");
-        }
-    </script>
-
     <style>
         body
         {
@@ -44,7 +28,7 @@
             border: 1px solid #8B0000;
         }
 
-        input[type="text"]
+        input
         {
             width: 280px;
             padding: 10px;
@@ -72,6 +56,23 @@
             cursor: pointer;
         }
     </style>
+
+    <script>
+        function generar()
+        {
+            let primitiva = new Set();
+
+            while(primitiva.size < 6)
+            {
+                let numero = Math.floor(Math.random() * 47 + 1);
+                primitiva.add(numero);
+            }
+            console.log(primitiva.values());
+            let resultado = document.getElementById("idResultado");
+            resultado.textContent = Array.from(primitiva).join(",");
+        }
+    </script>
+
 
 </head>
 <body>
