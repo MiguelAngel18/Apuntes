@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio 1</title>
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+        }
+
+        h1
+        {
+            color: #8B0000;
+            text-align: center;
+        }
+
+        input[type="text"]
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            background-color: #D3D3D3;
+            width: 280px;
+            padding: 10px;
+            border: 1px solid #8B0000;
+            margin-top: 10px;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-left: 110px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        let num, numero1, numero2, operacion, resultado;
+        const operadores = ['+', '-', '*', '/'];
+
+        numero1 = Math.floor(Math.random() * 10) + 1;
+        numero2 = Math.floor(Math.random() * 10) + 1;
+
+        operacion = numero1 + operadores[Math.floor(Math.random() * operadores.length)] + numero2;
+
+        function verificar()
+        {
+            num = parseFloat(num);
+
+            operacion = new Function("return " + operacion)();
+            operacion = parseFloat(operacion);
+
+            if(operacion == num)
+            {
+                resultado = "Correcto";
+            }
+            else
+            {
+                resultado = "Incorrecto";
+            }
+            return resultado;
+        }
+
+        function enviar()
+        {
+            num = document.getElementById("idNumero").value;
+
+            resultado = verificar();
+
+            document.getElementById("idResultado").innerHTML = resultado;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>Contesta</strong></h1>
+        <label for="idNumero">Operación: <script>document.write(operacion)</script></label>
+        <input type="text" id="idNumero" name="numero">
+        <div class="result" id="idResultado"></div>
+        <button onclick="enviar()">Enviar</button>
+    </div>
+</body>
+</html>

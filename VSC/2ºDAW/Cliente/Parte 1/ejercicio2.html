@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Ejercicio 1</title>
-
+    <title>Ejercicio 2</title>
     <style>
         body
         {
@@ -58,33 +56,21 @@
 
     <script>
 
-        let num, numero1, numero2, operacion, resultado, intercambio=false;
+        let num, numero1, numero2, operacion, resultado;
         const operadores = ['+', '-', '*', '/'];
 
         numero1 = Math.floor(Math.random() * 10) + 1;
         numero2 = Math.floor(Math.random() * 10) + 1;
 
-        operacion = numero1 +" "+ operadores[Math.floor(Math.random() * operadores.length)] +" "+ numero2;
+        operacion = numero1 + operadores[Math.floor(Math.random() * operadores.length)] + numero2;
 
-        function verificar()
-        {
-            if(operacion = num) // Error en la comparación del número(string) y la operación(string)
-            {
-                resultado = "Correcto";
-            }
-            else
-            {
-                resultado = "Incorrecto";
-            }
-            return resultado;
-        }
-
-        function enviar()
+        function incrementar()
         {
             num = document.getElementById("idNumero").value;
 
             resultado = verificar();
-            intercambio=true;
+
+            document.getElementById("idResultado").innerHTML = resultado;
         }
 
     </script>
@@ -96,8 +82,8 @@
         <h1><strong>Contesta</strong></h1>
         <label for="idNumero">Operación: <script>document.write(operacion)</script></label>
         <input type="text" id="idNumero" name="numero">
-        <div class="result" id="idResultado"><script>if(intercambio===true){document.write(resultado)}else{(document.write(""))}</script></div>
-        <button onclick="enviar()">Enviar</button>
+        <div class="result" id="idResultado"></div>
+        <button onclick="incrementar()">Incrementar</button>
     </div>
 </body>
 </html>
