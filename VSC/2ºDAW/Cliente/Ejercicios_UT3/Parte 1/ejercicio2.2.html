@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio 2.2</title> 
+    
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+        }
+
+        h1
+        {
+            color: #8B0000;
+            text-align: center;
+        }
+
+        input[type="text"]
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            background-color: #D3D3D3;
+            width: 280px;
+            padding: 10px;
+            border: 1px solid #8B0000;
+            margin-top: 10px;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        let numero1=0, numero2=0, resultado;
+
+        numero1 = prompt("Introduce el primer numero: ");
+        numero2 = prompt("Introduce el segundo numero: ");
+        
+        resultado = function comparar()
+        {
+            if (numero1 > numero2)
+            {
+                alert("EL numero 1 es mayor que el numero 2. " + numero1 + ">" + numero2);
+            }
+            else
+            {
+                return parseFloat(numero1) + parseFloat(numero2);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <h1><strong>Comparador</strong></h1>
+        <div class="result" id="idResultado">
+            <script>document.getElementById('idResultado').innerHTML = resultado()</script>
+        </div>
+    </div>
+</body>
+</html>

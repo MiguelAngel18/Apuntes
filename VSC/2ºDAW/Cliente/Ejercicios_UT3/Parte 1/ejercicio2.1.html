@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 2.1</title>
     <style>
         body
         {
@@ -56,34 +56,23 @@
 
     <script>
 
-        let num, numero1, numero2, operacion, resultado;
-        const operadores = ['+', '-', '*', '/'];
+        let num = prompt('Introduce un número:')
 
-        numero1 = Math.floor(Math.random() * 10) + 1;
-        numero2 = Math.floor(Math.random() * 10) + 1;
-
-        operacion = numero1 + operadores[Math.floor(Math.random() * operadores.length)] + numero2;
-
-        function incrementar()
+        function incrementar(num)
         {
-            num = document.getElementById("idNumero").value;
-
-            resultado = verificar();
-
-            document.getElementById("idResultado").innerHTML = resultado;
+            num++
+            document.getElementById('idResultado').innerHTML = num // Introduce el valor en el input
         }
-
+        
     </script>
 
 </head>
 
 <body>
     <div class="container">
-        <h1><strong>Contesta</strong></h1>
-        <label for="idNumero">Operación: <script>document.write(operacion)</script></label>
-        <input type="text" id="idNumero" name="numero">
+        <h1><strong>Variable incrementada</strong></h1>
         <div class="result" id="idResultado"></div>
-        <button onclick="incrementar()">Incrementar</button>
+        <button onclick="incrementar(num)">Incrementar</button>
     </div>
 </body>
 </html>
