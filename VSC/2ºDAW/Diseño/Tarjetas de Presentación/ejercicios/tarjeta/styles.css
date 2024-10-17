@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*
+{
+    font-family: "Open sans";
+}
+
+html>body>p.card-content
+{
+    color:#555555;
+}
+
+html>body>div.card
+{
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+html>body>div.card>img.card-img
+{
+    width: 100%;
+    height: auto;
+    border: black 1px solid;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px #4d4949;
+    background-color: #d5f3f7;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    color: darkblue;
+}
