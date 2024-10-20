@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra | Papel | Tijeras</title>
+    <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Piedra | Papel | Tijeras</h1>
+
+        <div id="result">
+    
+            <img id="machine-img" src="piedra.png">
+
+            <div id="start-text">
+                Elige una opción
+            </div>
+
+            <img id="user-img" src="piedra.png">
+
+        </div>
+
+        <div id="group-btn">
+            <button id="piedra" type="button">
+                <img src="piedra.png"/>
+            </button>
+            <button id="papel" type="button">
+                <img src="papel.png"/>
+            </button>
+            <button id="tijeras" type="button">
+                <img src="tijeras.png"/>
+            </button>
+        </div>
+
+        <section id="group-radio">
+                <label for="Piedra">Piedra</label>
+                <input type="radio" name="mano" id="piedra" value="Piedra">
+                <label for="Papel">Papel</label>
+                <input type="radio" name="mano" id="papel" value="Papel">
+                <label  for="Tijeras">Tijeras</label>
+                <input type="radio" name="mano" id="tijeras" value="Tijeras">
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body
+{
+    background-color: #eeeeee;
+}
+
+#title
+{
+    text-align: center;
+    font-size: 3.5em;
+    margin: 25px auto;
+    padding: 0;
+}
+
+div.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+    max-height: 75%;
+    min-width: 75%;
+}
+
+div#container-img
+{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;      
+}
+img
+{
+    height: 500px;
+    border: black 0px solid;
+    border-radius: 20px;
+    margin: 0px auto 0px auto;
+}
+
+select,button
+{
+    height: 100%;
+    width: 100%;
+    margin: 5px auto 5px auto;
+    font-size: 1.5em;
+    border-radius: 8px;
+}
+
+select
+{
+    padding-bottom: 1px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(74,69,66,255)
+}
+
+button
+{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio 3</title>
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+            border-radius: 8px;
+        }
+
+        #idResultado
+        {
+            width: 200px;
+        }
+
+        h1
+        {
+            color: #8B0000;
+            text-align: center;
+        }
+
+        input[type="text"]
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            width: 280px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            justify-content: center;
+            margin: 10px auto 10px 150px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        let nums, resultado;
+
+        function verificar()
+        {
+            num = parseFloat(num);
+            console.log(num);
+            resultado = 1;
+            for(numero in num)
+            {
+                num = parseFloat(num[i]);
+                resultado += num;
+            }
+            return resultado;
+        }
+
+        function calcular()
+        {
+            num = document.getElementById("idNumero").value;
+
+            num = num.split(",");
+
+            resultado = verificar();
+
+            document.getElementById("idResultado").innerHTML = resultado;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>Números de argumentos variables</strong></h1>
+        <label for="idNumero">Números:</label>
+        <input type="text" id="idNumero" name="numero">
+        <label for="idResultado">Suma:</label>
+        <div class="result" id="idResultado"></div>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+</body>
+</html>

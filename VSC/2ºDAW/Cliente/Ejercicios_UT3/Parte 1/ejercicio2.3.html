@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ejercicio 2.2</title> 
-    
+    <title>Ejercicio 2.3</title>
+
     <style>
         body
         {
@@ -50,7 +50,7 @@
             color: white;
             padding: 10px 20px;
             margin-top: 10px;
-            margin-left: 100px;
+            margin-left: 110px;
             border: none;
             cursor: pointer;
         }
@@ -58,43 +58,23 @@
 
     <script>
 
-        let numero1=0, numero2=0, resultado;
+    let firstNum, secondNum, result, sum;
 
-        numero1 = prompt("Introduce el primer numero: ");
-        numero2 = prompt("Introduce el segundo numero: ");
-        
-        resultado = function comparar()
-        {
-            if(isNaN(numero1) && isNaN(numero1))
-            {         
-                if (numero1 > numero2)
-                {
-                    alert("EL número " + numero1 + " es mayor que " + numero2);
-                    return "";
-                }
-                else
-                {
-                    return parseFloat(numero1) + parseFloat(numero2);
-                }
-            }
-            else
-            {
-                alert("Introduce números");
-                return "";
-            }
-        }
-
+    function addNumbers()
+    {
+        firstNum = 4;
+        secondNum = 5;
+        alert("Antes: " + result);
+        result = firstNum + secondNum;
+        alert("Después: " + result);
+        return result;
+    }
+    result = 0;
+    sum = addNumbers();
     </script>
 
 </head>
 
 <body>
-    <div class="container">
-        
-        <h1><strong>Comparador</strong></h1>
-        <div class="result" id="idResultado">
-            <script>document.getElementById('idResultado').innerHTML = resultado()</script>
-        </div>
-    </div>
 </body>
 </html>

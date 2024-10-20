@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        
+        let result, election, jugadas = 0;
+
+        function cambiarImagen(limite)
+        {
+            const imagen = document.getElementById('imgMoneda');
+            const imagenes = ['cara.png', 'cruz.png'];
+            let indice = 0;
+            let contador = 0;
+            const intervalo = setInterval(() => {
+                imagen.src = imagenes[indice];
+                indice = (indice + 1) % imagenes.length; // Ciclo para volver al inicio
+                contador++;
+                if (contador === limite) 
+                {
+                    clearInterval(intervalo); // Detener el intervalo
+                }
+            }, 100); // Cambiar la imagen cada segundo
+
+            setTimeout(resultado, 600); // Se ejecuta la función resultado después de 600 milisegundos
+        }
+        
+        function resultado()
+        {
+            if(result === "Cara")
+            {
+                document.getElementById("imgMoneda").src = "cara.png";
+            }
+            else if(result === "Cruz")
+            {
+                document.getElementById("imgMoneda").src = "cruz.png";
+            }
+        }
+
+        function jugar()
+        {
+            result = Math.floor(Math.random() * 2); // Se define quién ha ganado
+            election = document.getElementById("election").value; // Se obtiene la elección del usuario
+
+            if(election === "Null") // Se frena el programa si no se ha elegido ninguna de las dos, de lo contrario se sigue ejecutando
+            {
+                alert("Elige una para jugar");
+                return "";
+            }
+            else if(result === 0)
+            {
+                result = "Cara";
+            }
+            else if(result === 1)
+            {
+                result = "Cruz";
+            }
+            
+            if(result === election)
+            {
+                ganador = "El Jugador";
+            }
+            else
+            {
+                ganador = "La Máquina";
+            }
+
+            console.log("");
+            console.log("Jugada: " + ++jugadas + ".");
+            console.log("Elección: " + election + ".");
+            console.log("Resultado: " + result + ".");
+            console.log("Ganador: " + ganador + ".");
+            console.log("");
+
+            cambiarImagen(6);
+            resultado();
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Cara o Cruz</h1>
+        <select id="election">
+            <option value="Null" selected>Elige sabiamente</option>
+            <option value="Cara">Cara</option>
+            <option value="Cruz">Cruz</option>
+        </select>
+        <div id="container-img" class="container">
+            <img src="image.png" class= "img" id="imgMoneda"></img>
+        </div>
+        <button onclick="jugar()">Jugar</button>
+    </div>
+</body>
+</html>
