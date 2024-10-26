@@ -41,11 +41,16 @@
             border: 1px solid #8B0000;
         }
 
+        .suma
+        {
+            margin-top: 33px;
+        }
+
         .result
         {
-            width: 280px;
+            width: 300px;
             padding: 10px;
-            margin-top: 5px;
+            margin: 25px auto;
             border: 1px solid #8B0000;
         }
 
@@ -63,28 +68,54 @@
 
     <script>
 
-        let nums, resultado;
+        let nums, suma = 0, resultado;
 
-        function verificar()
+        function sumar()
         {
-            num = parseFloat(num);
-            console.log(num);
-            resultado = 1;
-            for(numero in num)
+            if(nums == "")
             {
-                num = parseFloat(num[i]);
-                resultado += num;
+                return "";
             }
+
+            console.log(nums);
+
+            nums = nums.split(",");
+            
+            console.log(nums);
+            
+            for(numero in nums)
+            {
+                nums[numero] = parseFloat(nums[numero]);
+
+                if(isNaN(nums[numero]))
+                {
+                    nums[numero] = 0;
+                }
+            }
+            console.log(nums);
+            
+            for(numero in nums)
+            {
+                suma += nums[numero];
+                console.log(suma);
+            }
+            
+            if(isNaN(suma))
+            {
+                return "";
+            }
+
+            resultado = suma;
+            suma = 0;
+
             return resultado;
         }
 
         function calcular()
         {
-            num = document.getElementById("idNumero").value;
+            nums = document.getElementById("idNumero").value;
 
-            num = num.split(",");
-
-            resultado = verificar();
+            resultado = sumar();
 
             document.getElementById("idResultado").innerHTML = resultado;
         }
@@ -98,7 +129,6 @@
         <h1><strong>Números de argumentos variables</strong></h1>
         <label for="idNumero">Números:</label>
         <input type="text" id="idNumero" name="numero">
-        <label for="idResultado">Suma:</label>
         <div class="result" id="idResultado"></div>
         <button onclick="calcular()">Calcular</button>
     </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ejercicio 2.3</title>
+    <title>Ejercicio 3</title>
 
     <style>
         body
@@ -58,23 +58,30 @@
 
     <script>
 
-        let firstNum, secondNum, result, sum;
-        
-        function addNumbers()
+        let n, resultado;
+
+        function calcular()
         {
-            firstNum = 4;
-            secondNum = 5;
-            alert("Antes: " + result);
-            result = firstNum + secondNum;
-            alert("Después: " + result);
-            return result;
+            num = document.getElementById("idNumero").value;
+
+            resultado = num => {
+                if(num <= 1) return 1;
+                return num * resultado(num - 1);
+            }
+            document.getElementById("idResultado").innerHTML = resultado;
         }
-        result = 0;
-        sum = addNumbers();
+
     </script>
 
 </head>
 
 <body>
+    <div class="container">
+        <h1><strong>Contesta</strong></h1>
+        <label for="idNumero">Número:</label>
+        <input type="text" id="idNumero" name="numero">
+        <div class="result" id="idResultado"></div>
+        <button onclick="calcular()">Calcular</button>
+    </div>
 </body>
 </html>

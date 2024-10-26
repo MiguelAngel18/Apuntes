@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    
+    <!-- NO ENTIENDO EL ENUNCIADO -->
+
+    <style>
+        body
+        {
+            background-color: #ffffff;
+        }
+
+        .container
+        {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #a8a6a6;
+            padding: 20px;
+            border: 1px solid #8B0000;
+            border-radius: 8px;
+        }
+
+        h1
+        {
+            color: #8B0000;
+            text-align: center;
+        }
+
+        input[type="text"]
+        {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #8B0000;
+        }
+
+        .result
+        {
+            width: 300px;
+            padding: 10px;
+            margin: 25px auto;
+            border: 1px solid #8B0000;
+        }
+
+        button
+        {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            justify-content: center;
+            margin: 10px auto 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        
+        let localidad = "Las Palmas de G.C.";
+        let valor = 100;
+        let resultado = "";
+
+        function darInfo1(nombre,localidad, valor)
+        {}
+
+        function darInfo2(nombre,localidad)
+        {}
+
+        function darInfo3(nombre)
+        {}
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Parámetros por defecto</strong></h1>
+        <p>Pulse la opción deseada y obsereve los resultados</p>
+        <label for="idNumero">Información:</label>
+        <input type="text" id="idNumero" name="numero">
+        <button onclick="darInfo1()">Formato 1. Nombre | Localidad | Valor</button>
+        <button onclick="darInfo2()">Formato 2. Nombre | Localidad</button>
+        <button onclick="darInfo3()">Formato 3. Nombre</button>
+    </div>
+</body>
+</html>
