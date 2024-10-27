@@ -1,6 +1,16 @@
+@media (max-width: 640px) 
+{
+    #laravel_img
+    {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 *,::after,::before
 {
-    box-sizing:border-box;border-width:0;
+    box-sizing:border-box;
+    border-width:0;
     border-style:solid;
     border-color:#e5e7eb
 }
@@ -93,7 +103,7 @@ table
 {
     text-indent:0;
     border-color:inherit;
-    border-collapse:collapse
+    border-collapse:collapse;
 }
 
 form
@@ -120,7 +130,7 @@ label
 {
     font-weight:600;
     margin-bottom:5px;
-    color: grey;
+    color: darkgray;
 }
 
 input,select
@@ -128,9 +138,23 @@ input,select
     border-radius: 5px;
     margin: 5px 0px 5px 0px;
     padding: 5px 5px 5px 5px;
+    background-color: rgb(31, 31, 31);
 }
 
-button,input,optgroup,select,textarea
+input
+{
+    font-family:inherit;
+    font-feature-settings:inherit;
+    font-variation-settings:inherit;
+    font-size:100%;
+    font-weight:inherit;
+    line-height:inherit;
+    color:rgb(191, 191, 191);
+    margin:100;
+    padding:100;
+}
+
+button,optgroup,select,textarea
 {
     font-family:inherit;
     font-feature-settings:inherit;
@@ -142,6 +166,7 @@ button,input,optgroup,select,textarea
     margin:100;
     padding:100;
 }
+
 
 button,select
 {
@@ -230,11 +255,13 @@ textarea
     resize:vertical
 }
 
-input::placeholder,textarea::placeholder
+select,input::placeholder,textarea::placeholder
 {
     opacity:1;
-    color:#9ca3af
+    color: rgb(84, 86, 88);
 }
+
+
 
 [role=button],button
 {
@@ -871,8 +898,14 @@ img,video
     }
 }
 
-@media (min-width: 1024px) 
+@media (min-width: 1024px)
 {
+    #img-laravel
+    {
+        width: 1px;
+        height: 10px;
+    }
+
     .lg\:col-start-2 
     {
         grid-column-start: 2;

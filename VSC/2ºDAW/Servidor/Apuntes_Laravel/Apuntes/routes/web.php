@@ -17,8 +17,6 @@ Route::post('/saveform', [Controlador::class, 'saveNota'])->name("save");
 // Elimina notas
 Route::delete('/notas/{id}', [Controlador::class, 'deleteNota'])->name("delete");
 
-// Editar notas
-Route::put('/notas/{id}/edit', [Controlador::class, 'editNota'])->name("edit");
-
-// Guardar notas editadas
-Route::post('/notas/{id}/edit/saveEdit', [Controlador::class, 'saveNewNota'])->name("saveNewNota");
+// Editar y guardar notas
+Route::get('/notas/{id}/edit', [Controlador::class, 'editNota'])->name("edit");
+Route::put('/notas/{id}', [Controlador::class, 'updateNota'])->name("update");

@@ -52,30 +52,30 @@ class Controlador extends Controller
 
     public function deleteNota($id)
     {
-        $dudas = Nota::findOrFail($id);
-        $dudas->delete();
+        $nota = Nota::findOrFail($id);
+        $nota->delete();
 
         return redirect()->route('notas')->with('success', 'Nota eliminada correctamente.');
     }
 
-    // public function editNota($id)
-    // {
-    //     $dudas = Modelo::findOrFail($id); 
-    //     return view('editar', compact('dudas')); 
-    // }
+    public function editNota($id)
+    {
+        $nota = Nota::findOrFail($id); 
+        return view('Editar', compact('nota')); 
+    }
 
-    // public function updateNota(Request $request, $id)
-    // {
-    //     $validated = $request->validate([
-    //         'email' => 'required|email',
-    //         'module' => 'required',
-    //         'subject' => 'required|string|max:50|not_regex:/^\d+$/',
-    //         'description' => 'required|string|max:300',
-    //     ]);
+    public function updateNota(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'email' => 'required|email',
+            'module' => 'required',
+            'subject' => 'required|string|max:50|not_regex:/^\d+$/',
+            'description' => 'required|string|max:300',
+        ]);
 
-    //     $dudas = Modelo::findOrFail($id);
-    //     $dudas->update($validated);
+        $nota = Nota::findOrFail($id);
+        $nota->update($validated);
 
-    //     return redirect()->route('showdudas')->with('success', 'Duda actualizada correctamente.');
-    // }
+        return redirect()->route('notas')->with('success', 'Nota actualizada correctamente.');
+    }
 }

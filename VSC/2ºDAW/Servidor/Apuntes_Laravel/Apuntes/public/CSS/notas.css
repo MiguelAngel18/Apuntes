@@ -1,3 +1,17 @@
+@media (width: 640px) 
+{
+    #laravel_img
+    {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+
+
+
+
 *,::after,::before
 {
     box-sizing:border-box;border-width:0;
@@ -835,10 +849,22 @@ img,video
     {
         grid-row: span 3 / span 3;
     }
+
+    #laravel_img
+    {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 @media (min-width: 1024px) 
 {
+    #laravel_img
+    {
+        height: 100px;
+        width: 100px;
+    }
+
     .lg\:col-start-2 
     {
         grid-column-start: 2;
@@ -939,6 +965,12 @@ img,video
     .dark\:to-zinc-900 
     {
         --tw-gradient-to: #18181b var(--tw-gradient-to-position);
+    }
+
+    #laravel_img
+    {
+        height: 100px;
+        width: 100px;
     }
 
     .dark\:text-white\/50 
