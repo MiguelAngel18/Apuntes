@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas</title>
     <link rel="stylesheet" href="{{ asset('css/notas.css') }}">
+
+    <script>
+        function confirmDelete(event)
+        {
+            if (!confirm("¿Estás seguro de que deseas eliminar esta nota?"))
+            {
+                event.preventDefault(); // Cancela la eliminación si el usuario cancela
+            }
+        }
+    </script>
+
 </head>
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
