@@ -57,19 +57,19 @@
                                     <td>{{ $nota->subject }}</td>
                                     <td>{{ $nota->description }}</td>
                                     <td>
+                                        <form action="{{ route('edit', $nota->id) }}" method="PUT">
+                                            <button type="submit" class="editar">Editar</button>
+                                        </form>
+                                    </td>  
+                                    <td>
                                         <form action="{{ route('delete', $nota->id) }}" method="POST" onsubmit="confirmDelete(event)">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="button">Eliminar</button>
                                         </form>
                                     </td>
-                                    <td>
-                                            <form action="{{ route('edit', $nota->id) }}" method="PUT">
-                                                <button type="submit" class="editar">Editar</button>
-                                            </form>
-                                        </td>   
-                                    </tr>
-                                @endforeach
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 @endif
