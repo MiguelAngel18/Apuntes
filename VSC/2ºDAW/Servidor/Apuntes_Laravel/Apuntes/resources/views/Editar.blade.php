@@ -47,8 +47,6 @@
                 </form>
 
                 <a href="{{ route('notas') }}">Notas</a>
-
-                <a href="{{ route('notas') }}">Notas</a>
             </div>
         </div>
     </div>

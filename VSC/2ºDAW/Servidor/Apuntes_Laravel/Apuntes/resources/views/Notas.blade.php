@@ -74,6 +74,7 @@
                     </table>
                 @endif
 
+                <br>
                 <a href="{{ route('formulario') }}" id="new">Nueva Nota</a>
             </div>
         </div>
