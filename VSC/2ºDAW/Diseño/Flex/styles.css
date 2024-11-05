@@ -1,0 +1,26 @@
+*
+{
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+body
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.format
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#target_1
+{
+    background-color: salmon;
+    color: white;
+}
+
