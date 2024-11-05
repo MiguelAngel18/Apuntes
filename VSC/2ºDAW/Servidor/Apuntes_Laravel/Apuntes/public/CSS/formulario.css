@@ -894,7 +894,6 @@ img,video
         grid-row: span 3 / span 3;
     }
 }
-
 @media (min-width: 1024px)
 {
     #img-laravel
