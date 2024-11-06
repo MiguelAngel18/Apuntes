@@ -176,7 +176,6 @@ button,select
 
 [type=button],[type=reset],[type=submit],button
 {
-    -webkit-appearance:button;
     background-color:transparent;
     background-image:none
 }
@@ -203,7 +202,6 @@ progress
 
 [type=search]
 {
-    -webkit-appearance:textfield;
     outline-offset:-2px
 }
 
@@ -276,7 +274,6 @@ select,input::placeholder,textarea::placeholder
 audio,canvas,embed,iframe,img,object,svg,video
 {
     display:block;
-    vertical-align:middle
 }
 
 img,video
