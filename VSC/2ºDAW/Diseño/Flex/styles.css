@@ -4,23 +4,54 @@
     border-radius: 8px;
 }
 
-body
+#a,#b
 {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.format
-{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
     padding: 10px;
+    
 }
 
 #target_1
 {
     background-color: salmon;
     color: white;
+    padding: 10px;
+    margin-right: 10px;
+    padding: 10px;
+
 }
 
+#target_2_1
+{
+    height: 100px;
+    width: 100px;
+    background-color:grey;
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+.grey
+{
+    background-color: lightgray;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+
+#target_4
+{
+    background-color: white;
+    height: 100px;
+    width: 360px;
+}
+
+#target_5
+{
+    background-color: lightgray;
+    margin: 0px 0px 0px 10px;
+    padding-left: 10px;
+    height: 100px;
+    width: 450px;
+}
