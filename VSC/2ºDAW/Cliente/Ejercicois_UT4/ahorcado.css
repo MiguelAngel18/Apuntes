@@ -1,0 +1,52 @@
+*
+{
+   box-sizing: border-box; 
+}
+
+body
+{
+   font-family: 'Arial', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f0f0f0;
+}
+
+.img
+{
+    display: block;
+}
+
+#img_0
+{
+   display: block;
+}
+
+#img_1
+{
+   display: none;
+}
+
+#img_2
+{
+   display: none;
+}
+
+#img_3
+{
+   display: none;
+}
+
+#img_4
+{
+   display: none;
+}
+
+#img_5
+{
+   display: none;
+}
+
+#img_6
+{
+   display: none;
+}
