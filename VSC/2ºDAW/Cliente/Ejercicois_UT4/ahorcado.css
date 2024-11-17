@@ -1,6 +1,6 @@
 *
 {
-   box-sizing: border-box; 
+   box-sizing: border-box;
 }
 
 body
@@ -11,9 +11,16 @@ body
    background-color: #f0f0f0;
 }
 
-.img
+#result_1
 {
-    display: block;
+   color: black;
+}
+
+.ahorcado
+{
+   display: block;
+   height: 500px;
+   width: 350px;
 }
 
 #img_0

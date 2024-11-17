@@ -5,34 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcado</title>
     <link rel="stylesheet" href="ahorcado.css">
-    <script src="ahorcado.js"></script>
 </head>
 <body>
     <h1>EL AHORCADO</h1>
     <form id="user_1">
-        <label for="palabra">Introduce una letra:</label>
-        <input type="password" name="palabra" id="palabra" required>
-        <input type="submit" value="Empezar">
-        <img id="img_0" class="img" src="0.png">
-        <img id="img_6" class="img" src="6.png">
-        <img id="img_5" class="img" src="5.png">
-        <img id="img_4" class="img" src="4.png">
-        <img id="img_3" class="img" src="3.png">
-        <img id="img_2" class="img" src="2.png">
-        <img id="img_1" class="img" src="1.png">
+        <h2>Jugador 1</h2>
+
+        <label for="result_1">Palabra clave: </label>
+        <p id="result_1"></p>
+
+        <br>
+
+        <label for="letra_1">Adivina: </label>
+        <input type="text" name="letra" id="letra_1" minlength="1" maxlength="1" required>
+
+        <button type="submit" onclick="validar_1()" value="Adivinar">Adivinar</button>
+
+        <div>
+            <img id="ahorcado" class="ahorcado" src="img/0.png">
+        </div>
     </form>
 
-    <form id="user_2">
-        <label for="palabra">Introduce una letra:</label>
-        <input type="password" name="palabra" id="palabra" required>
-        <input type="submit" value="Empezar">
-        <img id="img_0" class="img" src="0.png">
-        <img id="img_6" class="img" src="6.png">
-        <img id="img_5" class="img" src="5.png">
-        <img id="img_4" class="img" src="4.png">
-        <img id="img_3" class="img" src="3.png">
-        <img id="img_2" class="img" src="2.png">
-        <img id="img_1" class="img" src="1.png">
-    </form>
+    <script src="ahorcado.js"></script>
 </body>
 </html>
