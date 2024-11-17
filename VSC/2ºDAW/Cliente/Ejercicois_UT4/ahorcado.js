@@ -20,35 +20,52 @@ function validar_1()
             return;
         }
 
-        resultado_1 = password_1.replace(/./g, "_ ").split(" ");
+        if(resultado_1 === password_1.replace(/./g, "_ "))
+        {
+            resultado_1 = password_1.replace(/./g, "_ ").split(" ");
+        }
 
         for(let i=0; i<password_1.length; i++)
         {
             if(password_1[i] === letra)
             {
                 resultado_1[i] = letra;
-                alert("Letra encontrada: " + letra);
                 encontrada = true;
             }
         }
 
-        if(encontrada === false)
+        if(encontrada === true)
+        {
+            alert("Letra encontrada: " + letra);
+            encontrada === false;
+        }
+        else
         {
             alert("Letra no encontrada");
+            fallos_1++;
 
             switch(fallos_1)
             {
-                case 1: document.getElementById('ahorcado').src = 'img/6.png'; break;
-                case 2: document.getElementById('ahorcado').src = 'img/5.png'; break;
-                case 3: document.getElementById('ahorcado').src = 'img/4.png'; break;
-                case 4: document.getElementById('ahorcado').src = 'img/3.png'; break;
-                case 5: document.getElementById('ahorcado').src = 'img/2.png'; break;
-                case 6: document.getElementById('ahorcado').src = 'img/1.png'; alert("Usuario 1 pierde"); break;
-                default: alert("No hay más intentos"); break;
+                case 1: document.getElementById('img_0').style.display = 'none'; document.getElementById('img_6').style.display = 'block'; break;
+                case 2: document.getElementById('img_6').style.display = 'none'; document.getElementById('img_5').style.display = 'block'; break;
+                case 3: document.getElementById('img_5').style.display = 'none'; document.getElementById('img_4').style.display = 'block'; break;
+                case 4: document.getElementById('img_4').style.display = 'none'; document.getElementById('img_3').style.display = 'block'; break;
+                case 5: document.getElementById('img_3').style.display = 'none'; document.getElementById('img_2').style.display = 'block'; break;
+                case 6: document.getElementById('img_2').style.display = 'none'; document.getElementById('img_1').style.display = 'block'; break;
+                default: break;
             }
+
+            // switch(fallos_1)
+            // {
+            //     case 1: document.getElementById('ahorcado').src = 'img/6.png'; break;
+            //     case 2: document.getElementById('ahorcado').src = 'img/5.png'; break;
+            //     case 3: document.getElementById('ahorcado').src = 'img/4.png'; break;
+            //     case 4: document.getElementById('ahorcado').src = 'img/3.png'; break;
+            //     case 5: document.getElementById('ahorcado').src = 'img/2.png'; break;
+            //     case 6: document.getElementById('ahorcado').src = 'img/1.png'; alert("Usuario 1 pierde"); break;
+            // }
         }
         
-        alert(resultado_1);
         document.getElementById('result_1').innerHTML = resultado_1;
 
         if(!resultado_1.includes("_"))
