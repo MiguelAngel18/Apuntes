@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aparcamiento</title>
+    <link rel="stylesheet" href="aparcamiento.css">
 </head>
 <body>
     <header>
-        <h1>Parking EL Rincón</h1>
+        <h1 id="title">Parking EL Rincón</h1>
     </header>
     <section>
-        <div>
-            <h2><strong>Horario</strong></h2>
+        <fieldset>
+            <legend><h3><strong>Precio</strong></h3></legend>
             <div>
-                <label for="entrada">Entrada: dd/mm/aaaa hh:mm</label>
-                <input type="date" name="entrada" id="entrada" required>
+                <div>
+                    <label for="entrada">Entrada: dd/mm/aaaa hh:mm</label>
+                    <input type="date" name="entrada" id="entrada" required>
+                </div>
+
                 <br>
-                <label for="salida">Salida: dd/mm/aaaa hh:mm</label>
-                <input type="date" name="salida" id="salida" required>
+
+                <div>
+                    <label for="salida">Salida: dd/mm/aaaa hh:mm</label>
+                    <input type="date" name="salida" id="salida" required>
+                </div>
             </div>
-        </div>
-        <div>
-            <h2><strong>Precio</strong></h2>
+        </fieldset>
+        <fieldset>
+            <legend><h3><strong>Precio</strong></h3></legend>
             <div>
                 <label for="precio">Precio:</label>
                 <input type="text" name="precio" id="entrada">
             </div>
-        </div>
-        <h2><strong>Horario</strong></h2>
-        <div>
-            <button onclick="">PRECIO</button>
-            <button onclick="">REINICIAR</button>
-        </div>
+        </fieldset>
+        <fieldset id="botones">
+            <button id="precio" onclick="">PRECIO</button>
+            <form action=""><button id="reiniciar" onclick="">REINICIAR</button></form>
+        </fieldset>
     </section>
 </body>
 </html>
