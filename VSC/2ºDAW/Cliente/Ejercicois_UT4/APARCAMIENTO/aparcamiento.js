@@ -1,43 +1,61 @@
 function precio()
 {
-    let fecha = new Date(); // Fecha actual
-    let hora_actual = new fecha.getHours; // Hora actual
-
-
     let entrada = document.getElementById("entrada").value;
+
     entrada = entrada.split("T");
     
-    let entrada_fecha = entrada[0]; // Fecha de entrada dd/mm/aaaa
-    alert(entrada_fecha)
-    let entrada_hora = entrada[1]; // Hora de entrada hh:mm
-    alert(salida_hora)
+    let fecha_entrada = entrada[0]; // Fecha de entrada yyyy-mm-dd
+    let hora_entrada = entrada[1]; // Hora de entrada hh:mm
+
+    let anio_entrada = fecha_entrada.split("-")[0];
+    let mes_entrada = fecha_entrada.split("-")[1];
+    let dia_entrada = fecha_entrada.split("-")[2];
+
+    let horas_entrada = hora_entrada.split(":")[0];
+    let min_entrada = hora_entrada.split(":")[1];
+
+    fecha_entrada = new Date(anio_entrada, mes_entrada, dia_entrada, horas_entrada, min_entrada);
 
     let salida = document.getElementById("salida").value;
-    salida = salida.split(" ");
-    
-    let salida_fecha = entrada[0];
-    let salida_hora = entrada[1];
+    salida = salida.split("T");
 
+    let fecha_salida = salida[0]; // Fecha de salida yyyy-mm-dd
+    let hora_de_salida = salida[1]; // Hora de salida hh:mm
 
+    let anio_salida = fecha_salida.split("-")[0];
+    let mes_salida = fecha_salida.split("-")[1];
+    let dia_salida = fecha_salida.split("-")[2];
+
+    let hora_salida = hora_de_salida.split(":")[0];
+    let min_salida = hora_de_salida.split(":")[1];
+
+    fecha_salida = new Date(anio_salida, mes_salida, dia_salida, hora_salida, min_salida);
+
+    let dif = Math.abs(fecha_salida.getTime() - fecha_entrada.getTime());
+    alert(dif);
+
+    let dias = Math.floor(dif/(1000*60*60*24));
+    alert(dias);
+
+    let horas = dif/(1000*60*60) - Math.floor(dif/(1000*60*60));
+    alert(horas); 
 
     let precio = 0.0;
 
-    if(entrada_fecha > salida_fecha || entrada_fecha == null || salida_fecha == null)
+    if(fecha_entrada > salida_fecha || fecha_entrada == null || salida_fecha == null)
     {
         return;
     }
-    if(entrada_hora > salida_hora || entrada_hora == salida_hora || entrada_hora == null || salida_hora == null || entrada_hora === hora_actual)
+    if(hora_entrada > salida_hora || hora_entrada == salida_hora || hora_entrada == null || salida_hora == null)
     {
         return;
     }
-    else if(salida_fecha - entrada_fecha >= 1)
+    else if(dias >= 1)
     {
-        let dias = salida_fecha - entrada_fecha;
         precio += 20 * dias;
     }
-    else if(salida_hora - entrada_hora <= 60)
+    else if(horas >= 1)
     {
-        let horas = salida_hora - entrada_hora;
         if(horas === 1)
         {
             precio += 1,20;
@@ -48,5 +66,5 @@ function precio()
             precio += 1,50 * (horas-1);
         }
     }
-    document.getElementById(""). precio + "€";
+    document.getElementById("precio").innerHTML = precio + "€";
 }
