@@ -16,14 +16,14 @@
             <div>
                 <div>
                     <label for="entrada">Entrada: dd/mm/aaaa hh:mm</label>
-                    <input type="date" name="entrada" id="entrada" required>
+                    <input type="datetime-local" name="entrada" id="entrada" required>
                 </div>
 
                 <br>
 
                 <div>
                     <label for="salida">Salida: dd/mm/aaaa hh:mm</label>
-                    <input type="date" name="salida" id="salida" required>
+                    <input type="datetime-local" name="salida" id="salida" required>
                 </div>
             </div>
         </fieldset>
@@ -31,13 +31,15 @@
             <legend><h3><strong>Precio</strong></h3></legend>
             <div>
                 <label for="precio">Precio:</label>
-                <input type="text" name="precio" id="entrada">
+                <input type="text" name="precio" id="entrada" disabled>
             </div>
         </fieldset>
         <fieldset id="botones">
-            <button id="precio" onclick="">PRECIO</button>
+            <button id="precio" onclick="precio()">PRECIO</button>
             <form action=""><button id="reiniciar" onclick="">REINICIAR</button></form>
         </fieldset>
     </section>
+
+    <script src="aparcamiento.js"></script>
 </body>
 </html>
