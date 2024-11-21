@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="../CSS/product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="nav">
+        <img class="logo" src="../IMG/logo.png" alt="logo">
+        <div class="navegador">
+            <div class="subnavegador">
+                <p><strong>Productos</strong></p>
+                <p>Hacer pedido</p>
+                <p>Reservar</p>
+                <p>Ofertas</p>
+            </div>
+            <div class="icos">
+                <img class="ico" src="../IMG/carrito.png" alt="carrito">
+                <img class="ico" src="../IMG/usuario.png" alt="usuario">
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-light" id="subnav">
+            <div class="container-fluid" id="container_fluid">
+                <img class="ico" src="../IMG/carrito.png" alt="carrito">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="nav-button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><strong>Productos</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Hacer Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Ofertas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </nav>
+    
+    <section>
+        <div class="targets" id="enlaces">
+            <p id="select">Baguettes</p>
+            <p>Pan de melón</p>
+            <p>Pan sin glúten</p>
+            <p>Pan de Matalauva</p>
+            <p>Pan integral</p>
+        </div>
+
+        <div id="product" class="targets">
+            <img id="baguettes" src="../IMG/baguettes.png">
+            <div id="product_content">
+                <h2>Postres</h2>
+                <div class="description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                        <img id="flecha" src="../IMG/flecha.png">
+                    </div>
+                    <p>Precio, ingredientes principales, valor nutricional,calificaciones, etc.</p>
+                </div>
+                <div class="description">
+                    <h4>Seleccionar cantidad</h4>
+                    <input type="number" name="cantidad" id="cantidad" min="0" max="999">
+                </div>
+                <button id="aniadir" class="boton">Añadir</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
