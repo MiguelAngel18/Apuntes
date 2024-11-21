@@ -105,7 +105,12 @@ section
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 150px 100px 0px 100px;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    min-width: 300px;
+    max-width: 900px;
 }
 
 .targets
@@ -114,7 +119,6 @@ section
     border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 100px;
-    padding: 10px;
     text-align: center;
 }
 
@@ -286,12 +290,6 @@ section
         justify-content: space-between;
         align-items: center;
         text-align: center;
-    }
-
-    section>div.targets>img
-    {
-        width: 250px;
-        height: 150px;
     }
 
     #product
