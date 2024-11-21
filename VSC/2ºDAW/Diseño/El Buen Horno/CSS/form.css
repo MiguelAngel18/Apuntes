@@ -193,15 +193,10 @@ section
     margin: 1px 15px;
 }
 
-.targets>.boton
-{
-    background-color: #C49A52;
-}
-
 .boton
 {
     font-size: 1em;
-    margin: 1px 15px;
+    margin: 10px 15px;
     border: none;
     border-radius: 8px;
 }
@@ -212,8 +207,14 @@ section
     background-color: rgb(44, 44, 44);
     height: 50px;
     width: 250px;
-    margin: 0px;
+    margin: 10px 0px 0px 0px;
     padding: 10px;
+}
+
+#pagos
+{
+    background-color: rgba(0, 0, 0, 0.775);
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 800px)
@@ -271,7 +272,6 @@ section
     {
         margin: 0px;
         padding: 0px;
-        font-size: 1.5em;
     }
 
     #flecha
@@ -298,11 +298,12 @@ section
         flex-direction: column;
     }
 
-    div#product>img#baguettes
+    div#product>img
     {
         width: 327px;
         height: 281px;
         margin: 10px 0px 10px 5px;
+        background-color: black;
     }
 
     #product_content
@@ -346,7 +347,7 @@ section
         background-color: rgb(44, 44, 44);
         height: 50px;
         width: 250px;
-        margin: 0px;
+        margin-top: 10px;
         padding: 10px;
     }
 }
