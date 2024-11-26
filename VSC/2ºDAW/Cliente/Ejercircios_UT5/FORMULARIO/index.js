@@ -1,60 +1,91 @@
-document.getElementById('addButton').addEventListener('click', addData);
-document.getElementById('viewButton').addEventListener('click', viewData);
-document.getElementById('deleteButton').addEventListener('click', deleteData);
+// Lista con todos los usuarios inscritos
+let list = [];
 
-function addData() {
-    const lastName = document.getElementById('lastName').value;
-    const firstName = document.getElementById('firstName').value;
-    const email = document.getElementById('email').value;
-    const source = document.getElementById('source').value;
+// Creción de los elementos de la lista
+class User 
+{
+    constructor(firstName, lastName, email, origin) 
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.origin = origin;
+    }
+}
 
-    if (!validateEmail(email)) {
+// Crea Y añade elementos a la lista
+function addData() 
+{
+    // Contenido del formulario
+    let firstName = document.getElementById('firstName').value;
+    let lastName = document.getElementById('lastName').value;
+    let email = document.getElementById('email').value;
+    let origin = document.getElementById('origin').value;
+
+    // validar(firstName, lastName, email, origin);
+
+    if(!validateEmail(email)) 
+    {
         alert('Por favor, introduzca una dirección de correo electrónico válida.');
         return;
     }
 
-    const listItem = document.createElement('li');
-    listItem.textContent = `${lastName}, ${firstName} - ${email} (${source})`;
-    document.getElementById('dataList').appendChild(listItem);
+    let user = new User(firstName, lastName, email, origin);
 
-    document.getElementById('dataForm').reset();
+    list.push(usuario);
+    alert("Creado con éxito");
+    document.getElementById('dataList').innerHTML += print `<li>${firstName} ${lastName} Correo electrónico ${email}</li>`;
 }
 
-function viewData() {
-    const items = document.querySelectorAll('#dataList li');
-    if (items.length === 0) {
+// Visualiza elementos de la lista
+function viewData() 
+{
+    let items = document.querySelectorAll('#dataList li');
+    if(items.length === 0) 
+    {
         alert('No hay datos para mostrar.');
         return;
     }
 
     let data = '';
-    items.forEach(item => {
+    items.forEach(item => 
+    {
         data += item.textContent + '\n';
     });
 
     alert(data);
 }
 
-function deleteData() {
-    const list = document.getElementById('dataList');
-    const selectedItem = list.querySelector('li.selected');
+// Elimina elementos de la lista
+function deleteData() 
+{
+    let list = document.getElementById('dataList');
+    let selectedItem = list.querySelector('li.selected');
 
-    if (selectedItem) {
+    if(selectedItem) 
+    {
         list.removeChild(selectedItem);
-    } else if (list.lastChild) {
+    }
+    else if(list.lastChild) 
+    {
         list.removeChild(list.lastChild);
-    } else {
+    }
+    else 
+    {
         alert('No hay elementos para eliminar.');
     }
 }
 
-document.getElementById('dataList').addEventListener('click', function (event) {
-    const items = document.querySelectorAll('#dataList li');
+document.getElementById('dataList').addEventListener('click', function (event) 
+{
+    let items = document.querySelectorAll('#dataList li');
     items.forEach(item => item.classList.remove('selected'));
     event.target.classList.add('selected');
 });
 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+
+function validateEmail(email) 
+{
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
 }

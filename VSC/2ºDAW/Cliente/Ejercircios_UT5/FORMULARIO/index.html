@@ -9,32 +9,54 @@
 <body>
     <form id="dataForm">
         <label for="lastName">Apellidos:</label>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <br><br>
         
         <label for="firstName">Nombre:</label>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <br><br>
         
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required>
         
-        <label for="source">¿Cómo llegó a la página?</label>
-        <select id="source" name="source">
+        <br><br>
+        
+        <label for="origin">¿Cómo llegó a la página?</label>
+        <select id="origin" name="origin">
             <option value="azar">Al azar</option>
             <option value="url">Le indicaron la URL de la página</option>
             <option value="search" selected>A través de un buscador</option>
             <option value="link">Mediante un enlace desde otra página</option>
-        </select><br><br>
+        </select>
+        
+        <div id="masInfo">
+            <label for="masInfo">¿Desearía más información sobre: ?</label>
+            <div class="checkboxs">
+                <input type="checkbox" id="checkbox_1"></input>
+                <label for="checkbox_1">Material audiovisual</label>
+                <input type="checkbox" id="checkbox_2"></input>
+                <label for="checkbox_2">Textos electrónicos</label>
+                <input type="checkbox" id="checkbox_3"></input>    
+                <label for="checkbox_3">Libros de texto</label>
+            </div>
+        </div>
+
+        <br><br>
         
         <div>
-            <button type="button" id="addButton">AÑADIR</button>
-            <button type="button" id="viewButton">VISUALIZAR DATOS</button>
-            <button type="button" id="deleteButton">ELIMINAR</button>
+            <button type="button" onclick="addData()" id="addButton">AÑADIR</button>
+            <button type="button" onclick="viewData()" id="viewButton">VISUALIZAR DATOS</button>
+            <button type="button" onclick="deleteData()" id="deleteButton">ELIMINAR</button>
         </div>
     </form>
     <section>
-        <textarea id="dataList" placeholder="Personas inscritas"></textarea>
+        <select id="dataList" placeholder="Personas inscritas:">
+            <option value="" ></option>
+        </select>
     </section>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
