@@ -1,0 +1,78 @@
+        /* Contenedor principal */
+        .container 
+        {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px; /* Espaciado insuficiente que afecta la percepción visual */
+            padding: 10px; /* Margen reducido dificulta la separación de elementos */
+            background-color: #fffde7; /* Fondo amarillo claro */
+        }
+
+        /* Encabezado y pie de página */
+        header, footer 
+        {
+            grid-column: 1 / -1;
+            background-color: #ffeb3b; /* Amarillo brillante que puede dificultar el contraste */
+            color: #212121; /* Contraste aceptable pero mejorable */
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Navegación lateral */
+        nav 
+        {
+            background-color: #fff9c4; /* Fondo amarillo pálido */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Espaciado limitado entre enlaces */
+        }
+
+        nav a 
+        {
+            text-decoration: none;
+            color: #f57f17; /* Contraste insuficiente con el fondo amarillo */
+            padding: 8px;
+            background-color: #ffe082; /* Fondo similar al fondo principal */
+            border-radius: 3px;
+            border: 1px solid #fbc02d; /* Borde apenas visible */
+        }
+
+        /* Contenido principal */
+        .main-content 
+        {
+            background-color: #fffde7; /* Color similar al fondo general */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombras ligeras que no destacan */
+        }
+
+        .card 
+        {
+            display: block; /* Disposición vertical sin jerarquía clara */
+            background-color: #fff9c4; /* Fondo muy similar al fondo general */
+            padding: 10px;
+            border: 1px solid #ffe082; /* Borde apenas perceptible */
+            margin-bottom: 5px; /* Separación mínima entre tarjetas */
+        }
+
+        .card h3 
+        {
+            margin: 0;
+            font-size: 1em; /* Tamaño pequeño que afecta la legibilidad */
+        }
+
+        button 
+        {
+            padding: 5px 10px; /* Botones demasiado pequeños */
+            background-color: #ffd740; /* Amarillo intenso */
+            color: #212121; /* Contraste limitado */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        footer p 
+        {
+            font-size: 0.8em; /* Texto demasiado pequeño */
+        }
