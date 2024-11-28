@@ -1,78 +1,113 @@
-        /* Contenedor principal */
-        .container 
-        {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 10px; /* Espaciado insuficiente que afecta la percepción visual */
-            padding: 10px; /* Margen reducido dificulta la separación de elementos */
-            background-color: #fffde7; /* Fondo amarillo claro */
-        }
+/* Contenedor principal => ISO 9241-210: Percepción y legibilidad */
+.container 
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Separación en dos secciones*/
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(98, 140, 143);
+}
 
-        /* Encabezado y pie de página */
-        header, footer 
-        {
-            grid-column: 1 / -1;
-            background-color: #ffeb3b; /* Amarillo brillante que puede dificultar el contraste */
-            color: #212121; /* Contraste aceptable pero mejorable */
-            text-align: center;
-            padding: 10px;
-        }
+/* Encabezado y pie de página => ISO 9241-210: Percepción y legibilidad */
+header, footer 
+{
+    grid-column: 1 / -1;
+    background-color: #b2bebe; /* Fondo de alto contraste */
+    color: #212121; /* Color de alto contraste */
+    text-align: center;
+    padding: 10px;
+}
 
-        /* Navegación lateral */
-        nav 
-        {
-            background-color: #fff9c4; /* Fondo amarillo pálido */
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px; /* Espaciado limitado entre enlaces */
-        }
+/* Navegación lateral => ISO 9241-210: Consistencia y estándares */
+nav 
+{
+    background-color: #b2bebe; /* Fondo de alto contraste */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
-        nav a 
-        {
-            text-decoration: none;
-            color: #f57f17; /* Contraste insuficiente con el fondo amarillo */
-            padding: 8px;
-            background-color: #ffe082; /* Fondo similar al fondo principal */
-            border-radius: 3px;
-            border: 1px solid #fbc02d; /* Borde apenas visible */
-        }
+/* Enlaces de navegación => ISO 9241-210: Percepción y legibilidad */
+nav a 
+{
+    text-decoration: none;
+    padding: 8px;
+/*  color: #f57f17;  Contraste insuficiente con el fondo amarillo */
+    background-color: rgb(98, 140, 143); /* Fondo similar al fondo principal */
+    border-radius: 3px;
+    border: 1px solid rgb(98, 140, 143); /* Borde apenas visible */
+}
 
-        /* Contenido principal */
-        .main-content 
-        {
-            background-color: #fffde7; /* Color similar al fondo general */
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombras ligeras que no destacan */
-        }
+/* Contenido principal => ISO 9241-210: Percepción y legibilidad */
+.main-content 
+{
+    background-color: #b2bebe; /* Color similar al fondo general */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Sombras ligeras que no destacan */
+}
 
-        .card 
-        {
-            display: block; /* Disposición vertical sin jerarquía clara */
-            background-color: #fff9c4; /* Fondo muy similar al fondo general */
-            padding: 10px;
-            border: 1px solid #ffe082; /* Borde apenas perceptible */
-            margin-bottom: 5px; /* Separación mínima entre tarjetas */
-        }
+/* Tarjetas => ISO 9241-210: Percepción y legibilidad */
+.card 
+{
+    display: block; /* Disposición vertical sin jerarquía clara */
+    background-color: rgb(98, 140, 143); /* Fondo muy similar al fondo general */
+    padding: 10px;
+    border: 1px solid rgb(98, 140, 143); /* Borde apenas perceptible */
+    margin-bottom: 5px; /* Separación mínima entre tarjetas */
+}
 
-        .card h3 
-        {
-            margin: 0;
-            font-size: 1em; /* Tamaño pequeño que afecta la legibilidad */
-        }
+/* Encabezados de tarjetas => ISO 9241-210: Percepción y legibilidad */
+.card h3 
+{
+    margin: 0;
+    font-size: 1em; /* Tamaño pequeño que afecta la legibilidad */
+}
 
-        button 
-        {
-            padding: 5px 10px; /* Botones demasiado pequeños */
-            background-color: #ffd740; /* Amarillo intenso */
-            color: #212121; /* Contraste limitado */
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+/* Botones => ISO 9241-210: Percepción y legibilidad, Control y libertad del usuario */
+button 
+{
+    padding: 5px 10px; /* Botones demasiado pequeños */
+    background-color: #b2bebe; /* Fondo de alto contraste */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
-        footer p 
-        {
-            font-size: 0.8em; /* Texto demasiado pequeño */
-        }
+/* Texto del pie de página => ISO 9241-210: Percepción y legibilidad */
+footer p 
+{
+    font-size: 0.8em;
+}
+
+/* Adiciones => ISO 9241-210: Consistencia y estándares */
+*
+{
+    border-radius: 8px; /* Bordes redondeados: principio de semejanza */
+}
+
+/* Cuerpo del documento => ISO 9241-210: Percepción y legibilidad */
+body
+{
+    background-color: rgb(98, 140, 143); /* Fondo de mayor contraste */
+}
+
+/* Enlaces y botones => ISO 9241-210: Percepción y legibilidad, Control y libertad del usuario */
+a, button
+{
+    color: #212121; /* Texto oscuro para mejor contraste */
+    cursor: hand; /* Cambio de cursor al pasar el ratón, para mayor usabilidad */
+}
+
+/* Efectos de hover => ISO 9241-210: Percepción y legibilidad, Control y libertad del usuario */
+a:hover, button:hover
+{
+    background-color: #bac9c9; /* Cambio de color al pasar el ratón, para mayor usabilidad */
+}
+
+/* Pie de página => ISO 9241-210: Percepción y legibilidad */
+footer
+{
+    font-size: 1.2em; /* Tamaño de letra más grande, para mayor visibilidad */
+}
