@@ -24,7 +24,7 @@ function addData()
 
     // validar(firstName, lastName, email, origin);
 
-    if(!validateEmail(email)) 
+    if(!validateEmail(email))
     {
         alert('Por favor, introduzca una dirección de correo electrónico válida.');
         return;
@@ -32,57 +32,46 @@ function addData()
 
     let user = new User(firstName, lastName, email, origin);
 
-    list.push(usuario);
-    alert("Creado con éxito");
-    document.getElementById('dataList').innerHTML += print `<li>${firstName} ${lastName} Correo electrónico ${email}</li>`;
+    list.push(user);
+    alert("Añadido con éxito");
+
+    let dataList = document.getElementById('dataList'); // Obtener la lista
+
+
+    let option = document.createElement('option'); // Crear un nuevo elemento de lista
+
+    // Configurar los atributos del option
+    option.type = 'text';
+    option.name = 'element';
+    option.className = 'element_list';
+    option.value = `${user.firstName} ${user.lastName} - ${user.email}`;
+    option.disabled = true;
+        
+    // Añadir el nuevo elemento a la lista
+    dataList.appendChild(option);
 }
 
 // Visualiza elementos de la lista
 function viewData() 
 {
-    let items = document.querySelectorAll('#dataList li');
-    if(items.length === 0) 
+    // Seleccionar el botón
+    let viewButton = document.getElementById('viewButton');
+    
+    // Crear una función que se ejecutará cuando se haga clic en el botón
+    function view()
     {
-        alert('No hay datos para mostrar.');
-        return;
+        alert('¡Botón!');
     }
-
-    let data = '';
-    items.forEach(item => 
-    {
-        data += item.textContent + '\n';
-    });
-
-    alert(data);
+    
+    // Asociar la función al evento 'click' del botón
+    viewButton.addEventListener('click', view);
 }
 
 // Elimina elementos de la lista
 function deleteData() 
 {
-    let list = document.getElementById('dataList');
-    let selectedItem = list.querySelector('li.selected');
 
-    if(selectedItem) 
-    {
-        list.removeChild(selectedItem);
-    }
-    else if(list.lastChild) 
-    {
-        list.removeChild(list.lastChild);
-    }
-    else 
-    {
-        alert('No hay elementos para eliminar.');
-    }
 }
-
-document.getElementById('dataList').addEventListener('click', function (event) 
-{
-    let items = document.querySelectorAll('#dataList li');
-    items.forEach(item => item.classList.remove('selected'));
-    event.target.classList.add('selected');
-});
-
 
 function validateEmail(email) 
 {

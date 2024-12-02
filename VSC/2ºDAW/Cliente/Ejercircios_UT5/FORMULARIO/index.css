@@ -9,7 +9,7 @@ body
     margin-top: 200px;
 }
 
-section,form
+form
 {
     width: 400px;
     margin: 0;
@@ -18,11 +18,20 @@ section,form
     border-radius: 5px;
 }
 
-section
+#list
 {
     margin: 0px 0px 0px 20px;
+    width: 400px;
     height: 550px;
     background-color: #4CAF50;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#list
+{
+    margin-top: 5px;
 }
 
 label
@@ -39,7 +48,12 @@ input[type="text"], input[type="email"]
     border-radius: 3px;
 }
 
-select
+#element
+{
+    margin: 0px;
+}
+
+ul
 {
     height: 90%;
     width: 95%;
@@ -49,13 +63,31 @@ select
     resize: none;
 }
 
-select
+ul
 {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background-color: white;
+}
+
+ol
+{
+    margin: 0px;
+    padding: 0px;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    border-radius: 3px;
+}
+
+.element_list:hover
+{
+    background-color: #d6d6d6;
 }
 
 div
@@ -103,4 +135,12 @@ div>button:hover
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+@media screen and (max-width: 943px)
+{
+    #list
+    {
+        margin: 10px 0px 0px 0px;
+    }
 }
