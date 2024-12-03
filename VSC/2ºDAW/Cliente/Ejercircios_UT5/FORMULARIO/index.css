@@ -18,20 +18,22 @@ form
     border-radius: 5px;
 }
 
-#list
+#origin
 {
-    margin: 0px 0px 0px 20px;
-    width: 400px;
-    height: 550px;
-    background-color: #4CAF50;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0px;
+    border-radius: 4px;
 }
 
 #list
 {
-    margin-top: 5px;
+    margin: 0px 0px 0px 20px;
+    width: 400px;
+    height: 650px;
+    background-color: #4CAF50;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 label
@@ -85,11 +87,6 @@ ol
     border-radius: 3px;
 }
 
-.element_list:hover
-{
-    background-color: #d6d6d6;
-}
-
 div
 {
     display: flex;
@@ -130,11 +127,49 @@ div>button:hover
     align-items: baseline;
 }
 
-#dataList
+.radios
 {
+    display: grid;
+    grid-template-columns: 1fr 50fr;
+    margin: 0px;
+    padding: 0px;
+    justify-items: start;
+    align-items: baseline;
+}
+
+input[type="checkbox"]:checked
+{
+    background-color: #45a049;
+}
+
+#list
+{
+    width: 425px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border-radius: 8px;
+}
+
+option
+{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 97%;
+    background-color: white;
+}
+
+option:hover
+{
+    color: white;
+    background-color: rgb(11, 129, 11);
+}
+
+option:checked
+{
+    color: white;
+    background-color: darkgreen;
 }
 
 @media screen and (max-width: 943px)
