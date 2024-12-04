@@ -137,11 +137,6 @@ div>button:hover
     align-items: baseline;
 }
 
-input[type="checkbox"]:checked
-{
-    background-color: #45a049;
-}
-
 #list
 {
     width: 425px;

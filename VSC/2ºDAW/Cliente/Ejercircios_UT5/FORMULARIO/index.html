@@ -19,11 +19,11 @@
         <br><br>
 
         <div class="radios">
-            <input type="radio" id="radio_1" name="info" required></input>
+            <input type="radio" id="radio_1" name="info" value="Hombre" required></input>
             <label for="radio_1">Hombre</label>
-            <input type="radio" id="radio_2" name="info"></input>
+            <input type="radio" id="radio_2" name="info" value="Mujer"></input>
             <label for="radio_2">Mujer</label>
-            <input type="radio" id="radio_3" name="info"></input>
+            <input type="radio" id="radio_3" name="info" value="Otro"></input>
             <label for="radio_3">Helicóptero Apache</label>
         </div>
 
@@ -36,21 +36,21 @@
         
         <label for="origin">¿Cómo llegó a la página?</label>
         <select id="origin" name="origin">
-            <option value="none" selected></option>
-            <option value="azar">Al azar</option>
-            <option value="url">Le indicaron la URL de la página</option>
-            <option value="search">A través de un buscador</option>
-            <option value="link">Mediante un enlace desde otra página</option>
+            <option class="option" value="none"></option>
+            <option class="option" value="azar">Al azar</option>
+            <option class="option" value="url">Le indicaron la URL de la página</option>
+            <option class="option" value="search">A través de un buscador</option>
+            <option class="option" value="link">Mediante un enlace desde otra página</option>
         </select>
         
         <div id="masInfo">
             <label for="masInfo">¿Desearía más información sobre?</label>
             <div class="checkboxs">
-                <input type="checkbox" id="checkbox_1" name="info"></input>
+                <input type="checkbox" class="checkbox" id="checkbox_1" name="info" value="Material audiovisual"></input>
                 <label for="checkbox_1">Material audiovisual</label>
-                <input type="checkbox" id="checkbox_2" name="info"></input>
+                <input type="checkbox" class="checkbox"id="checkbox_2" name="info" value="Textos electrónicos"></input>
                 <label for="checkbox_2">Textos electrónicos</label>
-                <input type="checkbox" id="checkbox_3" name="info"></input>
+                <input type="checkbox" class="checkbox" id="checkbox_3" name="info" value="Libros de texto"></input>
                 <label for="checkbox_3">Libros de texto</label>
             </div>
         </div>
@@ -59,7 +59,7 @@
         
         <div>
             <button type="button" onclick="addData()" id="addButton">AÑADIR</button>
-            <button type="button" onclick="viewData()" id="viewButton">VISUALIZAR DATOS</button>
+            <button type="button" id="viewButton">VISUALIZAR DATOS</button>
             <button type="button" onclick="deleteData()" id="deleteButton">ELIMINAR</button>
         </div>
     </form>
