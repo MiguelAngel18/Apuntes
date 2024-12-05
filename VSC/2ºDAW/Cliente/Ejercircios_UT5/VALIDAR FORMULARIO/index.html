@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validación</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form id="formulario">
+        <section>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+    
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos"><br><br>
+    
+                <label for="expediente">Expediente:</label>
+                <input type="text" id="expediente" name="expediente"><br><br>
+    
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" name="edad"><br><br>
+    
+                <label for="fechaPermiso">Fecha de Permiso:</label>
+                <input type="date" id="fechaPermiso" name="fechaPermiso"><br><br>
+            </div>
+            <div>
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula"><br><br>
+    
+                <label for="importe">Importe:</label>
+                <input type="text" id="importe" name="importe"><br><br>
+    
+                <label for="mesExpiracion">Mes de Expiración:</label>
+                <input type="text" id="mesExpiracion" name="mesExpiracion"><br><br>
+    
+                <label for="anioExpiracion">Año de Expiración:</label>
+                <input type="text" id="anioExpiracion" name="anioExpiracion"><br><br>
+    
+                <label for="tarjeta">Tarjeta:</label>
+                <select id="tarjeta" name="tarjeta">
+                    <option value="generica">Genérica</option>
+                    <option value="americanExpress">American Express</option>
+                    <option value="dinersClub">Diner's Club</option>
+                    <option value="masterCard">Master Card</option>
+                    <option value="visa">Visa</option>
+                </select><br><br>
+            </div>    
+        </section>
+        <button type="button" onclick="validarFormulario()">VALIDA FORMULARIO</button>
+    </form>
+    <script src="validación.js" defer></script>
+</body>
+</html>
