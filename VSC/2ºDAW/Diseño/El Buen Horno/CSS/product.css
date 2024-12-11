@@ -133,6 +133,12 @@ section
     grid-row: auto;
 }
 
+#aniadir>a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
 #baguettes
 {
     height: 1000px;

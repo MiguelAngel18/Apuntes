@@ -5,10 +5,7 @@
 
 body
 {
-    background-image: url(../IMG/fondo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #D8C096;
 }
 
 nav
@@ -31,6 +28,14 @@ nav,.navegador,.subnavegador
     background-color: #ffffffd7;
     border-radius: 8px;
 }
+
+#lupa:hover
+{
+    cursor: pointer;
+    background-color: #e4d3b6;
+    border-radius: 8px;
+}
+
 
 .navegador
 {
@@ -115,19 +120,6 @@ section
 {
     display: grid;
     grid-row: auto;
-}
-
-#baguettes
-{
-    height: 1000px;
-    width: 1000px;
-}
-
-.description
-{
-    background-color: rgba(255, 255, 255, 0.616);
-    border: 1px solid black;
-    border-radius: 8px;
 }
 
 .title-description
@@ -215,7 +207,15 @@ div#product>img#baguettes
 
 .targets>.boton
 {
-    background-color: #C49A52;
+    background-color: rgb(126, 204, 10);
+    text-decoration: none;
+    color: white;
+}
+
+.targets>.boton>a
+{
+    text-decoration: none;
+    color: inherit;
 }
 
 .boton
