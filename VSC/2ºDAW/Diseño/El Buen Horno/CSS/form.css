@@ -76,6 +76,12 @@ nav,.navegador,.subnavegador
     opacity: 1;
 }
 
+#aniadir>a
+{
+    text-decoration: none;
+    color: white;
+}
+
 #subnav
 {
     display: none;
