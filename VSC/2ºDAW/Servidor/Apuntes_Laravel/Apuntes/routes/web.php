@@ -6,6 +6,10 @@ use App\Http\Controllers\Controlador;
 
 // Original: Route::get('/', function () {return view('welcome');});
 
+
+// GRUPO DE NOTAS
+
+
 // Muestra las vistas
 Route::get('/', [Controlador::class, 'showVista'])->name("vista");
 Route::get('/notas', [Controlador::class, 'showNotas'])->name("notas");
