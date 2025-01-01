@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores RGB</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function()
+        {
+            let color = localStorage.getItem('color');
+            alert(color)
+            if(color)
+            {
+                document.body.style.backgroundColor = color;
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="cambiarColores.html">Cambiar color de fondo</a>
+</body>
+</html>

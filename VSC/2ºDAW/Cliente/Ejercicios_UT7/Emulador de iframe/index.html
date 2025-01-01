@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function escribirTexto()
+        {
+            const texto = document.getElementById('texto').value;
+            const contenedorSeleccionado = document.querySelector('input[name="contenedor"]:checked').value;
+            document.getElementById(contenedorSeleccionado).innerText = texto;
+        }
+
+        function mostrarNombres()
+        {
+            const textoIzquierdo = document.getElementById('contenedor-izquierdo').innerText;
+            const textoDerecho = document.getElementById('contenedor-derecho').innerText;
+            alert('Texto del contenedor izquierdo:\n' + textoIzquierdo + '\n\nTexto del contenedor derecho:\n' + textoDerecho);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="contenedor-izquierdo">
+            <p>Contenedor Izquierdo</p>
+        </div>
+        <div class="box" id="contenedor-central">
+            <input type="text" id="texto" placeholder="Escribe aquí...">
+            <div>
+                <input type="radio" id="izquierdo" name="contenedor" value="contenedor-izquierdo">
+                <label for="izquierdo">Izquierdo</label>
+                <input type="radio" id="central" name="contenedor" value="contenedor-central">
+                <label for="central">Central</label>
+                <input type="radio" id="derecho" name="contenedor" value="contenedor-derecho">
+                <label for="derecho">Derecho</label>
+            </div>
+            <button onclick="escribirTexto()">ESCRIBIR</button>
+        </div>
+        <div class="box" id="contenedor-derecho">
+            <p>Contenedor Derecho</p>
+            <button onclick="mostrarNombres()">COMO SE LLAMAN LOS MARCOS</button>
+        </div>
+    </div>
+</body>
+</html>

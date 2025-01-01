@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen en Alta Resolución</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function getQueryParam(param)
+        {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function()
+        {
+            const imageName = getQueryParam('image');
+            if(imageName)
+            {
+                document.getElementById('high-res-image').src = imageName;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Imagen en Alta Resolución</h1>
+    <div class="image-container">
+        <img id="high-res-image" src="" alt="Imagen en alta resolución">
+    </div>
+</body>
+</html>

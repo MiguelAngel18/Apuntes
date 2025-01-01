@@ -1,0 +1,39 @@
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1
+{
+    color: #333;
+}
+
+.gallery
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery a
+{
+    margin: 10px;
+}
+
+.gallery img
+{
+    width: 250px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover
+{
+    transform: scale(1.1);
+}

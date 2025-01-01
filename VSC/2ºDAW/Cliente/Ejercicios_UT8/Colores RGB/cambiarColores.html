@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar colores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <h1>Elija una propiedad:</h1>
+    <select name="atributos" id="atributos">
+        <option value="" selected>Elije un atributo</option>
+        <option value="bgColor">bgColor</option>
+        <option value="fgColor">fgColor</option>
+        <option value="linkColor">linkColor</option>
+        <option value="aLinkColor">aLinkColor</option>
+        <option value="vLinkColor">vLinkColor</option>
+    </select>
+
+    <h1>Elija un color:</h1>
+    
+    <label for="rojo" style="color:red;">Rojo</label>
+    <input type="number" id="rojo" min="0" max="255" maxlength="3">
+    <br>
+    <label for="verde" style="color:green;">Verde</label>
+    <input type="number" id="verde" min="0" max="255" maxlength="3">
+    <br>
+    <label for="azul" style="color:blue;">Azul</label>
+    <input type="number" id="azul" min="0" max="255" maxlength="3">
+    <br>
+    <button onclick="cambiarColor()">Cambiar de color</button>
+
+    <script>
+        function cambiarColor()
+        {
+            let rojo = document.getElementById('rojo').value;
+            let verde = document.getElementById('verde').value;
+            let azul = document.getElementById('azul').value;
+
+            if(rojo==='' || verde==='' || azul==='')
+            {
+                if(rojo==='')
+                {
+                    rojo=255;
+                }
+                if(verde==='')
+                {
+                    verde=255;
+                }
+                if(azul==='')
+                {
+                    azul=255;
+                }
+            }
+            
+            let color = 'rgb(' + rojo + ',' + verde + ',' + azul + ')';
+            localStorage.setItem('color', color);
+            alert('Color guardado. Vuelve a la página principal para ver el cambio.');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>
