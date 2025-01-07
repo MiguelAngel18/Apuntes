@@ -1,0 +1,68 @@
+<html>
+  <head>
+  <title>Ejemplo 6 Canvas </title>
+  <script type="text/javascript">
+  function dibujarCanvas(){
+  var canvas = document.getElementById('miCanvas');
+  var contexto = canvas.getContext('2d');
+  // gradiente lineal vertical
+  var gradienteLineal = contexto.createLinearGradient(0,0,0,100); 
+  gradienteLineal.addColorStop(0, 'rgb(255,0,0)'); // rojo
+  gradienteLineal.addColorStop(0.5, '#fff');       // blanco
+  gradienteLineal.addColorStop(1, 'rgb(50,220,0)'); // verde
+  contexto.fillStyle = gradienteLineal;
+  contexto.fillRect(0,0,100,100);
+  // gradiente lineal horizontal
+  var gradienteLineal = contexto.createLinearGradient(120,0,220,0); 
+  gradienteLineal.addColorStop(0, 'rgb(255,0,0)');
+  gradienteLineal.addColorStop(0.5, '#fff');
+  gradienteLineal.addColorStop(1, 'rgb(50,220,0)');
+  contexto.fillStyle = gradienteLineal;
+  contexto.fillRect(120,0,100,100);
+
+ // gradiente lineal diagonal
+  var gradienteLineal = contexto.createLinearGradient(230,0,330,100); 
+  gradienteLineal.addColorStop(0, 'rgb(255,0,0)');
+  gradienteLineal.addColorStop(0.5, '#fff');
+  gradienteLineal.addColorStop(1, 'rgb(50,220,0)');
+  contexto.fillStyle = gradienteLineal;
+  contexto.fillRect(230,0,100,100); 
+
+  // gradiente lineal sobre trazo 
+  var gradienteLineal = contexto.createLinearGradient(0,110,0,210);
+  gradienteLineal.addColorStop(0, 'red'); // rojo
+  gradienteLineal.addColorStop(1, 'white'); // blanco
+  contexto.strokeStyle = gradienteLineal;
+  contexto.strokeRect(10,110,30,100);  
+
+  // gradiente lineal  sobre relleno
+  contexto.fillStyle = gradienteLineal;
+  contexto.fillRect(50,110,50,100);  
+
+  // gradiente radial efecto esfera 
+
+  var gradienteRadial = contexto.createRadialGradient(160,160,1,170,150,30);
+  gradienteRadial.addColorStop(0, '#FFFFFF');
+  gradienteRadial.addColorStop(0.9, 'rgba(255,0,0,1)'); // rojo
+  gradienteRadial.addColorStop(1, 'rgba(255,0,0,0)'); // rojo transparente
+  contexto.fillStyle = gradienteRadial;
+  contexto.fillRect(120,110,150,150);
+
+ // gradiente radial uniforme
+
+ var gradienteRadial = contexto.createRadialGradient(280,160,1,280,160,190);
+  gradienteRadial.addColorStop(0, '#FFFFFF');
+  gradienteRadial.addColorStop(0.7, 'rgba(255,0,0,1)'); // rojo
+  gradienteRadial.addColorStop(1, 'rgba(255,0,0,1)'); // rojo transparente
+  contexto.fillStyle = gradienteRadial;
+  contexto.fillRect(230,110,100,100);
+  }
+   </script>
+  </head>
+  <body onLoad="dibujarCanvas();">
+  <canvas id="miCanvas" width="450" height="350">Su navegador no soporta Canvas.</canvas>
+  </body>
+  </html>
+
+
+

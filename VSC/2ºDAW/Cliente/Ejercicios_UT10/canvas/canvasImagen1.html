@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Ejemplo 7 Canvas </title>
+    <script type="text/javascript">
+      function dibujarCanvas(){
+        var canvas = document.getElementById('miCanvas');
+        var contexto = canvas.getContext('2d');
+	      // imagen
+		var imagen = new Image();
+		imagen.onload = function(){
+			contexto.drawImage(imagen,0,0);  // imagen completa en la posición (0,0) 
+			contexto.drawImage(imagen,285,0, 150,107); // escalado
+			contexto.drawImage(imagen,130,85,80,60,285,205,150,107); // escalado de una porción
+			contexto.strokeStyle = 'yellow';
+       	contexto.strokeRect (130,85,80,60); // rectángulo amarillo
+		 }
+		  imagen.src = 'http://www.aulaclic.es/articulos/graficos/cabeza_pato.png';
+		  /**imagen.src='Penguins.jpg';**/
+		  
+	  }
+	  
+
+    </script>
+  </head>
+  <body onLoad="dibujarCanvas();">
+    <canvas id="miCanvas" width="450" height="350">Su navegador no soporta Canvas.</canvas>
+  </body>
+</html

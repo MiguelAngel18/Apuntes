@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      } 
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="430"></canvas>
+    <canvas id="tempCanvas" width="578" height="430" style="display:none;"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var tempCanvas = document.getElementById('tempCanvas');
+      var tempContext = tempCanvas.getContext('2d');
+
+      var squareWidth = 55;
+      var circleRadius = 35;
+      var shapeOffset = 50;
+      var operationOffset = 150;
+      var arr = [];
+
+      arr.push('source-atop');
+      arr.push('source-in');
+      arr.push('source-out');
+      arr.push('source-over');
+      arr.push('destination-atop');
+      arr.push('destination-in');
+      arr.push('destination-out');
+      arr.push('destination-over');
+      arr.push('lighter');
+      arr.push('darker');
+      arr.push('xor');
+      arr.push('copy');
+
+      // translate context to add 10px padding
+      context.translate(10, 10);
+
+      // draw each of the operations
+      for(var n = 0; n < arr.length; n++) {
+        var thisOperation = arr[n];
+
+        tempContext.save();
+        
+        // clear temp context
+        tempContext.clearRect(0, 0, canvas.width, canvas.height);
+
+        // draw rectangle (destination)
+        tempContext.beginPath();
+        tempContext.rect(0, 0, squareWidth, squareWidth);
+        tempContext.fillStyle = 'blue';
+        tempContext.fill();
+
+        // set global composite
+        tempContext.globalCompositeOperation = thisOperation;
+
+        // draw circle (source)
+        tempContext.beginPath();
+        tempContext.arc(shapeOffset, shapeOffset, circleRadius, 0, 2 * Math.PI, false);
+        tempContext.fillStyle = 'red';
+        tempContext.fill();
+        tempContext.restore();
+
+        // draw text
+        tempContext.font = '10pt Verdana';
+        tempContext.fillStyle = 'black';
+        tempContext.fillText(thisOperation, 0, squareWidth + 45);
+
+        // translate visible context so operation is drawn in the right place
+        if(n > 0) {
+          if(n % 4 === 0) {
+            context.translate(operationOffset * -3, operationOffset);
+          }
+          else {
+            context.translate(operationOffset, 0);
+          }
+        }
+
+        // copy drawing from tempCanvas onto visible canvas
+        context.drawImage(tempCanvas, 0, 0);
+      }
+    </script>
+  </body>
+</html>      

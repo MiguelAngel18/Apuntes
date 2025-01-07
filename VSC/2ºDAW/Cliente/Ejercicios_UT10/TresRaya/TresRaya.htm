@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>X marca el punto</title>
+<style type="text/css">
+	body { margin: 0.5in; background-color: white }
+	td.val { background-color: yellow;
+			width: 30; height:35; text-align:center }
+	td.noval { background-color: lime; 
+			width: 30; height: 35; text-align: center }
+	div.juego { margin-top: 0.5in; margin-left: 1.5in }
+</style> 
+<script language="javascript">
+<!--
+var nombre_imagen = "o.gif"
+function jugar() {
+   // Obtener lugar del click y colocar imagen
+   var obj=window.event.srcElement;
+   if (obj.className != 'val')
+	return
+   obj.className = 'noval';
+   nombre_imagen = nombre_imagen == "Imagenes/x.gif" ? "Imagenes/o.gif" : "Imagenes/x.gif";
+   var mi_nombre_imagen = "<img src='" + nombre_imagen + "'>";
+   obj.innerHTML = mi_nombre_imagen;
+}
+//-->
+</script>
+
+</head>
+<body onClick="jugar()">
+<h1 id="cabecera"> Tres en raya con HTML dinámico</h1>
+<p>
+Bueno, espero que sepa cómo jugar a este juego... es tan viejo como el tiempo. El jugador 1
+es "X" y el jugador 2 es "O". El primer jugador en conseguir tres cuadros iguales en una fila,
+en diagonal, horizontal o vertical, gana. Si ningún jugador consigue tres cuadros en una fila,
+el juego queda empatado.
+<div class="juego">
+<table border="5" cellpadding="0" cellspacing="5">
+<tr><td id="uno" class=val> </td><td id="dos" class=val> </td>
+	<td id="tres"class=val> </td></tr>
+<tr><td id="cuatro" class=val> </td><td id="cinco" class=val> </td>
+	<td id="seis" class=val> </td></tr>
+<tr><td id="siete" class=val> </td><td id="ocho" class=val> </td>
+	<td id="nueve" class=val> </td></tr>
+</table>
+</div>
+</body>
+</html>

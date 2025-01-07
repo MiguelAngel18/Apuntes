@@ -1,0 +1,310 @@
+<!DOCtype html PUBLIC "-//W3C//DTD html 3.2//EN">
+<html>
+<head>
+<title>Lugares de YASD: El Zoo de la Ciudad</title>
+<link rel="stylesheet" type="text/css" 
+	href="estilo1.css" title="estilo1">
+
+<script language="javascript" >
+	num = 1;
+   function cambio() {	
+   alert(num);
+	if (num == 1) {
+	
+		//document.styleSheets[0].href="estilo2.css";	 	Este no se ejecuta automáticamente
+		num=2;
+		document.getElementsByTagName('link')[0].href="estilo2.css"; 
+		document.styleSheets[0].addRule("body", "background-color:red"); 
+
+		}
+	else {
+		//document.styleSheets[0].href="./estilo1.css";		Este no se ejecuta automáticamente
+		num = 1;
+		document.getElementsByTagName('link')[0].href="estilo1.css"; 
+		
+		}
+	}
+</script>
+</head>
+<body onclick="cambio()">
+<h1>El análisis preliminar </h1>
+<p style="text-indent: 0in">
+El equipo de desarrollo crearía normalmente
+un guión del sitio para el posible cliente.
+<p>
+ En el proceso de desarrollo del sitio web, el guión puede
+utilizarse para ver la jerarquía sugerida, o la organización de página,
+para la página web. Además, el guión puede utilizarse también para
+mostrar el diseño de las páginas del sitio, los colores que se pueden
+emplear, cómo se pueden utilizar los gráficos, y otros factores. Las
+páginas de demostración pueden ser páginas estáticas que han sido creadas
+a mano o por ordenador, o bien pueden ser páginas web falsas que 
+muestran buena parte del concepto y diseño sin entrar en detalles. Las
+páginas html pueden utilizarse en primer lugar ya que son bastante
+fáciles de crear y pueden ser una demostración eficaz. Sin embargo, 
+dibujos estáticos o páginas html funcionarían. 
+</p>
+Un guión consistiría en un dibujo de la jerarquía de páginas sugerida
+y páginas de ejemplo que mostrarían el color y los gráficos sugeridos
+o las organizaciones de página. Si el cliente acepta la propuesta del
+equipo de desarrollo, el equipo desarrollaría entonces un prototipo de
+sitio web. Para un prototipo se crearían y visualizarían las páginas
+de demostración que representarían el modo en que se construiría el sitio
+y la organización de las páginas web. 
+<div id="sidebar">
+<p>
+<strong class="extended">Guiones de sitio web</strong><br>
+Los guiones se han utilizado en los campos del cine, la televisión
+y la publicidad durante años. Un guión es normalmente una serie de
+dibujos que se utilizan como representaciones del producto final.
+La persona que presenta el guión lo hace en el orden o secuencia
+en que se presentará el producto final. Durante la presentación 
+se discutirá el aspecto de producto final, los factores implicados en
+el proceso, el atractivo para un determinado segmento de mercado,
+etc. Estas presentaciones permiten al cliente tener una idea de lo que
+será el producto final antes del coste que supondría comprometerse
+en el desarrollo real del producto.
+</p>
+El objetivo de los guiones es demostrar al cliente lo que recibirá
+si acepta la propuesta del equipo de desarrollo. El objetivo de los
+prototipos es verificar la comprensión del equipo de desarrollo de
+los requisitos del cliente, ayudar al cliente a convalidar y dar por
+terminadas sus elecciones, y a que tome sus decisiones antes de
+crear las páginas del sitio. 
+</div>
+<p>
+El equipo de desarrollo investigó los sitios web existentes sobre zoos que se aproximarían
+a lo que pensaban que el Zoo de la Ciudad querría.
+El equipo investiga los sitios existentes para hacerse una idea de
+los tipos de contenido más eficaces y para comprender lo que 
+otras empresas u organizaciones de la misma línea de negocio
+creen que es lo bastante importante como para ser incluido en el
+sitio web. El equipo decidió además incluir demostraciones de estos
+sitios como parte del proceso del guión con el fin de mostrar al
+personal del Zoo de la Ciudad el aspecto de sitios de zoo existentes
+y lo que ellos estaban haciendo. Este tipo de demostración puede 
+servir como punto de partida, y puede facilitar la eliminación de posibles
+expectativas no realistas por parte de las organizaciones de sitios web
+principiantes. 
+<p class="note">
+De su investigación de otros sitios de zoos, el equipo de desarrollo
+obtuvo una importante conclusión: si es grande y rara y tiene un bebé,
+¡debe ir en la página principal! Los nacimientos de animales poco
+habituales o raros, como elefantes, gorilas, rinocerontes, etc., eran el
+tema de interés número uno para los sitios web de zoos. 
+<div id="sidebar">
+<p class="sidebar">
+<strong class="extended">Prototipo de sitio web</strong><br>
+Un prototipo de sitio web consistiría en sencillas páginas html
+que mostrarían la organización de la estructura básica del sitio web.
+Estas páginas mostrarían la ubicación recomendada de gráficos, marcos,
+el uso de las tablas, la navegación y la organización de la página web.
+El prototipo podría también mostrar el desarrollo de la aplicación web que
+se estaría produciendo para el sitio, como demostración de formularios
+basados en CGI o el uso de applets Java.
+<p>
+Con el fin de simplificar el proceso de desarrollo de prototipos,
+una empresa que desarrolle sitios web puede seguir un par de
+trucos. El primero es tener páginas web creadas que muestren
+una cierta funcionalidad. Entre algunos de estos tipos de páginas
+están páginas con marco arriba, a cada lado y abajo. Otra página
+web puede crear una tabla html falsa, o una lista de viñetas o un
+formulario. Otras páginas contendrían applets Java básicos, o controles
+de Microsoft ActiveX o plug-ins de Netscape. Las páginas pueden
+copiarse y modificarse para el prototipo o pueden fundirse en
+páginas de presentación.
+<p>
+Fundir las páginas puede ser tan sencillo como utilizar
+Server Side Includes (SSI) para incluir el html falso. Server
+Side Includes son técnicas que permiten incorporar un comando
+directamente en una página html. Este comando es entonces leído
+por el servidor antes de que la página sea devuelta y el comando
+procesado. Un ejemplo de un comando SSI sería el siguiente, que
+insertará el contenido del documento html específico directamente en
+la posición en la que existe el comando:
+<p>
+<code>&lt;!--#include "some.html" --></code>
+<p>
+Se debe configurar la utilización de comandos SSI para cada sitio web,
+y los archivos html que contengan los comandos tienen una extensión
+distinta que las páginas html normales. Esto asegura que sólo las
+páginas web que contengan comandos SSI sean analizadas por el
+servidor. En otro caso el servidor abriría todos los archivos html en
+busca de comandos, ralentizando el acceso a las páginas web. 
+<P style="text-indent: 0in ">
+ Un sitio donde se puede obtener más información sobre Server Side Includes
+está en <a href="http://hoohoo.ncsa.uiuc.edu/docs/tutorials/includes.html">
+http://hoohoo.ncsa.uiuc.edu/docs/tutorials/includes.html</a>.
+Se puede acceder a un tutorial en línea sobre el uso de comandos SSI en 
+<a href="http://www.carleton.ca/~dmcfet/html/ssi.html">http://www.carleton.ca/~dmcfet/html/ssi.html
+</a>.
+Además, Server Side Includes se utilizará en cualquier punto de esta situación. 
+</div>
+<p>
+<strong>La entrega del guión</strong>
+<p>
+El equipo de desarrollo revisó varios sitios distintos de zoos de
+todo el país. El criterio que utilizaron para seleccionar los sitios
+para mostrar al cliente fue el aspecto, la organización y la 
+conservación del ancho de banda. Lo último se incluyó debido al
+conocimiento del equipo de desarrollo de que el sitio web se
+enlazaría a Internet mediante modem y que el sitio tendría que
+ser conservador en el uso de los gráficos. Los cinco candidatos
+que encontró el equipo de desarrollo fueron: 
+<ol>
+<li>
+<a href="http://www.nwtrek.org">Northwest Trek</a> en el estado de
+Washington. El sitio Northwest
+Trek fue elegido debido a su llamativo aspecto, su contenido bien
+organizado y su eficaz uso de las páginas del sitio web.
+<li> El <a href="http://www.indyzoo.com/">Zoo de Indianapolis</a>
+ en Indiana. De nuevo, el sitio estaba eficazmente diseñado y era
+muy llamativo. Al equipo de desarrollo le gustó el particular el
+logo del sitio web y lo fácil que era localizar información desde
+la página principal. este sitio tenía también un catálogo en línea
+de su tienda de regalos, aunque el sitio del catálogo estaba en
+construcción en el momento de visitar el sitio.  
+<li> El <a href="http://www.si.edu/natzoo/">Zoo Nacional</a>
+ en Washington DC. El equipo de desarrollo se preocupó por el
+tiempo que tardaba en descargarse el sitio debido al tamaño de los
+gráficos y a la cantidad de contenido gráfico. El equipo decidió,
+no obstante, que como el contenido gráfico era pertinente y eficaz
+el sitio se añadiría a la lista. 
+<li> El <a href="http://www.neaq.org">Acuario de Nueva Inglaterra</a> en Massachusetts. 
+Este sitio tiene gráficos muy profesionales y llamativos, hace
+un uso eficaz de texto alternativo, y dispone de una excelente
+organización.
+<li> El <a href="http://www.toledozoo.org/">Zoo de Toledo</a>
+ en Ohio. Al principio el equipo de desarrollo estaba un poco
+desanimado por el brillante colorido del sitio, pero tras
+la primera reacción pudieron ver que los colores realmente
+invitan a interesarse por el sitio. Además, como con los otros
+sitios seleccionados, la organización del sitio del Zoo de 
+Toledo estaba muy bien hecha. </ol>
+<p>
+ La principal razón por la otros sitios no se eligieron fue el intensivo
+uso que hacían de los gráficos, el uso de gráficos sin texto alternativo,
+demasiado contenido en una sola página web, un contenido y una
+organización que no cumplían los requisitos del cliente, o bien el uso
+de mapas de imagen para menús sin un medio alternativo para 
+navegar por el sitio. 
+<p>
+<strong >Mapas de imagen</strong>
+<p>
+ Los mapas de imagen son una herramienta eficaz e interesante
+para proporcionar navegación en un sitio web. Por desgracia, en
+su mayoría, estos mapas de imagen son también bastante grandes y
+su descarga puede requerir un tiempo considerable. Además, los
+navegadores proporcionan opciones que permiten a la gente desactivar 
+la descarga de imágenes, lo que hace que sean prácticamente inútiles.
+<p>
+Para utilizar un mapa de imagen en un sitio, proporcione siempre
+una alternativa. Esto permitirá a una persona utilizar un menú
+basado en texto si no eligen esperar a que la imagen se cargue.
+Además, esta será la única opción de navegación para los que no
+estén descargando imágenes.  
+<p>
+ En el sitio web del Acuario de Nueva Inglaterra, los desarrolladores
+de este sitio situaron, como texto alternativo para el mapa de imagen,
+las palabras &quot;Si no puede ver este menú gráfico, utilice el menú
+de texto situado al final de la página&quot;, como muestra la figura
+1. Esto se hace fácilmente añadiendo el atributo <b>ALT</b> a la etiqueta
+de la imagen, como se muestra en:<br>
+<code>&lt;img src="somemap.gif" width=400 height=220 alt="mapa de menú,
+o utilice el menú de texto de abajo" usemap="#menu" border=0></code>
+<p style="text-indent: 0in">
+ Otros sitios sitúan enlaces basados en texto directamente bajo el mapa
+de imagen, de modo que se vean fácilmente. 
+<p>
+Sea cual sea el método que emplee el sitio, sin una alternativa
+al mapa de imagen el lector de la página web puede no ser capaz de
+navegar por el sitio.
+<p class="figure">
+Figura 1. El texto alternativo al mapa de imagen del sitio
+web del Acuario de Nueva Inglaterra.
+</p>
+<img src="Imagenes/cap1fig1.jpg" width=400 height=300 alt="Zoo Acuario de Nueva Inglaterra" vspace=10>
+<p>
+Desde cada uno de los cinco sitios, el equipo de desarrollo
+creó una lista de lo que pensaban que eran las mejores funciones
+de los sitios: 
+<ul>
+<li>Organización - la página web principal estaba
+bien organizada y era muy sencillo encontrar el lugar en el que
+el sitio contenía la información deseada. 
+<li> Uso eficaz del espacio entre gráficos y palabras.
+Todos los sitios mantenían <i>espacio en blanco </i>alrededor de
+gráficos y texto. El espacio en blanco es espacio de la página que
+no contiene texto o gráficos ni ningún otro contenido. El uso de este
+espacio presentó un aspecto interesante aunque vacío.
+<li> Uso eficaz de los gráficos. Los sitios hacían un uso muy eficaz
+de los gráficos sin poner demasiados en las páginas que el sitio
+tardaría demasiado en descargar. La página del Zoo Nacional fue la
+más lenta en descargarse, pero era tan eficaz en otros campos que la
+lentitud fue pasada por alto.
+<li> Contenido - los sitios proporcionaban información sobre el 
+horario del zoo, los precios de las entradas y su ubicación. Además
+ofrecían información sobre acontecimientos, datos de interés especial
+y la mayoría contenía una sección especial para niños. Todos contenían
+fotos, pero eran pequeñas o situadas fuera de la página principal.
+<li> Todos los sitios hacían que se deseara ir más allá de la primera
+página, o visitar la página de nuevo, una auténtica clave para el éxito en
+un sitio web.
+</ul>
+<p>
+<strong >Contrarequisitos</strong>
+<p>
+Basándose en los elementos importantes listados en la sección
+anterior, el equipo de desarrollo decidió proponer un <I>contrarequisito</I>,
+un cambio recomendado de los requisitos basados en el análisis
+preliminar y en la compresión de la tecnología de sitio web del equipo
+de desarrollo.
+<p>
+ El personal del zoo quería inicialmente tener subsitios para cada una
+de las principales zonas de animales. El equipo de desarrollo estaba
+preocupado porque algunas de las zonas tienen más actividad que otras.
+Un importante elemento para todos los sitios web es que el contenido
+debe ser dinámico. Si una página web cambia poco, la página será 
+visitada con poca frecuencia, y cuando por fin cambie para anunciar
+algo importante, el cambio no será notado, ya que el sitio no se visita
+con frecuencia.
+<p>
+Basándose en la necesidad de páginas web dinámicas, el equipo de
+desarrollo recomendó que el sitio web del Zoo de la Ciudad mantuviera
+una página web para los animales más jóvenes, incluyendo información
+y fotos, y una página con fotos de los demás animales.
+Para asegurarse de que ninguna zona quedara fuera del ojo público,
+el sitio podría mantener una página especial que cambiara mensualmente
+y que entrara específicamente en detalle sobre cada una de las zonas de
+animales diferentes del zoo.
+<p>
+El Zoo de la Ciudad aceptó el requisito alternativo.
+Basándose en esto, la jerarquía del sitio web para el sitio del Zoo de la Ciudad
+sería similar al listado en la figura 2.3.  
+<P class="Figure">
+ Figura 2. Jerarquia del sitio web del Zoo de la Ciudad. 
+<p>
+<img src="Imagenes/cap1fig2.jpg" width=443 height=201 alt="jerarquía del sitio web" vspace=10>
+<p>
+Además, al cliente le gustó también la organización del sitio de
+demostración, aunque prefirieron un fondo de un color liso y blanco o claro
+a un fondo de imagen. También les gustaron los mapas de imagen hechos
+con fotos en lugar de los que utilizaban gráficos, cosa que mantenía la
+página web principal relativamente despejada, salvo por los anuncios
+principales y el menú de desplazamiento. 
+<p style="text-indent: 0in"> 
+ Con esta información, el equipo estaba preparado para empezar las
+páginas de diseño preliminares y desarrollar las dos alternativas de
+desarrollo pedidas.<BR>
+<p class="address">
+Visual J++, Internet Information Server, Windows NT, Visual C++, dbWeb <br>
+son  
+marcas registradas de Microsoft Corporation
+<br>Java, JDBC, JDK son marcas registradas de Sun Microsystems, Inc.
+<br>&copy 1996 YASD Web Development
+</p>
+<address>
+Enviar comentarios a <a href="mailto:shelleyp@yasd.com">YASD WebMaster</a>.
+</address>
+</body>
+</html>

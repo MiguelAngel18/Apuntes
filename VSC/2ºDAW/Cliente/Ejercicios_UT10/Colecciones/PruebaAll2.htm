@@ -1,0 +1,55 @@
+<head>
+<title>Prueba de all y etiquetas HTML</title>
+<script language="javascript">
+<!--
+
+var nombres;
+function bucle_elementos()
+  {
+	var un_nombre;
+	nombres = "";
+	var ct;
+	ct = 0;
+	var grupo;
+	grupo = document.all;
+	for(var i = 0; i<grupo.length;i++)
+	  {
+		un_nombre = grupo[i].tagName
+		//alert(un_nombre);
+		if (un_nombre!=null)
+		  {
+			ct++;
+			if (ct < 5)
+				nombres += un_nombre + "&nbsp;&nbsp;&nbsp;";
+			else
+				nombres += un_nombre + "<br>";
+				ct = 0;
+		   }
+	  }
+	vis_resultados()
+  }
+
+function vis_resultados() {
+	document.all.resultados.innerHTML=nombres
+	}
+//-->
+</script>
+</head>
+<body onclick="bucle_elementos()">
+<h1 name="cabecera1"> Soy la cabecera uno</h1>
+<h2  name="cabecera2"> Soy la cabecera dos</h2>
+<p name="parrafo1"> Soy el párrafo 1</P>
+<img src="Imagenes/x.gif" name="X">
+<ol name="list">
+<li name="item1">Este es el primer elemento</li>
+<li name="item2">Este es el segundo</li>
+</ol>
+<form name="un_formulario">
+<input type="button" name="boton1" value="Soy el botón1">
+</form>
+<div>
+Y los resultados son:
+</div>
+<div id="resultados">
+</div>
+</body>

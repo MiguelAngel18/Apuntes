@@ -1,0 +1,76 @@
+<head>
+<title>Modificar tabla con las colecciones rows y cells</title>
+<script language="Javascript">
+<!--
+function bucle_elements()
+  {
+      var filas = tabla.rows
+	  // por cada fila
+      for (var i=0;i<filas.length;i++)
+	    {
+	    var columnas = filas[i].cells
+	    bandera = 1
+	    // para cada columna, comprobamos color
+	     for ( var j=0; j < columnas.length; j++)
+		   {
+		   if (columnas[j].style.backgroundColor == "red")
+		     {
+		     bandera=0
+		     columnas[j].style.backgroundColor = "maroon"
+		     }
+		   else if (columnas[j].style.backgroundColor == "blue")
+		     {
+		     bandera=0
+		     columnas[j].style.backgroundColor = "navy"
+		     }
+		   else if (columnas[j].style.backgroundColor == "lime")
+		     {
+		     bandera=0
+		     columnas[j].style.backgroundColor = "green"
+		     }
+		   else if (columnas[j].style.backgroundColor == "white")
+		     {
+		     bandera=0
+		     columnas[j].style.backgroundColor = "black"
+		     }
+		   // si hubo cambio de color de fondo, cambiamos color de primer plano y fuente
+		   if (bandera == 0)
+		     {
+		     columnas[j].style.color="white"
+		     columnas[j].style.fontFamily="Cursive"
+		     break;
+		     }
+	       } // fin for j
+	    // si no hay mas valores que cambiar salimos del bucle
+	    if (bandera == 0)
+		  break;
+	    } // fin for i
+  } // fin function
+//-->
+</script>
+</head>
+<body>
+<center>
+<input type=button value="Púlseme cuando termine cada tarea" onClick="bucle_elements()">
+</center>
+<p>
+<table id="tabla" cols="4" border="3" cellspacing="5" align="center">
+<tr>
+<td width="125" align=center style="background-color: lime"> Tarea Uno </td>
+<td width="125" align=center style="background-color: white"> Tarea Dos </td>
+<td width="125" align=center style="background-color: blue"> Tarea Tres </td>
+<td width="125" align=center style="background-color: red"> Tarea Cuatro </td>
+</tr>
+<tr>
+<td width="125" align=center style="background-color: white"> Tarea Cinco </td>
+<td width="125" align=center style="background-color: blue"> Tarea Seis </td>
+<td width="125" align=center style="background-color: red"> Tarea Siete </td>
+<td width="125" align=center style="background-color: lime"> Tarea Ocho </td>
+</tr>
+<tr>
+<td width="125" align=center style="background-color: blue"> Tarea Nueve </td>
+<td width="125" align=center style="background-color: red"> Tarea Diez </td>
+<td width="125" align=center style="background-color: lime"> Tarea Once </td>
+<td width="125" align=center style="background-color: white"> Tarea Doce </td>
+</tr>
+</body>

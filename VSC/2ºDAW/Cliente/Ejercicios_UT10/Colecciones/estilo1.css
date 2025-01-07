@@ -1,0 +1,38 @@
+
+	BODY {  background-color: #eeeeee ; 
+		font-size: 10pt ; font-family: Helvetica;
+		margin-left: 0.5in ; margin-right: 0.5in ;
+		margin-top: 0.5in }
+	H1 { font: 28pt ; color: maroon ; text-align: center} 
+	H2 { font: 24pt ; color: navy ; margin-left: 0.5in }
+	H3 { font: 20pt ; color: black ; margin-left: 0.2in }
+
+	#sidebar { margin-left: 0.5in; 
+		margin-right: 0.5in ; background-image: URL(snow.jpg) ;
+		text-align: left  ; font-variant: small-caps ;
+		font-size: 10pt ; text-indent: 0.0in ; }
+
+	CODE { color: red ; font-weight: bold ; text-decoration: underline}
+
+	STRONG {  font-size: 22pt; color: red ; 
+		font-family: Helvetica ; font-weight: bold}
+	STRONG.extended { font-size: 20pt; color: blue ; 
+			background-color : silver; font-style: italic; font-weight: bold }
+
+	A:link { color : orange ; text-decoration: none }
+	A:visited { color : black ; text-decoration: none}
+
+	OL { margin-left: 0.3in; margin-right: 0.3in; font-size: 10pt; 
+		background-color: yellow: color: black; font-family: Arial }
+	UL { margin-left: 0.4in; margin-right: 0.4in; font-size: 10pt; 
+		background-color: black; color: yellow; font-family: Arial }
+
+	P { text-indent: 0.2in }
+	P.Figure { color: olive ; text-indent: 0.0in ; font-style: italic; 
+			font-weight: bold; font-variant: small-caps } 
+	P.address { font-style: italic; font-size: 8pt; font-family: Times ;
+			text-indent: 0.0in; margin-left: 0.0in}
+
+	P.newstyle { letter-spacing: 0.5em ; text-transform: uppercase }
+
+	.note { color: maroon; letter-spacing: 0.2em ; text-transform: uppercase }

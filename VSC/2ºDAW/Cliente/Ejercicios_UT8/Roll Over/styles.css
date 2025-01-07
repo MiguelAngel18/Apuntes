@@ -1,0 +1,35 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.image-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.image-container img
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+img#primaria1:hover
+{
+    #primaria2
+    {
+        display: block;
+    }
+}
+
+#primaria2
+{
+    display: none;
+}
+
+#secundaria2
+{
+    display: none;
+}
