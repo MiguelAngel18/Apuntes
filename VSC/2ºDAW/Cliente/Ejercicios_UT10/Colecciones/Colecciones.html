@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colecciones</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- Texto con efecto marquesina -->
+	<marquee id="marquesina" style="color: red;">¡Queremos que compre!</marquee>
+	
+	<!-- Texto verde con eventos de ratón -->
+	<div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;">
+		<span style="color: green;" onmouseover="cambiarTextoMarquesina('Este producto es el mejor de la línea')" onmouseout="restaurarTexto()">Producto A</span>
+		<br>
+		<span style="color: green;" onmouseover="cambiarTextoMarquesina('Este producto es de la mejor calidad')" onmouseout="restaurarTexto()">Producto B</span>
+		<br>
+		<span style="color: green;" onmouseover="cambiarTextoMarquesina('Este producto es barato, barato, barato')" onmouseout="restaurarTexto()">Producto C</span>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

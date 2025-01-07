@@ -1,0 +1,26 @@
+#buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    margin-top: 125px;
+}
+
+#buttons button
+{
+    margin-right: 5px;
+}
+
+#imagen
+{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    transition: transform 2s, left 2s, right 2s;
+    border-bottom: 1px solid black;
+}
+
+.invertida
+{
+    transform: scaleX(-1);
+}
