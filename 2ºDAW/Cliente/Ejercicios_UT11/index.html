@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Seleccionar Pizza</h1>
+    <form id="pizzaForm">
+        <h2>Ingredientes</h2>
+        <hr>
+        <label><input type="checkbox" name="ingredientes" value="Queso" /> Queso</label>
+        <label><input type="checkbox" name="ingredientes" value="Tomate" /> Tomate</label>
+        <label><input type="checkbox" name="ingredientes" value="Jamón" /> Jamón</label>
+        <hr>
+
+        <h3>Tipo de masa:</h3>
+        <select id="masa">
+            <option value="Fina">Fina</option>
+            <option value="Gruesa">Gruesa</option>
+        </select>
+        <br><br>
+        <button type="button" id="prepPizza">Prep Pizza</button>
+    </form>
+
+    <p id="resultado"></p>
+  
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4CAF50, #FFFFFF, #F44336);
+}
+
+h1
+{
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em 0;
+    background: #3b4a3b;
+}
+
+form
+{
+    max-width: 500px;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 100px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+label
+{
+    display: inline-block;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+#resultado
+{
+    text-align: center;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #F44336;
+}
