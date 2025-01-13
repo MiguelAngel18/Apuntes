@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panadería "Sabores Caseros"</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Panadería "Sabores Caseros"</h1>
+    <nav>
+        <ul>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#pedido">Hacer Pedido</a></li>
+        </ul>
+    </nav>
+    <section id="presentacion">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+            Bienvenidos a la panadería con mayor tradición en el barrio,
+            con un <span class="low-contrast">amplio surtido</span> de panes.
+            <br>
+            ¡Disfruta de nuestros productos frescos cada día!
+        </p>
+        <p>Imagen de nuestro local: <img src="local.png" alt="Imagen del local"></p>
+    </section>
+    <section id="productos">
+        <h3>Productos Especiales</h3>
+        <ul>
+            <li><b>Pan Integral</b> con alto contenido en fibra</li>
+            <li><b>Pan Rústico</b> muy sabroso y aromático</li>
+            <li><b>Pasteles Caseros</b>, ideales para celebraciones</li>
+        </ul>
+        <img src="pastel.jpg" alt="Imagen de pastel">
+    </section>
+    <section id="pedido"></section>
+        <h3>Hacer Pedido</h3>
+        <form action="pedido.php" method="post">
+            <label> Nombre:
+                <input type="text" name="nombre" required>
+            </label>
+            <label> Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>Selecciona tu producto preferido:
+                <select name="producto" required>
+                    <option value="integral" selected>Selecciona</option>
+                    <option value="rustico">Pan Rústico</option>
+                    <option value="integral">Pan Integral</option>
+                    <option value="pastel">Pastel</option>
+                </select>
+            </label>
+            <label>Comentarios:
+                <textarea name="comentarios"></textarea>
+            </label>
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Panadería "Sabores Caseros".</p>
+    </footer>
+</body>
+</html>
+
+
