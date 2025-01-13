@@ -29,9 +29,9 @@ class Articulo
 }
 
 let articulos = [
-    new Articulo('A001','Ordenador PIV',650.10,1,'Imagenes/ORDENADOR1.GIF'),
-    new Articulo('A002','Ordenador PIV mod. 2',683.15,3,'Imagenes/ORDENADOR2.GIF'),
-    new Articulo('B003','Impresora HP',150.88,1,'Imagenes/IMPRESORA.GIF'),
+    new Articulo('A001','Ordenador PIV',650.10,0,'Imagenes/ORDENADOR1.GIF'),
+    new Articulo('A002','Ordenador PIV mod. 2',683.15,0,'Imagenes/ORDENADOR2.GIF'),
+    new Articulo('B003','Impresora HP',150.88,0,'Imagenes/IMPRESORA.GIF'),
 ];
 
 function verInventario()
@@ -40,31 +40,43 @@ function verInventario()
     {
         document.write(articulos[i].toString(i));
     }
-    saveInCookie();
 }
 
-function imprimirTicket()
-{
+function imprimirTicket() {
     let suma = 0;
-    for(let i = 0; i < articulos.length; i++)
-    {
+    for (let i = 0; i < articulos.length; i++) {
+        // Obtener datos guardados en la cookie
+        const cookieStr = getCookie(`articulo${i}`);
+        if (!cookieStr) continue;
+        const cookieData = JSON.parse(cookieStr);
+        
+        // Actualizar cantidad del artículo con la de la cookie
+        articulos[i].setCantidad(cookieData.cantidad);
+        
+        // Omitir si no hay cantidad
         if (articulos[i].cantidad === 0) {
             continue;
         }
-        let articuloData = {
-            codigo: articulos[i].codigo,
-            descripcion: articulos[i].descripcion,
-            precio: articulos[i].precio,
-            cantidad: articulos[i].cantidad,
-            imagen: articulos[i].imagen
-        };
-        document.cookie = `articulo${i}=${JSON.stringify(articuloData)}; path=/;`;
+        
         document.write(`<div class="articulo">
             <p>${articulos[i].cantidad} ud. ${articulos[i].descripcion} a <strong>${articulos[i].precio}</strong> €.</p>
         </div>`);
-        suma += articulos[i].precio*articulos[i].cantidad;
+        suma += articulos[i].precio * articulos[i].cantidad;
     }
     document.write(`<div class="articulo"><p>Total: <strong>${suma}</strong> €.</p></div>`);
+}
+
+// Función auxiliar para obtener valor de la cookie
+function getCookie(nombre) {
+    let nameEQ = nombre + "=";
+    let ca = document.cookie.split(';');
+    for(let i=0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
 }
 
 function saveInCookie()
