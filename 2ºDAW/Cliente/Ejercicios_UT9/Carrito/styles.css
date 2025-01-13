@@ -1,17 +1,20 @@
-body {
+body
+{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-.container {
+.container
+{
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
-header {
+header
+{
     background: #333;
     color: #fff;
     padding-top: 30px;
@@ -19,37 +22,43 @@ header {
     border-bottom: #77aaff 3px solid;
 }
 
-a {
+a
+{
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-header ul {
+header ul
+{
     padding: 0;
     list-style: none;
 }
 
-header li {
+header li
+{
     display: inline;
     padding: 0 20px 0 20px;
 }
 
-header #branding {
+header #branding
+{
     float: left;
 }
 
-header #branding h1 {
+header #branding h1
+{
     margin: 0;
 }
 
-header nav {
+header nav
+{
     float: right;
     margin-top: 10px;
 }
 
-/* Estilo para los artículos */
-.article {
+.articulo
+{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,26 +70,31 @@ header nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-article img {
+.articulo img
+{
     max-width: 100%;
     height: auto;
 }
 
-article h2 {
+article h2
+{
     margin-top: 0;
 }
 
 /* Estilo para el botón */
-button a{
+button {
     display: flex;
     flex-direction: column;
     background: #333;
     color: #fff;
+    margin: 0 auto;
+    margin-top: 15px;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-button a:hover {
+button:hover
+{
     background: #3b3b3b;
 }

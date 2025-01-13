@@ -5,38 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factura de Pedido</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Factura de Pedido</h1>
     </header>
-    <div id="factura"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let facturaDiv = document.getElementById('factura');
-            let cookieData = document.cookie.split('; ').find(row => row.startsWith('pedido='));
-            if (cookieData)
-            {
-                let pedido = JSON.parse(decodeURIComponent(cookieData.split('=')[1]));
-                pedido.forEach(item => {
-                    let articulo = new Articulo(item.codigo, item.descripcion, item.precio, item.cantidad, item.imagen);
-                    facturaDiv.innerHTML += `
-                        <div>
-                            <img src="${articulo.imagen}" alt="${articulo.descripcion}" />
-                            <p>${articulo.descripcion}</p>
-                            <p>Precio: $${articulo.precio}</p>
-                            <p>Cantidad: ${articulo.cantidad}</p>
-                            <p>Total: $${articulo.precio * articulo.cantidad}</p>
-                        </div>
-                    `;
-                });
-            }
-            else
-            {
-                facturaDiv.innerHTML = '<p>No hay artículos en el pedido.</p>';
-            }
-        });
-    </script>
-    <script src="articulo.js"></script>
+    <section id="factura">
+        <!-- Productos pedidos -->
+        <script>imprimirTicket()</script>
+    </section>
 </body>
 </html>
