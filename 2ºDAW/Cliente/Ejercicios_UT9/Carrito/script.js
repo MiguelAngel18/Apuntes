@@ -1,6 +1,6 @@
 // Este archivo contiene la lógica principal del proyecto, gestionando los eventos y el almacenamiento de datos en cookies.
 
-import { Articulo } from './articulo.js';
+import Articulo from './articulo.js';
 
 let articulos = [
     new Articulo('001', 'Artículo 1', 10.00, 0, 'imagen1.jpg'),
@@ -8,23 +8,18 @@ let articulos = [
     new Articulo('003', 'Artículo 3', 20.00, 0, 'imagen3.jpg')
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    let botonVerPedido = document.getElementById('ver-pedido');
+// Función para añadir un objeto Articulo al array articulos
+function addArticuloToArray(codigo, descripcion, precio, cantidad, imagen)
+{
+    let nuevoArticulo = new Articulo(codigo, descripcion, precio, cantidad, imagen);
+    articulos.push(nuevoArticulo);
+    nuevoArticulo.saveInCookie();
+}
 
-    articulos.forEach(articulo => {
-        let cantidadInput = document.getElementById(`cantidad-${articulo.codigo}`);
-        cantidadInput.addEventListener('change', (event) => {
-            articulo.cantidad = parseInt(event.target.value);
-        });
-    });
+// Ejemplo de uso de la función
+addArticuloToArray('004', 'Artículo 4', 25.00, 0, 'imagen4.jpg');
 
-    botonVerPedido.addEventListener('click', () => {
-        let cantidades = articulos.map(articulo => ({
-            codigo: articulo.codigo,
-            cantidad: articulo.cantidad
-        }));
-
-        document.cookie = `pedido=${JSON.stringify(cantidades)}; path=/`;
-        window.location.href = 'MiniPedido.html';
-    });
+// Recorrer el array de artículos y crear una cookie para cada uno
+articulos.forEach(articulo => {
+    articulo.saveInCookie();
 });

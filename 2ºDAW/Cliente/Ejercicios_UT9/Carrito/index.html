@@ -8,16 +8,47 @@
 </head>
 <body>
     <header>
-        <h1>Lista de Artículos</h1>
+        <h1>Carrito de la compra</h1>
     </header>
-    <main>
+    <section>
         <section id="articulos">
             <!-- Artículos -->
+            <div class="article">
+                <h3>${this.codigo}</h3>
+                <h3>${this.descripcion}</h3>
+                <p>Precio: $${this.precio}</p>
+                <p>Adquirir: ${this.cantidad} uds.</p>
+                <img src="Imagenes/ALTAVOCES.GIF" title="${this.descripcion}">
+            </div>
+            <div class="article">
+                <h3>${this.codigo}</h3>
+                <h3>${this.descripcion}</h3>
+                <p>Precio: $${this.precio}</p>
+                <p>Adquirir: ${this.cantidad} uds.</p>
+                <img src="Imagenes/ALTAVOCES.GIF" title="${this.descripcion}">
+            </div>
+
+
         </section>
         <br>
-        <button href="MiniPedido.html">VER PEDIDO</button>
-    </main>
+        <button onclick="addArticulo(new Articulo)">Nuevo artículo</button>
+
+        <button><a href="MiniPedido.html">VER PEDIDO</a></button>
+        </section>
     <script src="articulo.js"></script>
-    <script src="script.js"></script>
+    <script>
+        import { Articulo } from './articulo.js';
+        // Recorrer el array de artículos y crear una cookie para cada uno
+        
+        let articulos = [
+            Articulo('A001', 'Artículo 1', 10.00, 0, 'Imagenes/ALTAVOCES.GIF'),
+            Articulo('A002', 'Artículo 2', 15.00, 0, 'imagenes/IMPRESORA.GIF'),
+            Articulo('B003', 'Artículo 3', 20.00, 0, 'imagenes/WEBCAM.GIF')
+        ];
+
+        document.addEventListener('click', () => {
+        articulos.forEach(articulo => {articulo.addArticulo()})
+        });
+    </script>
 </body>
 </html>

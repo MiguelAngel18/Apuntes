@@ -19,10 +19,9 @@ header {
     border-bottom: #77aaff 3px solid;
 }
 
-header a {
+a {
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 16px;
 }
 
@@ -50,9 +49,13 @@ header nav {
 }
 
 /* Estilo para los artículos */
-article {
-    margin: 20px 0;
-    padding: 20px;
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -68,16 +71,16 @@ article h2 {
 }
 
 /* Estilo para el botón */
-button {
-    display: inline-block;
+button a{
+    display: flex;
+    flex-direction: column;
     background: #333;
     color: #fff;
     padding: 10px 20px;
-    border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
-button:hover {
-    background: #555;
+button a:hover {
+    background: #3b3b3b;
 }

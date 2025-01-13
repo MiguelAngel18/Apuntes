@@ -1,6 +1,7 @@
 class Articulo
 {
-    constructor(codigo, descripcion, precio, cantidad, imagen) {
+    constructor(codigo, descripcion, precio, cantidad, imagen)
+    {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -8,13 +9,13 @@ class Articulo
         this.imagen = imagen;
     }
 
-    modificarCantidad(nuevaCantidad)
+    setCantidad(nuevaCantidad)
     {
         this.cantidad = nuevaCantidad;
-        this.guardarEnCookie();
+        this.saveInCookie();
     }
 
-    guardarEnCookie()
+    saveInCookie()
     {
         let articuloData = {
             codigo: this.codigo,
@@ -26,15 +27,16 @@ class Articulo
         document.cookie = `articulo=${JSON.stringify(articuloData)}; path=/;`;
     }
 
-    aniadirArticulo()
+    addArticulo()
     {
-        return  `<div class="articulo">
-                    <img src="${this.imagen}" alt="${this.descripcion}">
+        this.saveInCookie();
+        return `<div class="article">
+                    <h3>${this.codigo}</h3>
                     <h3>${this.descripcion}</h3>
                     <p>Precio: $${this.precio}</p>
-                    <p>Cantidad: ${this.cantidad}</p>
-                 </div>
-                `;
+                    <p>Adquirir: ${this.cantidad} uds.</p>
+                    <img src="${this.imagen}" alt="${this.descripcion}">
+                </div>`;
     }
 }
 
